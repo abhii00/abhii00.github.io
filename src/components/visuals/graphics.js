@@ -38,7 +38,7 @@ function loadTexture(image_object){
 }
 
 /**
- * Animation 1: The background for the introduction component
+ * Animation 1: The animation for the introduction component
  * @param scene the scene into which to render
  * @param camera the camera for the animation
  * @param renderer the renderer
