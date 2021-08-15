@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import sphere_texture from "../../assets/animations/intro/mercury.jpg"
 
 /*ORIGINALLY FROM EOVISUALISER*/
 
@@ -45,16 +46,16 @@ function loadTexture(image_object){
  */
 function introAnimation(scene, camera, renderer){
     const sun_light = new THREE.PointLight(0xffffff, 1, 0, 2);
-    sun_light.position.set(0,2,0);
+    sun_light.position.set(0,5,0);
     sun_light.castShadow = true;
         
-    var sphere_geometry = new THREE.SphereBufferGeometry(1, 20, 20);
-    var sphere_material = new THREE.MeshStandardMaterial({
+    const sphere_geometry = new THREE.SphereBufferGeometry(1, 80, 80);
+    const sphere_material = new THREE.MeshStandardMaterial({
         metalness: 0.3,
         roughness: 0.8,
-        color: 0xffffff
+        map: loadTexture(sphere_texture)
     })
-    var sphere = new THREE.Mesh(sphere_geometry, sphere_material);
+    const sphere = new THREE.Mesh(sphere_geometry, sphere_material);
     sphere.position.set(0,0,0)
 
     scene.add(sun_light);
@@ -66,7 +67,7 @@ function introAnimation(scene, camera, renderer){
     function animate(){
         requestAnimationFrame(animate);
 
-        sphere.rotation.y += 0.01;
+        sphere.rotation.y += 0.005;
 
         renderer.render(scene, camera);
     };
