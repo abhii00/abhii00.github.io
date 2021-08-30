@@ -65,7 +65,7 @@ function Animation1(scene, camera, renderer){
     const sphere_geometry = new THREE.SphereBufferGeometry(30, 50, 50);
     const small_sphere_geometry = new THREE.SphereBufferGeometry(1, 4, 4);
     const plane_geometry = new THREE.PlaneBufferGeometry(3000, 3000, 300, 300);
-    const box_geometry = new THREE.BoxBufferGeometry(5,3,3);
+    const box_geometry = new THREE.BoxBufferGeometry(5,4,4);
 
     //create sky
     const sky_material = new THREE.MeshBasicMaterial({color: 0x00000d})
@@ -79,7 +79,7 @@ function Animation1(scene, camera, renderer){
     for (let i = 0; i < 500; i++) {
         const star = new THREE.Mesh(small_sphere_geometry, star_material);
         const x = THREE.MathUtils.randFloatSpread(1000);
-        const y = THREE.MathUtils.randFloatSpread(1000);
+        const y = THREE.MathUtils.randFloatSpread(400) + 100;
         const z = THREE.MathUtils.randFloatSpread(250) - 250;
         star.position.set(x,y,z);
         stars.push(star);
@@ -102,7 +102,7 @@ function Animation1(scene, camera, renderer){
     //create train
     const train_material = new THREE.MeshBasicMaterial({color:0x800000});
     const train = new THREE.Mesh(box_geometry, train_material);
-    train.position.set(-100,0,-10)
+    train.position.set(-180,0,-10)
     scene.add(train);
 
     //create ocean
@@ -124,9 +124,15 @@ function Animation1(scene, camera, renderer){
     function animate(){
         requestAnimationFrame(animate);
 
-        const time = performance.now() * 0.001;
-        moon.position.y = Math.sin(time) * 2 + 40;
-        train.position.x += 0.5;
+        const time = performance.now()*0.001;
+        moon.position.y = Math.sin(time)*2 + 40; //floating moon
+        water.position.y = Math.sin(0.25*time)*2 - 30; //twinkling stars
+
+        train.position.x += 0.5; //moving train
+        if (train.position.x > 180){
+            train.position.x = -180;
+        }
+        
         renderer.render(scene, camera);
     };
     animate();    
