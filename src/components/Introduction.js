@@ -1,6 +1,6 @@
 import React from "react";
 import * as THREE from "three";
-import { setupScene, Animation1 } from "./visuals/graphics.js"
+import { setupScene, Animation1 } from "./visuals/graphics.js";
 
 class Introduction extends React.Component{
     componentDidMount() {
