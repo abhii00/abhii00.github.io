@@ -1,13 +1,14 @@
 import React from "react";
 import * as THREE from "three";
-import { setupScene, Animation1 } from "./visuals/graphics.js";
+import { setupScene } from "./visuals/graphics.js";
+import { animation1 } from "./visuals/animations.js";
 
 class Introduction extends React.Component{
     componentDidMount() {
         const [scene, camera, renderer] = setupScene(new THREE.Vector3(0,0,100))
         this.mount.appendChild(renderer.domElement);
 
-        Animation1(scene, camera, renderer)
+        animation1(scene, camera, renderer)
     }
 
     render(){
