@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { loadTexture } from "./graphics.js";
-import sphere_texture from "../../assets/animations/intro/mercury.jpg";
+import sphere_texture from "../../assets/animations/0/mercury.jpg";
 
 /**
  * Animation 0: The coming soon animation
