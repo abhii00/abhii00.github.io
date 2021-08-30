@@ -1,5 +1,7 @@
 import * as THREE from "three";
-import {Water} from 'three/examples/jsm/objects/Water.js';
+import { Water } from 'three/examples/jsm/objects/Water.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import mountain from '../../assets/animations/1/mountain1.glb';
 
 /**
  * Animation 1: Train Animation
@@ -20,7 +22,7 @@ import {Water} from 'three/examples/jsm/objects/Water.js';
     */
 
     //create reusable geometries
-    const sphere_geometry = new THREE.SphereBufferGeometry(30, 50, 50);
+    const sphere_geometry = new THREE.SphereBufferGeometry(20, 50, 50);
     const small_sphere_geometry = new THREE.SphereBufferGeometry(1, 4, 4);
     const plane_geometry = new THREE.PlaneBufferGeometry(3000, 3000, 300, 300);
     const box_geometry = new THREE.BoxBufferGeometry(5,4,4);
@@ -57,11 +59,20 @@ import {Water} from 'three/examples/jsm/objects/Water.js';
     moon_light.position.set(80,80,-30);
     scene.add(moon_light);
 
-    //create train
-    const train_material = new THREE.MeshBasicMaterial({color:0x800000});
-    const train = new THREE.Mesh(box_geometry, train_material);
-    train.position.set(-180,0,-10)
-    scene.add(train);
+    //create ambient light
+    const ambient_light = new THREE.PointLight(0xffffff,0.15,0,2);
+    ambient_light.position.set(80,80,10);
+    scene.add(ambient_light);
+
+    //create mountains 
+    const loader = new GLTFLoader();
+    loader.load(mountain, function (mountain_gltf) {
+        var mountain = mountain_gltf.scene;
+        mountain.position.set(0,-30,-40);
+        mountain.rotation.set(0,Math.PI/2,0);
+        mountain.scale.set(20,20,20);
+        scene.add(mountain);
+    });
 
     //create ocean
     const water = new Water(
@@ -73,8 +84,14 @@ import {Water} from 'three/examples/jsm/objects/Water.js';
         }
     );
     water.rotation.x = - Math.PI / 2;
-    water.position.set(-30,-30,0);
+    water.position.set(0,-30,0);
     scene.add( water );
+
+    //create train
+    const train_material = new THREE.MeshBasicMaterial({color:0x800000});
+    const train = new THREE.Mesh(box_geometry, train_material);
+    train.position.set(-180,0,-30)
+    scene.add(train);
 
     /**
      * animator
