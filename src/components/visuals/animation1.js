@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { Water } from 'three/examples/jsm/objects/Water.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import mountain from '../../assets/animations/1/mountain1.glb';
+import mountains from '../../assets/animations/1/mountainrange1.glb';
 
 /**
  * Animation 1: Train Animation
@@ -66,12 +66,12 @@ import mountain from '../../assets/animations/1/mountain1.glb';
 
     //create mountains 
     const loader = new GLTFLoader();
-    loader.load(mountain, function (mountain_gltf) {
-        var mountain = mountain_gltf.scene;
-        mountain.position.set(0,-30,-40);
-        mountain.rotation.set(0,Math.PI/2,0);
-        mountain.scale.set(20,20,20);
-        scene.add(mountain);
+    loader.load(mountains, function (mountains_gltf) {
+        var mountains = mountains_gltf.scene;
+        mountains.position.set(0,-25,-40);
+        mountains.rotation.set(0,Math.PI/2,0);
+        mountains.scale.set(60,60,60);
+        scene.add(mountains);
     });
 
     //create ocean
@@ -90,7 +90,7 @@ import mountain from '../../assets/animations/1/mountain1.glb';
     //create train
     const train_material = new THREE.MeshBasicMaterial({color:0x800000});
     const train = new THREE.Mesh(box_geometry, train_material);
-    train.position.set(-180,0,-30)
+    train.position.set(-180,5,-22)
     scene.add(train);
 
     /**
