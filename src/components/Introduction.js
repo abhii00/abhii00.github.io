@@ -18,10 +18,11 @@ class Introduction extends React.Component{
             <div className="introduction">
                 <div className="introduction-hi">Hi, I'm</div>
                 <div className="introduction-name">Abhijit Pandit</div>
-                <div className="introduction-tagline">Aspiring Space Engineer and Creative</div>
+                <div className="introduction-tagline">An Aspiring Space Engineer and Creative</div>
                 <div className="introduction-animation" ref={ref => (this.mount = ref)}/>
                 <div className="introduction-darkeningfilter"></div>
                 <div className="introduction-expandcontainer">
+                    <div>Learn More</div> 
                     <ExpandMore className="introduction-expand"/>
                 </div>
             </div>  

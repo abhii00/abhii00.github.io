@@ -8,6 +8,10 @@
     --e: #29648A;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0px;
     padding: 0px;
@@ -18,54 +22,63 @@ body{
 /*Header*/
 .header {
     position: absolute;
-	width: 100%;
-    height: 5%;
-	z-index: 100;
+	width: 100vw;
+    height: 5vh;
+	z-index: 5;
 	display: inline-block;
 }
 
 .header-name {
-    padding-left: 20px;
+    padding-left: 1vw;
     color: white;
-    font-size: 40px;
+    font-size: 4vh;
+}
+
+.header-icons {
+    text-align: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: 5%;
+    margin-top: 1.5%;
 }
 
 /*Introduction*/
+.introduction {
+    height: 100vh;
+}
+
 .introduction-hi {
     color: white;
-    font-size: 40px;
+    font-size: 4vh;
 
 	position: absolute;
-	width: 45%;
-    height: 20%;
-	text-align: center;
-    padding-top: 300px;
+    top: 46vh;
+	width: 100vw;
+    text-align: center;
 	z-index: 100;
 	display: inline-block;
 }
 
 .introduction-name {
     color: white;
-    font-size: 200px;
+    font-size: 25vh;
 
 	position: absolute;
-	width: 100%;
-    height: 30%;
+    top: 45vh;
+	width: 100vw;
 	text-align: center;
-    padding-top: 300px;
 	z-index: 100;
 	display: inline-block;
 }
 
 .introduction-tagline {
     color: white;
-    font-size: 60px;
+    font-size: 8vh;
 
 	position: absolute;
-	width: 100%;
-    height: 20%;
-	text-align: center;
-    padding-top: 500px;
+    top: 70vh;
+	width: 100vw;
+    text-align: center;
 	z-index: 100;
 	display: inline-block;
 }
@@ -73,23 +86,25 @@ body{
 .introduction-darkeningfilter {
     background-color: var(--a);
     opacity: 0.4;
+
 	position: absolute;
-    top: 0px;
-	width: 100%;
-    height: 100%;
+    top: 0%;
+	width: 100vw;
+    height: 100vh;
 	z-index: 5;
 	display: inline-block;
 }
 
 .introduction-expandcontainer {
     color: white;
-
+    font-size: 3vh;
+    
 	position: absolute;
-    top: 0px;
-	width: 100%;
-    height: 5%;
+    top: 89vh;
+    padding-top: 2vh;
+	width: 100vw;
+    height: 9vh;
 	text-align: center;
-    padding-top: 800px;
 	z-index: 100;
 	display: inline-block;
 }
@@ -97,3 +112,5 @@ body{
 .introduction-expand {
     transform: scale(2);
 }
+
+/*About*/
