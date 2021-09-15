@@ -22,7 +22,7 @@ class Introduction extends React.Component{
                 <div className="introduction-animation" ref={ref => (this.mount = ref)}/>
                 <div className="introduction-darkeningfilter"></div>
                 <div className="introduction-expandcontainer">
-                    <div>Learn More</div> 
+                    <div>Coming Soon</div> 
                     <ExpandMore className="introduction-expand"/>
                 </div>
             </div>  
