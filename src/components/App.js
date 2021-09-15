@@ -1,11 +1,18 @@
 import React from "react";
-import { Introduction } from "./components.js";
+import { Header, Introduction } from "./components.js";
+import {BrowserView, MobileView} from 'react-device-detect';
 
 class App extends React.Component{
     render(){
         return(
             <div className="app">
-                <Introduction/>
+                <BrowserView>
+                    <Header/>
+                    <Introduction/>
+                </BrowserView>
+                <MobileView>
+                    
+                </MobileView>
             </div>
         )
     }

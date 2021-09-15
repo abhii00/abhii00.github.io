@@ -24,8 +24,8 @@ function setupScene(starting_camera_pos){
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.update();
+    //const controls = new OrbitControls(camera, renderer.domElement);
+    //controls.update();
 
     return [scene, camera, renderer]
 }

@@ -2,6 +2,7 @@ import React from "react";
 import * as THREE from "three";
 import { setupScene } from "./visuals/graphics.js";
 import { animation1 } from "./visuals/animations.js";
+import { ExpandMore } from '@material-ui/icons';
 
 class Introduction extends React.Component{
     componentDidMount() {
@@ -15,7 +16,14 @@ class Introduction extends React.Component{
     render(){
         return(
             <div className="introduction">
+                <div className="introduction-hi">Hi, I'm</div>
+                <div className="introduction-name">Abhijit Pandit</div>
+                <div className="introduction-tagline">Aspiring Space Engineer and Creative</div>
                 <div className="introduction-animation" ref={ref => (this.mount = ref)}/>
+                <div className="introduction-darkeningfilter"></div>
+                <div className="introduction-expandcontainer">
+                    <ExpandMore className="introduction-expand"/>
+                </div>
             </div>  
         )
     }
