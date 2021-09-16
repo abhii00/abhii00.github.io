@@ -85,7 +85,7 @@ body{
 
 .introduction-darkeningfilter {
     background-color: var(--a);
-    opacity: 0.4;
+    opacity: 0.2;
 
 	position: absolute;
     top: 0%;
