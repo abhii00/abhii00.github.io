@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Introduction } from "./components.js";
+import { Header, Introduction, About } from "./components.js";
 import {BrowserView, MobileView} from 'react-device-detect';
 
 class App extends React.Component{
@@ -9,6 +9,7 @@ class App extends React.Component{
                 <BrowserView>
                     <Header/>
                     <Introduction/>
+                    <About/>
                 </BrowserView>
                 <MobileView>
                     
