@@ -43,9 +43,5 @@ function loadTexture(image_object){
 
 export {
     setupScene,
-<<<<<<< HEAD
-    loadTexture
-=======
     loadTexture,
->>>>>>> dev/features/experience
 }
