@@ -18,9 +18,13 @@ function setupScene(starting_camera_pos){
     //setup renderer
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
 
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+    //const controls = new OrbitControls(camera, renderer.domElement);
+    //controls.update();
 
     return [scene, camera, renderer]
 }
@@ -39,5 +43,9 @@ function loadTexture(image_object){
 
 export {
     setupScene,
+<<<<<<< HEAD
     loadTexture
+=======
+    loadTexture,
+>>>>>>> dev/features/experience
 }

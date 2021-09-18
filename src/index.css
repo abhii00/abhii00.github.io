@@ -1,22 +1,174 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root{
+    --a: #050713;
+    --b: #464866;
+    --c: #AAABB8;
+    --d: #2E9CCA;
+    --e: #29648A;
+}
+
+html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar {
+    display: none; /* Chrome */
+}
 
 body{
     margin: 0px;
     padding: 0px;
+    background-color: var(--a);
+    font-family: 'Bebas Neue', cursive;
 }
 
 /*Introduction*/
-.introduction-text {
+.introduction {
+    height: 100vh;
+    width: 100%;
+}
+
+.introduction-hi {
     color: white;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 200px;
+    font-size: 4vh;
 
 	position: absolute;
-	top: 10px;
+    top: 46%;
 	width: 100%;
-    height: 30%;
-	text-align: center;
-    padding-top: 400px;
+    text-align: center;
 	z-index: 100;
 	display: inline-block;
+}
+
+.introduction-name {
+    color: white;
+    font-size: 25vh;
+
+	position: absolute;
+    top: 45%;
+	width: 100%;
+	text-align: center;
+	z-index: 100;
+	display: inline-block;
+}
+
+.introduction-tagline {
+    color: white;
+    font-size: 8vh;
+
+	position: absolute;
+    top: 70%;
+	width: 100%;
+    text-align: center;
+	z-index: 100;
+	display: inline-block;
+}
+
+.introduction-darkeningfilter {
+    background-color: var(--a);
+    opacity: 0.2;
+
+	position: absolute;
+    top: 0%;
+	width: 100%;
+    height: 100%;
+	z-index: 5;
+	display: inline-block;
+}
+
+.introduction-expandcontainer {
+    color: white;
+    font-size: 3vh;
+    
+	position: absolute;
+    top: 89vh;
+    padding-top: 2vh;
+	width: 100%;
+    height: 9%;
+	text-align: center;
+	z-index: 100;
+	display: inline-block;
+}
+
+.introduction-expand {
+    transform: scale(2);
+}
+
+/*About*/
+.about {
+    position:absolute;
+    top: 100vh;
+    height: 100vh;
+    width: 100vw;
+}
+
+.about-title {
+    color: white;
+    font-size: 5vh;
+
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 40%;
+    text-align: left;
+}
+
+.about-text {
+    color: white;
+    font-size: 2.4vh;
+    font-family: 'Lato', sans-serif;
+
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 30%;
+    text-align: justify;
+}
+
+.about-image {
+    border: solid 2px white;
+
+    position: absolute;
+    top: 23%;
+    left: 25%;
+    width: 20vw;
+    height: 20vw;
+}
+
+/*Experience*/
+.experience {
+    position: absolute;
+    top: 200vh;
+    height: 100vh;
+    width: 100vw;
+}
+
+.experience-title {
+    color: white;
+    font-size: 5vh;
+
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 40%;
+    text-align: left;
+}
+
+/*Project Grid*/
+.projectgrid {
+    position: absolute;
+    width: 100%;
+}
+
+/*Project*/
+.project {
+    background-color: white;
+    height: 15vw;
+    width: 15vw;
+
+    position: absolute;
 }
