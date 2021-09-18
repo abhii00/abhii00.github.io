@@ -1,5 +1,5 @@
 import App from './App.js';
-import Header from './Header.js';
+import Menu from './Menu.js';
 import Introduction from './Introduction.js';
 import About from './About.js';
 import Experience from './Experience.js';
@@ -8,7 +8,7 @@ import Project from './Project.js';
 
 export {
     App,
-    Header,
+    Menu,
     Introduction,
     About,
     Experience,

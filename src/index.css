@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 :root{
     --a: #050713;
@@ -16,7 +16,7 @@ html {
 }
 
 html::-webkit-scrollbar {
-    display: none;
+    display: none; /* Chrome */
 }
 
 body{
@@ -26,8 +26,8 @@ body{
     font-family: 'Bebas Neue', cursive;
 }
 
-/*Header*/
-.header {
+/*Menu*/
+.menu {
     position: absolute;
 	width: 100vw;
     height: 5vh;
@@ -35,13 +35,13 @@ body{
 	display: inline-block;
 }
 
-.header-name {
+.menu-name {
     padding-left: 1vw;
     color: white;
     font-size: 4vh;
 }
 
-.header-icons {
+.menu-icons {
     text-align: center;
     display: flex;
     margin-left: auto;
@@ -130,16 +130,31 @@ body{
     color: white;
     font-size: 5vh;
 
+    position: absolute;
+    top: 120vh;
+    left: 50vw;
     width: 40vw;
     text-align: left;
-
 }
 
 .about-text {
     color: white;
     font-size: 2.4vh;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
 
-    width: 40vw;
+    position: absolute;
+    top: 125vh;
+    left: 50vw;
+    width: 30vw;
     text-align: justify;
+}
+
+.about-image {
+    border: solid 2px white;
+
+    position: absolute;
+    top: 125vh;
+    left: 25vw;
+    width: 20vw;
+    height: 20vw;
 }
