@@ -14,7 +14,7 @@ class Introduction extends React.Component{
 
     render(){
         return(
-            <div className="introduction">
+            <div className="section" style={this.props.style}>
                 <div className="introduction-hi">Hi, I'm</div>
                 <div className="introduction-name">Abhijit Pandit</div>
                 <div className="introduction-tagline">An Aspiring Space Engineer and Creative</div>

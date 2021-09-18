@@ -1,5 +1,5 @@
 import React from 'react';
-import { Introduction, About, Experience } from './components.js';
+import { Introduction, About, Experience, Portfolio, Contact } from './components.js';
 import {BrowserView, MobileView} from 'react-device-detect';
 
 class App extends React.Component{
@@ -7,9 +7,11 @@ class App extends React.Component{
         return(
             <div className='app'>
                 <BrowserView>
-                    <Introduction/>
-                    <About/>
-                    <Experience/>
+                    <Introduction style={{top: '0vh'}}/>
+                    <About style={{top: '100vh'}}/>
+                    <Experience style={{top: '200vh'}}/>
+                    <Portfolio style={{top: '300vh'}}/>
+                    <Contact style={{top: '400vh'}}/>
                 </BrowserView>
                 <MobileView>
                     

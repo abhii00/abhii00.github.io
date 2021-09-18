@@ -4,8 +4,8 @@ import { ProjectGrid } from './components.js';
 class Experience extends React.Component{
     render(){
         return(
-            <div className = 'experience'>
-                <div className = 'experience-title'>Education and Experience</div>
+            <div className='section' style={this.props.style}>
+                <div className = 'section-title'>Education and Experience</div>
                 <ProjectGrid style={{top: '30%'}}/>
             </div> 
         )

@@ -3,8 +3,8 @@ import React from 'react';
 class About extends React.Component{
     render(){
         return(
-            <div className='about'>
-                <div className='about-title'>About Me </div>
+            <div className='section' style={this.props.style}>
+                <div className='section-title'>About Me</div>
                 <div className='about-text'>
                     <p>
                         Hi, I'm Abhi and I'm currently a 3rd year Engineering student at the University of Cambridge. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse elit urna, fringilla rhoncus sem a, pulvinar tincidunt arcu. Aliquam erat volutpat.
