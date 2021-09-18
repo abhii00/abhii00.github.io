@@ -4,6 +4,7 @@ import Introduction from './Introduction.js';
 import About from './About.js';
 import Experience from './Experience.js';
 import Portfolio from './Portfolio.js';
+import ProjectGrid from './ProjectGrid.js';
 import Project from './Project.js';
 
 export {
@@ -13,5 +14,6 @@ export {
     About,
     Experience,
     Portfolio,
+    ProjectGrid,
     Project
 }
