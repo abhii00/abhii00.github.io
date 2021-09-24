@@ -6,7 +6,7 @@ class ProjectGrid extends React.Component{
         const number = 5;
         const size = 15;
         const size_string = size.toString() + 'vw';
-        const end_spacing = 5;
+        const end_spacing = 10;
         const spacing = (100 - 2*end_spacing - number*size)/(number - 1);
 
         const projects = [];

@@ -1,9 +1,10 @@
 import React from 'react';
+import { SideLine } from './components.js';
 
 class About extends React.Component{
     render(){
         return(
-            <div className='section' style={this.props.style}>
+            <div className='section' id='about' style={this.props.style}>
                 <div className='section-title'>About Me</div>
                 <div className='about-text'>
                     <p>
@@ -17,6 +18,7 @@ class About extends React.Component{
                     </p>
                 </div>
                 <div className='about-image'></div>
+                <SideLine left={true}/>
             </div>
         )
     }

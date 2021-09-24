@@ -1,12 +1,13 @@
 import React from 'react';
-import { ProjectGrid } from './components.js';
+import { ProjectGrid, SideLine } from './components.js';
 
 class Portfolio extends React.Component{
     render(){
         return(
-            <div className='section' style={this.props.style}>
+            <div className='section' id='portfolio' style={this.props.style}>
                 <div className = 'section-title'>Portfolio</div>
                 <ProjectGrid style={{top: '30%'}}/>
+                <SideLine left={true}/>
             </div> 
         )
     }

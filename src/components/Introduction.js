@@ -3,6 +3,7 @@ import * as THREE from "three";
 import { setupScene } from "./visuals/graphics.js";
 import { animation1 } from "./visuals/animations.js";
 import { ExpandMore } from '@material-ui/icons';
+import { Link } from 'react-scroll';
 
 class Introduction extends React.Component{
     componentDidMount() {
@@ -20,10 +21,12 @@ class Introduction extends React.Component{
                 <div className="introduction-tagline">An Aspiring Space Engineer and Creative</div>
                 <div className="introduction-animation" ref={ref => (this.mount = ref)}/>
                 <div className="introduction-darkeningfilter"></div>
-                <div className="introduction-expandcontainer">
-                    <div>Learn More</div> 
-                    <ExpandMore className="introduction-expand"/>
-                </div>
+                <Link to="about" duration={2}>
+                    <div className="introduction-expandcontainer">
+                        <div>Learn More</div> 
+                        <ExpandMore className="introduction-expand"/>
+                    </div>
+                </Link>
             </div>  
         )
     }

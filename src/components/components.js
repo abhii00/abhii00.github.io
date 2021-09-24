@@ -7,6 +7,7 @@ import Portfolio from './Portfolio.js';
 import Contact from './Contact.js';
 import ProjectGrid from './ProjectGrid.js';
 import Project from './Project.js';
+import SideLine from './SideLine.js';
 
 export {
     App,
@@ -17,5 +18,6 @@ export {
     Portfolio,
     Contact,
     ProjectGrid,
-    Project
+    Project,
+    SideLine
 }
