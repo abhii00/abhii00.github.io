@@ -13,7 +13,7 @@ class ProjectGrid extends React.Component{
         var pos = end_spacing;
 
         for (var i = 0; i < number; i++){
-            projects.push(<Project style={{left: pos.toString() + 'vw', height: size_string, width: size_string}}/>); //TODO add unique project specification prop
+            projects.push(<Project style={{left: pos.toString() + 'vw', height: size_string, width: size_string}}/>); /* TODO add unique project specification prop */
             pos += size + spacing;
         }
 

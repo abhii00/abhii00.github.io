@@ -72,7 +72,7 @@ body{
 
 .menu-link {
     color: white;
-    font-size: 2vh;
+    font-size: 1.2vw;
     font-family: 'Lato', sans-serif;
     text-align: center;
     vertical-align: middle;
@@ -82,10 +82,13 @@ body{
     padding-left: 5vw;
 
     cursor: pointer;
+
+    transition: transform 0.2s;
 }
 
 .menu-link:hover {
     color: var(--d);
+    transform: scale(1.1);
 }
 
 /*Introduction*/
@@ -197,14 +200,20 @@ body{
     background-color: white;
     height: 15vw;
     width: 15vw;
+    border-radius: 1%;
+    transition: transform 0.2s;
 
     position: absolute;
+}
+
+.project:hover {
+    transform: scale(1.1);
 }
 
 /*SideLine*/
 .sideline-left {
     height: 80vh;
-    width: 15vw;
+    width: 5vw;
     position: absolute;
     left: 5vw;
     top: 10vh;
@@ -212,7 +221,7 @@ body{
 
 .sideline-right {
     height: 80vh;
-    width: 15vw;
+    width: 5vw;
     position: absolute;
     left: 92vw;
     top: 10vh;
@@ -224,7 +233,7 @@ body{
 
 .sideline-line {
     height: 60vh;
-    width: 15vw;
+    width: 5vw;
     border-left: 2px solid var(--d);
-    margin-left: 6.5%;
+    margin-left: 1vw;
 }

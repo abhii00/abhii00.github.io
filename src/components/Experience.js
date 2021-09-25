@@ -6,7 +6,7 @@ class Experience extends React.Component{
         return(
             <div className='section' id='experience' style={this.props.style}>
                 <div className = 'section-title'>Education and Experience</div>
-                <ProjectGrid style={{top: '30%'}}/> //TODO add Projects
+                <ProjectGrid style={{top: '30%'}}/> {/* TODO add Projects */}
                 <SideLine/>
             </div> 
         )
