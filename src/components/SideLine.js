@@ -11,7 +11,7 @@ class SideLine extends React.Component{
             main_class = 'sideline-right';
         }
         return(
-            <div className={main_class}>
+            <div className={main_class}> // TODO add colour changer for sideline and icon, perhaps deeper blue
                 <img src={rkticon} alt='' className='sideline-icon' mask-image={rkticon}></img>
                 <div className='sideline-line'></div>
             </div>

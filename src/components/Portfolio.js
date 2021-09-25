@@ -6,7 +6,7 @@ class Portfolio extends React.Component{
         return(
             <div className='section' id='portfolio' style={this.props.style}>
                 <div className = 'section-title'>Portfolio</div>
-                <ProjectGrid style={{top: '30%'}}/>
+                <ProjectGrid style={{top: '30%'}}/> // TODO add Projects
                 <SideLine left={true}/>
             </div> 
         )
