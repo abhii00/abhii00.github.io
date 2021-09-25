@@ -7,6 +7,7 @@ class App extends React.Component{
         return(
             <div className='app'>
                 <BrowserView> 
+                    {/* FIXME change to relative positioning to allow project description to push rest of content down*/}
                     {/* TODO add on load animations */}
                     {/* TODO add animations for interest */}
                     {/* FIXME website icons, descriptions, metadata */}

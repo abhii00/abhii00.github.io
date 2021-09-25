@@ -27,7 +27,7 @@ body{
 }
 
 .section {
-    position:absolute;
+    position: absolute;
     height: 100vh;
     width: 100%;
 }
@@ -193,6 +193,14 @@ body{
 .projectgrid {
     position: absolute;
     width: 100%;
+}
+
+.projectgrid-description {
+    background-color: white;
+    height: 30vw;
+    width: 100vw;
+    position: relative;
+    top: 20vw;
 }
 
 /*Project*/
