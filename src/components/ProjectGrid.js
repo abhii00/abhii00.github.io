@@ -42,7 +42,7 @@ class ProjectGrid extends React.Component{
         var pos = end_spacing;
 
         for (var i = 0; i < number; i++){
-            projects.push(<Project index={i} renderDescription={this.renderDescription} style={{left: pos.toString() + 'vw', height: size_string, width: size_string}}/>); /* TODO add unique project specification prop */
+            projects.push(<Project index={i} renderDescription={this.renderDescription} style={{left: pos.toString() + 'vw', height: size_string, width: size_string}}/>); /* TODO add unique project specification prop and file to handle descriptions*/
             pos += size + spacing;
         }
 
