@@ -11,6 +11,7 @@ class App extends React.Component{
                     {/* TODO add on load animations */}
                     {/* TODO add animations for interest */}
                     {/* FIXME website icons, descriptions, metadata */}
+                    {/* TODO Lato Font and refactor css*/}
                     <Menu style = {{top: '0vh'}}/>
                     <Introduction style={{top: '0vh'}}/>
                     <About style={{top: '100vh'}}/>

@@ -19,7 +19,7 @@ html::-webkit-scrollbar {
     display: none; /* Chrome */
 }
 
-body{
+body {
     margin: 0px;
     padding: 0px;
     background-color: var(--a);
