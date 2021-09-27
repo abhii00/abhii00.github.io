@@ -1,5 +1,5 @@
 import React from 'react';
-import rkticon from '../assets/icons/rkt-blue.png'
+import rkticon from '../assets/icons/rktblue.svg'
 
 class SideLine extends React.Component{
     render(){
@@ -11,8 +11,8 @@ class SideLine extends React.Component{
             main_class = 'sideline-right';
         }
         return(
-            <div className={main_class}> {/* TODO add colour changer for sideline and icon, perhaps deeper blue */}
-                <img src={rkticon} alt='' className='sideline-icon' mask-image={rkticon}></img>
+            <div className={main_class}>
+                <img src={rkticon} alt='' className='sideline-icon'></img>
                 <div className='sideline-line'></div>
             </div>
         )
