@@ -6,21 +6,34 @@ class ProjectsGrid extends React.Component {
         super(props);
 
         this.state = {
-            projectTiles: []
+            projectTiles: [],
+            descriptionShown: false,
+            descriptionProjectID: 0
         }
     }
 
     componentDidMount(){
         var projectTiles = [];
         for (var i = 0; i < 6; i++){
-            projectTiles.push(<ProjectTile/>);
+            projectTiles.push(<ProjectTile projectID={i} renderDescription={this.renderDescription}/>);
             console.log(i);
         }
         this.setState({projectTiles: projectTiles});
     }
 
-    /* TODO on click description
-    TODO project import
+    renderDescription = (e) => {
+        this.setState({
+            descriptionShown: true,
+            descriptionProjectID: JSON.parse(e.currentTarget.getAttribute('projectID'))
+        });
+        
+    }
+
+    unrenderDescription = () => {
+        this.setState({descriptionShown: false});
+    }
+
+    /*TODO project import
     */
 
     render(){
@@ -32,6 +45,10 @@ class ProjectsGrid extends React.Component {
                 <div className='projectsgrid-row-container'>
                     {this.state.projectTiles}
                 </div>
+                {
+                    this.state.descriptionShown &&
+                    <div onClick={this.unrenderDescription} className='projectsgrid-description-container'/>
+                }
             </div>
         )
     }

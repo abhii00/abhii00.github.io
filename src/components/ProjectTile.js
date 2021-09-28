@@ -5,7 +5,7 @@ class ProjectTile extends React.Component {
 
     render(){
         return(
-            <div className='projecttile-container'/>
+            <div onClick={this.props.renderDescription} className='projecttile-container'/>
         )
     }
 }
