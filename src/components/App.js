@@ -5,6 +5,7 @@ import { Link } from 'react-scroll';
 import { Menu, Section, ProjectsGrid } from './components.js';
 import { setupScene } from './visuals/graphics.js';
 import { animation1 } from './visuals/animations.js';
+import experienceProjects from '../assets/projects/experience.json';
 
 class App extends React.Component{
     componentDidMount() {
@@ -15,7 +16,7 @@ class App extends React.Component{
     }
 
     /*TODO project JSONs
-    TODO contact us
+    TODO contact
 
     TODO on load animations
 
@@ -50,11 +51,11 @@ class App extends React.Component{
                 </Section>
 
                 <Section title='EXPERIENCE AND EDUCATION' id='experience' sidebarShown={false}>
-                    <ProjectsGrid/>
+                    <ProjectsGrid projectsJSON={experienceProjects}/>
                 </Section>
 
                 <Section title='PORTFOLIO' id='portfolio' sidebarShown={false}>
-                    <ProjectsGrid/>
+                    <ProjectsGrid projectsJSON={experienceProjects}/>
                 </Section>
 
                 <Section title='CONTACT' id='contact' sidebarLeft={false}/>

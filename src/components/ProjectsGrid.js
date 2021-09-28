@@ -14,9 +14,9 @@ class ProjectsGrid extends React.Component {
 
     componentDidMount(){
         var projectTiles = [];
-        for (var i = 0; i < 6; i++){
-            projectTiles.push(<ProjectTile projectID={i} renderDescription={this.renderDescription}/>);
-            console.log(i);
+        for (var i = 0; i < this.props.projectsJSON.length; i++){
+            var projectJSON = this.props.projectsJSON[i];
+            projectTiles.push(<ProjectTile projectID={projectJSON.id} projectImage={projectJSON.pictures.tile} renderDescription={this.renderDescription}/>);
         }
         this.setState({projectTiles: projectTiles});
     }
@@ -39,9 +39,6 @@ class ProjectsGrid extends React.Component {
     render(){
         return(
             <div className='projectsgrid-container'>
-                <div className='projectsgrid-row-container'>
-                    {this.state.projectTiles}
-                </div>
                 <div className='projectsgrid-row-container'>
                     {this.state.projectTiles}
                 </div>
