@@ -14,12 +14,11 @@ class App extends React.Component{
     }
 
     /*TODO project JSONs
-    TODO menu
 
-    TODO formatting of introduction text
     TODO on load animations
 
     TODO dynamic resizing of canvas
+    FIXME glitchy reflections at boundary
     TODO responsiveness and mobile layout*/
 
     render(){
@@ -30,14 +29,14 @@ class App extends React.Component{
                     <div className='introduction-animation-container' ref={ref => (this.mount = ref)}/>
                     <div className='introduction-darkfilter'/>
                     <div className='introduction-text-container'>
-                        <div className='introduction-text-hi'>Hi, I'm</div>
-                        <div className='introduction-text-name'>Abhijit Pandit</div>
-                        <div className='introduction-text-tagline'>An Aspiring Space Engineer and Creative</div>
+                        <div className='introduction-text-hi'>HI, I'M</div>
+                        <div className='introduction-text-name'>ABHIJIT PANDIT</div>
+                        <div className='introduction-text-tagline'>AN ASPIRING SPACE ENGINEER</div>
                     </div>
                     <ExpandMore className='introduction-icon'/>
                 </Section>
 
-                <Section title='About' id='about'>
+                <Section title='ABOUT' id='about'>
                     <div className='about-container'>
                         <div className='about-image'></div>
                         <div className='about-text'>
@@ -46,15 +45,15 @@ class App extends React.Component{
                     </div>
                 </Section>
 
-                <Section title='Experience and Education' id='experience' sidebarLeft={false}>
+                <Section title='EXPERIENCE AND EDUCATION' id='experience' sidebarShown={false}>
                     <ProjectsGrid/>
                 </Section>
 
-                <Section title='Portfolio' id='portfolio'>
+                <Section title='PORTFOLIO' id='portfolio' sidebarShown={false}>
                     <ProjectsGrid/>
                 </Section>
 
-                <Section title='Contact' id='contact' sidebarLeft={false}/>
+                <Section title='CONTACT' id='contact' sidebarLeft={false}/>
             </div>
         )
     }

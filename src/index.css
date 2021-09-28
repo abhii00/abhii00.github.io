@@ -22,6 +22,7 @@ body {
     background-color: var(--a);
     color: white;
     font-family: 'Lato', sans-serif;
+    font-weight: 300;
 
     margin: 0;
     padding: 0;
@@ -47,13 +48,13 @@ body {
 
     .section-sidebar-container-left {
         position: absolute;
-        top: 63vh;
+        top: 20vh;
         left: 10vw;
     }
 
     .section-sidebar-container-right {
         position: absolute;
-        top: 63vh;
+        top: 20vh;
         left: 90vw;
     }
 
@@ -64,7 +65,7 @@ body {
         .section-sidebar-line {
             border-left: 1px solid var(--d);
             
-            height: 29vh;
+            height: 53vh;
             margin-left: 50%;
         }
 
@@ -103,12 +104,16 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
     
+    position: absolute;
+    z-index: 1;
+
     height: 5vh;
     width: 100vw;
 }
 
     .menu-icon {
         font-size: 5vh;
+        font-weight: 100;
 
         width: 5vw;
         margin-left: 1vw;
@@ -145,6 +150,12 @@ body {
     height: 100vh;
 }
 
+.introduction-animation-container canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 .introduction-darkfilter {
     background-color: black;
     opacity: 0.8;
@@ -156,15 +167,17 @@ body {
 .introduction-text-container {
     display: flex;
     flex-flow: column nowrap;
+    
+    margin-top: 10%;
 }
 
     .introduction-text-hi {
-        font-size: 4vh;
+        font-size: 6vh;
         text-align: center;
     }
 
     .introduction-text-name {
-        font-size: 20vh;
+        font-size: 18vh;
         text-align: center;
     }
 

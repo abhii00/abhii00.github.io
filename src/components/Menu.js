@@ -8,16 +8,16 @@ class Menu extends React.Component{
                 <div className='menu-icon'>AP</div>
                 <div className='menu-links-container'>
                     <Link to='about'>
-                        <div className='menu-link'>About</div>
+                        <div className='menu-link'>ABOUT</div>
                     </Link>
-                    <Link to='Experience and Education'>
-                        <div className='menu-link'>Experience and Education</div>
+                    <Link to='experience'>
+                        <div className='menu-link'>EXPERIENCE AND EDUCATION</div>
                     </Link>
                     <Link to='portfolio'>
-                        <div className='menu-link'>Portfolio</div>
+                        <div className='menu-link'>PORTFOLIO</div>
                     </Link>
                     <Link to='contact'>
-                        <div className='menu-link'>Contact</div>
+                        <div className='menu-link'>CONTACT</div>
                     </Link>
                 </div>
             </div>
