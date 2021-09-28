@@ -1,11 +1,9 @@
 import React from 'react';
 
 class ProjectTile extends React.Component {
-    /* TODO image/name functionality */
-
     render(){
         return(
-            <img src={this.props.projectImage} alt='' onClick={this.props.renderDescription} className='projecttile-container'/>
+            <img src={require('../assets/projects/'+this.props.imageUrl).default} alt='' onClick={this.props.renderDescription} projectID={this.props.projectID} className='projecttile-container'/>
         )
     }
 }

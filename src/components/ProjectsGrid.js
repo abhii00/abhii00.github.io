@@ -1,5 +1,7 @@
 import React from 'react';
 import { ProjectTile } from './components.js';
+import { OpenInNew } from '@material-ui/icons';
+import githubIcon from '../assets/icons/github.png';
 
 class ProjectsGrid extends React.Component {
     constructor(props){
@@ -8,7 +10,8 @@ class ProjectsGrid extends React.Component {
         this.state = {
             projectRows: [],
             descriptionShown: false,
-            descriptionProjectID: 0
+            descriptionProjectID: 0,
+            descriptionProject: null
         }
 
         this.consts = {
@@ -21,7 +24,7 @@ class ProjectsGrid extends React.Component {
         var projectTiles = [];
         for (var i = 0; i < this.props.projectsJSON.length; i++){
             var projectJSON = this.props.projectsJSON[i];
-            projectTiles.push(<ProjectTile projectID={projectJSON.id} projectImage={projectJSON.pictures.tile} renderDescription={this.renderDescription}/>);
+            projectTiles.push(<ProjectTile projectID={i} imageUrl={projectJSON.pictures.tile} renderDescription={this.renderDescription}/>);
             if ((i+1) % this.consts.projectsPerLine === 0 || i === this.props.projectsJSON.length - 1){
                 projectRows.push(<div className='projectsgrid-row-container'>{projectTiles}</div>);
                 projectTiles = [];
@@ -33,17 +36,10 @@ class ProjectsGrid extends React.Component {
     renderDescription = (e) => {
         this.setState({
             descriptionShown: true,
-            descriptionProjectID: JSON.parse(e.currentTarget.getAttribute('projectID'))
+            descriptionProjectID: JSON.parse(e.currentTarget.getAttribute('projectID')),
+            descriptionProject: this.props.projectsJSON[JSON.parse(e.currentTarget.getAttribute('projectID'))]
         });
-        
     }
-
-    unrenderDescription = () => {
-        this.setState({descriptionShown: false});
-    }
-
-    /*TODO project import
-    */
 
     render(){
         return(
@@ -51,7 +47,25 @@ class ProjectsGrid extends React.Component {
                 {this.state.projectRows}
                 {
                     this.state.descriptionShown &&
-                    <div onClick={this.unrenderDescription} className='projectsgrid-description-container'/>
+                    <div className='projectsgrid-description-container'>
+                        <div className='projectsgrid-description-title'>{this.state.descriptionProject.name}</div>
+                        <div className='projectsgrid-description-content-container'>
+                            <div className='projectsgrid-description-leftcol-container'>
+                                <div className='projectsgrid-description-text'>{this.state.descriptionProject.description}</div>
+                                <div className='projectsgrid-description-tech'>{this.state.descriptionProject.techs}</div>
+                                <div className='projectsgrid-description-links-container'>
+                                    <a href={this.state.descriptionProject.urls.prod} target="_blank" rel="noopener noreferrer" className='projectsgrid-description-link'>
+                                        <OpenInNew className='projectsgrid-description-icon-new'/>   
+                                    </a>
+                                    <a href={this.state.descriptionProject.urls.src} target="_blank" rel="noopener noreferrer" className='projectsgrid-description-link'>
+                                        <img src={githubIcon} className='projectsgrid-description-icon-github' alt=''/>
+                                    </a>
+                                </div>
+                            </div>
+                            <img src={require('../assets/projects/'+this.state.descriptionProject.pictures.tile).default} alt='' className='projectsgrid-description-image'/>
+                        </div>
+                        
+                    </div>
                 }
             </div>
         )
