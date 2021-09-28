@@ -18,7 +18,6 @@ class App extends React.Component{
 
     TODO formatting of introduction text
     TODO on load animations
-    TODO on hover animations
 
     TODO dynamic resizing of canvas
     TODO responsiveness and mobile layout*/

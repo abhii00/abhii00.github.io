@@ -89,7 +89,13 @@ body {
 
     height: 15vw;
     width: 15vw;
+
+    transition: transform 0.4s;
 }
+
+    .projecttile-container:hover {
+        transform: scale(1.1);
+    }
 
 /*Introduction*/
 .introduction-animation-container {
@@ -134,7 +140,15 @@ body {
     top: 95vh;
 
     margin-left: 49%;
+
+    transition: transform 0.4s;
+    transition: color 0.4s;
 }
+
+    .introduction-icon:hover {
+        transform: scale(2.5);
+        color: var(--d);
+    }
 
 /*About*/
 .about-container {
