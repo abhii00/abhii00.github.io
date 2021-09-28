@@ -19,10 +19,17 @@ class ProjectsGrid extends React.Component {
         this.setState({projectTiles: projectTiles});
     }
 
+    /* TODO on click description
+    TODO project import
+    */
+
     render(){
         return(
             <div className='projectsgrid-container'>
-                <div className='projectsgrid-rowcontainer'>
+                <div className='projectsgrid-row-container'>
+                    {this.state.projectTiles}
+                </div>
+                <div className='projectsgrid-row-container'>
                     {this.state.projectTiles}
                 </div>
             </div>
