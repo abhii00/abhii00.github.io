@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 :root{
     --a: #050713;
@@ -23,180 +22,16 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: var(--a);
-    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-family: 'Lato', sans-serif;
 }
 
+/*Section*/
 .section {
-    position: absolute;
+    box-sizing: border-box;
+    border: 2px solid white;
     height: 100vh;
-    width: 100%;
 }
-
-.section-title {
-    color: white;
-    font-size: 6vh;
-
-    position: absolute;
-    top: 20%;
-    width: 100%;
-    text-align: center;
-}
-
-/*Menu*/
-.menu {
-    background-color: var(--a);
-    
-    position: absolute;
-    width: 100%;
-    height: 5vh;
-    z-index: 100;
-}
-
-.menu-name {
-    color: white;
-    font-size: 5vh;
-    height: 5vh;
-    
-    width: 9vw;
-    margin-left: 1vw;
-    display: inline-block;
-}
-
-.menu-links {
-    width: 48vw;
-    height: 5vh;
-    margin-left: 40vw;
-
-    display: inline-block;
-}
-
-.menu-link {
-    color: white;
-    font-size: 1.2vw;
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    vertical-align: middle;
-
-    height: 5vh;
-    display: inline-block;
-    padding-left: 5vw;
-
-    cursor: pointer;
-
-    transition: transform 0.4s;
-    transition: color 0.4s;
-}
-
-.menu-link:hover {
-    color: var(--d);
-    transform: scale(1.1);
-}
-
-/*Introduction*/
-.introduction-hi {
-    color: white;
-    font-size: 4vh;
-
-	position: absolute;
-    top: 46%;
-	width: 100%;
-    text-align: center;
-	z-index: 100;
-	display: inline-block;
-}
-
-.introduction-name {
-    color: white;
-    font-size: 25vh;
-
-	position: absolute;
-    top: 45%;
-	width: 100%;
-	text-align: center;
-	z-index: 100;
-	display: inline-block;
-}
-
-.introduction-tagline {
-    color: white;
-    font-size: 8vh;
-
-	position: absolute;
-    top: 70%;
-	width: 100%;
-    text-align: center;
-	z-index: 100;
-	display: inline-block;
-}
-
-.introduction-darkeningfilter {
-    background-color: var(--a);
-    opacity: 0.15;
-
-	position: absolute;
-    top: 0%;
-	width: 100%;
-    height: 100%;
-	z-index: 5;
-	display: inline-block;
-}
-
-.introduction-learnmorecontainer {
-    color: white;
-    font-size: 3vh;
-    
-	position: absolute;
-    top: 89vh;
-    padding-top: 2vh;
-	width: 100%;
-    height: 9%;
-	text-align: center;
-	z-index: 100;
-	display: inline-block;
-
-    cursor: pointer;
-
-    transition: transform 0.4s;
-    transition: color 0.4s;
-}
-
-.introduction-learnmore {
-    transform: scale(2);
-}
-
-.introduction-learnmorecontainer:hover {
-    color: var(--d);
-    transform: scale(1.1);
-}
-
-/*About*/
-.about-text {
-    color: white;
-    font-size: 2.4vh;
-    font-family: 'Lato', sans-serif;
-
-    position: absolute;
-    top: 27%;
-    left: 50%;
-    width: 30%;
-    text-align: justify;
-}
-
-.about-image {
-    border: solid 2px white;
-
-    position: absolute;
-    top: 29%;
-    left: 25%;
-    width: 20vw;
-    height: 20vw;
-}
-
-/*Experience*/
-
-/*Portfolio*/
-
-/*Contact*/
 
 /*Project Grid*/
 .projectgrid {

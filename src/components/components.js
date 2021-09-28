@@ -1,22 +1,14 @@
 import App from './App.js';
-import Menu from './Menu.js';
 import Introduction from './Introduction.js';
-import About from './About.js';
-import Experience from './Experience.js';
-import Portfolio from './Portfolio.js';
-import Contact from './Contact.js';
+import Section from './Section.js'
 import ProjectGrid from './ProjectGrid.js';
 import Project from './Project.js';
 import SideLine from './SideLine.js';
 
 export {
     App,
-    Menu,
     Introduction,
-    About,
-    Experience,
-    Portfolio,
-    Contact,
+    Section,
     ProjectGrid,
     Project,
     SideLine
