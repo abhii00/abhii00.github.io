@@ -14,11 +14,13 @@ class App extends React.Component{
     }
 
     /*TODO project JSONs
+    TODO contact us
 
     TODO on load animations
 
     TODO dynamic resizing of canvas
     FIXME glitchy reflections at boundary
+    FIXME darkening filter
     TODO responsiveness and mobile layout*/
 
     render(){
