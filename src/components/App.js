@@ -1,7 +1,7 @@
 import React from 'react';
 import * as THREE from 'three';
 import { ExpandMore } from '@material-ui/icons';
-import { Section, ProjectsGrid } from './components.js';
+import { Menu, Section, ProjectsGrid } from './components.js';
 import { setupScene } from './visuals/graphics.js';
 import { animation1 } from './visuals/animations.js';
 
@@ -25,6 +25,7 @@ class App extends React.Component{
     render(){
         return(
             <div className='app'>
+                <Menu/>
                 <Section id='introduction' titleShown={false} sidebarShown={false}>
                     <div className='introduction-animation-container' ref={ref => (this.mount = ref)}/>
                     <div className='introduction-darkfilter'/>
