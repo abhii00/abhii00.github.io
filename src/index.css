@@ -161,6 +161,7 @@ body {
 /*Introduction*/
 .introduction-animation-container {
     position: absolute;
+    top: 0;
     z-index: -1;
 
     height: 100vh;
@@ -173,11 +174,14 @@ body {
 }
 
 .introduction-darkfilter {
-    background-color: black;
-    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.35);
 
     position: absolute;
-    z-index: 0;
+    top: 0;
+    z-index: -1;
+
+    height: 100vh;
+    width: 100vw;
 }
 
 .introduction-text-container {
