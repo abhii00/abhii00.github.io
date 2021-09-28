@@ -19,73 +19,76 @@ html::-webkit-scrollbar {
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
     background-color: var(--a);
     color: white;
     font-family: 'Lato', sans-serif;
+
+    margin: 0;
+    padding: 0;
 }
 
 /*Section*/
-.section {
+.section-container {
     box-sizing: border-box;
     border: 2px solid white;
+
+    position: relative;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
     height: 100vh;
 }
 
-/*Project Grid*/
-.projectgrid {
-    position: absolute;
-    width: 100%;
+    .section-title {
+        font-size: 5vh;
+        text-align: center;
+        
+        margin-bottom: 2vh;
+    }
+
+    .section-sidebar-container-left {
+        position: absolute;
+        top: 63vh;
+        left: 10vw;
+    }
+
+    .section-sidebar-container-right {
+        position: absolute;
+        top: 63vh;
+        left: 90vw;
+    }
+
+        .section-sidebar-icon {
+            height: 7vh;
+        }
+
+        .section-sidebar-line {
+            border-left: 1px solid var(--d);
+            
+            height: 29vh;
+            margin-left: 50%;
+        }
+
+/*ProjectsGrid*/
+.projectsgrid-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+
+    margin-bottom: 2vh;
 }
 
-.projectgrid-description {
-    background-color: white;
-    height: 30vw;
-    width: 100vw;
-    position: relative;
-    top: 20vw;
-}
+    .projectsgrid-rowcontainer {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+    }
 
-/*Project*/
-.project {
+/*ProjectTile*/
+.projecttile-container {
     background-color: white;
     height: 15vw;
     width: 15vw;
-    border-radius: 1%;
-    transition: transform 0.4s;
-
-    position: absolute;
-}
-
-.project:hover {
-    transform: scale(1.1);
-}
-
-/*SideLine*/
-.sideline-left {
-    height: 80vh;
-    width: 5vw;
-    position: absolute;
-    left: 5vw;
-    top: 10vh;
-}
-
-.sideline-right {
-    height: 80vh;
-    width: 5vw;
-    position: absolute;
-    left: 92vw;
-    top: 10vh;
-}
-
-.sideline-icon {
-    height: 8vh;
-}
-
-.sideline-line {
-    height: 60vh;
-    width: 5vw;
-    border-left: 2px solid var(--d);
-    margin-left: 1.5vw;
 }
