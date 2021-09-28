@@ -15,8 +15,12 @@ class App extends React.Component{
         animation1(scene, camera, renderer);
     }
 
-    /*TODO contact
-    TODO Experiences/Projects/GitHub
+    /*TODO contact section
+    TODO create template portfolio
+    TODO write portfolio descriptions, update GitHubs, make public
+    TODO create template experiences
+    TODO write experience descriptions
+    TODO write about section
 
     TODO on load animations
     TODO streamline aesthetics
@@ -51,11 +55,11 @@ class App extends React.Component{
                     </div>
                 </Section>
 
-                <Section title='EXPERIENCE AND EDUCATION' id='experience' sidebarShown={false}>
+                <Section title='EXPERIENCE AND EDUCATION' id='experience' sidebarLeft={false}>
                     <ProjectsGrid projectsJSON={portfolioProjects}/>
                 </Section>
 
-                <Section title='PORTFOLIO' id='portfolio' sidebarShown={false}>
+                <Section title='PORTFOLIO' id='portfolio'>
                     <ProjectsGrid projectsJSON={portfolioProjects}/>
                 </Section>
 
