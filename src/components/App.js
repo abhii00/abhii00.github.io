@@ -1,6 +1,7 @@
 import React from 'react';
 import * as THREE from 'three';
 import { ExpandMore } from '@material-ui/icons';
+import { Link } from 'react-scroll';
 import { Menu, Section, ProjectsGrid } from './components.js';
 import { setupScene } from './visuals/graphics.js';
 import { animation1 } from './visuals/animations.js';
@@ -20,7 +21,6 @@ class App extends React.Component{
 
     TODO dynamic resizing of canvas
     FIXME glitchy reflections at boundary
-    FIXME darkening filter
     TODO responsiveness and mobile layout*/
 
     render(){
@@ -35,7 +35,9 @@ class App extends React.Component{
                         <div className='introduction-text-name'>ABHIJIT PANDIT</div>
                         <div className='introduction-text-tagline'>AN ASPIRING SPACE ENGINEER</div>
                     </div>
-                    <ExpandMore className='introduction-icon'/>
+                    <Link to='about'>
+                        <ExpandMore className='introduction-icon'/>
+                    </Link>
                 </Section>
 
                 <Section title='ABOUT' id='about'>
