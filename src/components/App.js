@@ -16,8 +16,10 @@ class App extends React.Component{
     }
 
     /*TODO contact
+    TODO Experiences/Projects/GitHub
 
     TODO on load animations
+    TODO streamline aesthetics
 
     TODO dynamic resizing of canvas
     FIXME glitchy reflections at boundary
@@ -44,7 +46,7 @@ class App extends React.Component{
                     <div className='about-container'>
                         <div className='about-image'></div>
                         <div className='about-text'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt rutrum dictum. Vivamus posuere volutpat consequat. Cras leo lorem, fermentum sed lacus sit amet, faucibus molestie magna. Donec non nisl sit amet turpis dapibus pretium et nec mauris. Nulla porttitor ligula magna, eget pretium tortor laoreet non. Nam in ipsum auctor elit molestie convallis. Proin arcu mauris, dignissim eu purus id, posuere convallis tellus. Curabitur gravida dolor vitae enim ultrices, condimentum pretium nunc congue. Pellentesque sapien libero, congue quis mollis in, tempus molestie leo. Quisque sed sodales odio, et efficitur mi. Nunc eget condimentum diam. Aenean mattis venenatis justo, sit amet ultricies lectus ultricies in. Sed nisl turpis, euismod non consequat nec, porttitor vel lorem. Quisque imperdiet, nibh nec tristique gravida, dolor turpis porttitor lorem, vel facilisis tellus mi non ante. In lacus nulla, efficitur at lectus ac, fringilla accumsan lacus.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt rutrum dictum. Vivamus posuere volutpat consequat. Cras leo lorem, fermentum sed lacus sit amet, faucibus molestie magna. Donec non nisl sit amet turpis dapibus pretium et nec mauris. Nulla porttitor ligula magna, eget pretium tortor laoreet non. Nam in ipsum auctor elit molestie convallis. Proin arcu mauris, dignissim eu purus id, posuere convallis tellus. Curabitur gravida dolor vitae enim ultrices, condimentum pretium nunc congue. Pellentesque sapien libero, congue quis mollis in, tempus molestie leo. Quisque sed sodales odio, et efficitur mi. Nunc eget condimentum diam. Aenean mattis venenatis justo, sit amet ultricies lectus ultricies in. Sed nisl turpis, euismod non consequat nec, porttitor vel lorem. 
                         </div>
                     </div>
                 </Section>
