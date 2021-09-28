@@ -15,8 +15,7 @@ class App extends React.Component{
         animation1(scene, camera, renderer);
     }
 
-    /*TODO project JSONs
-    TODO contact
+    /*TODO contact
 
     TODO on load animations
 
