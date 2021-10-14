@@ -10,6 +10,9 @@ class Menu extends React.Component{
                     <Link to='about'>
                         <div className='menu-link'>ABOUT</div>
                     </Link>
+                    <Link to='featured'>
+                        <div className='menu-link'>FEATURED</div>
+                    </Link>
                     <Link to='experience'>
                         <div className='menu-link'>EXPERIENCE AND EDUCATION</div>
                     </Link>

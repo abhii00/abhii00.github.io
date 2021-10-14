@@ -2,9 +2,11 @@ import React from 'react';
 import * as THREE from 'three';
 import { ExpandMore } from '@material-ui/icons';
 import { Link } from 'react-scroll';
-import { Menu, Section, ProjectsGrid } from './components.js';
+import { Menu, Section, Slideshow, ProjectsGrid } from './components.js';
 import { setupScene } from './visuals/graphics.js';
 import { animation1 } from './visuals/animations.js';
+import featuredProjects from '../assets/projects/featured.json';
+import experienceProjects from '../assets/projects/experience.json';
 import portfolioProjects from '../assets/projects/portfolio.json';
 
 class App extends React.Component{
@@ -16,14 +18,13 @@ class App extends React.Component{
     }
 
     /*TODO contact section
-    TODO featured projects section
-    TODO create template portfolio
+    TODO create template portfolio/experience/featured
     TODO write portfolio descriptions, update GitHubs, make public
     TODO create template experiences
     TODO write experience descriptions
     TODO write about section
 
-    TODO on load animations
+    TODO on load/on slide animations
     TODO streamline aesthetics
 
     TODO dynamic resizing of canvas
@@ -56,8 +57,12 @@ class App extends React.Component{
                     </div>
                 </Section>
 
+                <Section id='featured' titleShown={false} sidebarShown={false}>
+                    <Slideshow projectsJSON={featuredProjects}/>
+                </Section>
+
                 <Section title='EXPERIENCE AND EDUCATION' id='experience' sidebarLeft={false}>
-                    <ProjectsGrid projectsJSON={portfolioProjects}/>
+                    <ProjectsGrid projectsJSON={experienceProjects}/>
                 </Section>
 
                 <Section title='PORTFOLIO' id='portfolio'>
