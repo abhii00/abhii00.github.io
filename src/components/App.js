@@ -16,6 +16,7 @@ class App extends React.Component{
     }
 
     /*TODO contact section
+    TODO featured projects section
     TODO create template portfolio
     TODO write portfolio descriptions, update GitHubs, make public
     TODO create template experiences

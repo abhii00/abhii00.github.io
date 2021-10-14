@@ -41,6 +41,8 @@ class ProjectsGrid extends React.Component {
         });
     }
 
+    /* TODO Add cross */
+
     render(){
         return(
             <div className='projectsgrid-container'>
