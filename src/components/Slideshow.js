@@ -31,19 +31,24 @@ class Slideshow extends React.Component{
     render(){ 
         return(
             <React.Fragment>
-                <img src={require('../assets/projects/'+this.state.project.pictures.tile).default} className = 'slideshow-background' alt='' />
+                <img src={require('../assets/projects/'+this.state.project.pictures.tile).default} alt='' className='slideshow-background'/>
                 <div className='slideshow-shadow'/>
-                <div className='slideshow-content-container'>
-                    <div className='slideshow-title'>{this.state.project.name}</div>
-                    <div className='slideshow-text'>{this.state.project.description}</div>
-                    <div className='slideshow-tech'>{this.state.project.techs}</div>
-                    <div className='slideshow-links-container'>
-                        <a href={this.state.project.urls.prod} target="_blank" rel="noopener noreferrer" className='slideshow-link'>
-                            <OpenInNew className='slideshow-icon-new'/>   
-                        </a>
-                        <a href={this.state.project.urls.src} target="_blank" rel="noopener noreferrer" className='slideshow-link'>
-                            <img src={githubIcon} className='slideshow-icon-github' alt=''/>
-                        </a>
+                <div className='slideshow-box-container'>
+                    <div className='slideshow-content-container'>
+                        <div className='slideshow-leftcol-container'>
+                            <div className='slideshow-title'>{this.state.project.name}</div>
+                            <div className='slideshow-text'>{this.state.project.description}</div>
+                            <div className='slideshow-tech'>{this.state.project.techs}</div>
+                            <div className='slideshow-links-container'>
+                                <a href={this.state.project.urls.prod} target="_blank" rel="noopener noreferrer" className='slideshow-link'>
+                                    <OpenInNew className='slideshow-icon-new'/>   
+                                </a>
+                                <a href={this.state.project.urls.src} target="_blank" rel="noopener noreferrer" className='slideshow-link'>
+                                    <img src={githubIcon} className='slideshow-icon-github' alt=''/>
+                                </a>
+                            </div>
+                        </div>
+                        <img src={require('../assets/projects/'+this.state.project.pictures.tile).default} alt='' className='slideshow-image'/>
                     </div>
                 </div>
             </React.Fragment>

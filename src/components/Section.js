@@ -1,5 +1,5 @@
 import React from 'react';
-import rktIcon from '../assets/icons/rktblue.svg';
+import rktIcon from '../assets/icons/rktteal.svg';
 
 class Section extends React.Component {
     render(){

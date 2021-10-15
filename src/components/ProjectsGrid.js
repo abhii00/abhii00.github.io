@@ -24,7 +24,7 @@ class ProjectsGrid extends React.Component {
         var projectTiles = [];
         for (var i = 0; i < this.props.projectsJSON.length; i++){
             var projectJSON = this.props.projectsJSON[i];
-            projectTiles.push(<ProjectTile projectID={i} imageUrl={projectJSON.pictures.tile} renderDescription={this.toggleDescription}/>);
+            projectTiles.push(<ProjectTile projectID={i} imageUrl={projectJSON.pictures.tile} renderDescription={this.renderDescription}/>);
             if ((i+1) % this.consts.projectsPerLine === 0 || i === this.props.projectsJSON.length - 1){
                 projectRows.push(<div className='projectsgrid-row-container'>{projectTiles}</div>);
                 projectTiles = [];
@@ -33,11 +33,17 @@ class ProjectsGrid extends React.Component {
         this.setState({projectRows: projectRows});
     }
 
-    toggleDescription = (e) => {
+    renderDescription = (e) => {
         this.setState({
-            descriptionShown: !this.state.descriptionShown,
+            descriptionShown: true,
             descriptionProjectID: JSON.parse(e.currentTarget.getAttribute('projectID')),
             descriptionProject: this.props.projectsJSON[JSON.parse(e.currentTarget.getAttribute('projectID'))]
+        });
+    }
+
+    unrenderDescription = (e) => {
+        this.setState({
+            descriptionShown: false,
         });
     }
 
@@ -61,7 +67,7 @@ class ProjectsGrid extends React.Component {
                                         <img src={githubIcon} className='projectsgrid-description-icon-github' alt=''/>
                                     </a>
                                 </div>
-                                <Close onClick={this.toggleDescription} className='projectsgrid-description-icon-close'/>
+                                <Close onClick={this.unrenderDescription} className='projectsgrid-description-icon-close'/>
                             </div>
                             <img src={require('../assets/projects/'+this.state.descriptionProject.pictures.tile).default} alt='' className='projectsgrid-description-image'/>
                         </div>
