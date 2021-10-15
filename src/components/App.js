@@ -24,7 +24,6 @@ class App extends React.Component{
     TODO write experience descriptions
     TODO write about section
 
-    TODO on load animations
     TODO slider animations
     TODO streamline aesthetics
 

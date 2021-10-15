@@ -43,7 +43,7 @@ class ProjectsGrid extends React.Component {
 
     unrenderDescription = (e) => {
         this.setState({
-            descriptionShown: false,
+            descriptionShown: false
         });
     }
 
@@ -51,30 +51,27 @@ class ProjectsGrid extends React.Component {
         return(
             <div className='projectsgrid-container'>
                 {this.state.projectRows}
-                {
-                    this.state.descriptionShown &&
-                    <div className='projectsgrid-description-container'>
-                        <div className='projectsgrid-description-content-container'>
-                            <div className='projectsgrid-description-leftcol-container'>
-                                <div className='projectsgrid-description-title'>{this.state.descriptionProject.name}</div>
-                                <div className='projectsgrid-description-institution'>{this.state.descriptionProject.institution}</div>
-                                <div className='projectsgrid-description-date'>{this.state.descriptionProject.date}</div>
-                                <div className='projectsgrid-description-text'>{this.state.descriptionProject.description}</div>
-                                <div className='projectsgrid-description-tech'>{this.state.descriptionProject.techs}</div>
-                                <div className='projectsgrid-description-links-container'>
-                                    <a href={this.state.descriptionProject.urls.prod} target="_blank" rel="noopener noreferrer" className='projectsgrid-description-link'>
-                                        <OpenInNew className='projectsgrid-description-icon-new'/>   
-                                    </a>
-                                    <a href={this.state.descriptionProject.urls.src} target="_blank" rel="noopener noreferrer" className='projectsgrid-description-link'>
-                                        <img src={githubIcon} className='projectsgrid-description-icon-github' alt=''/>
-                                    </a>
-                                </div>
-                                <Close onClick={this.unrenderDescription} className='projectsgrid-description-icon-close'/>
+                <div className={`projectsgrid-description-container${this.state.descriptionShown ? ' visible' : ''}`}>
+                    <div className='projectsgrid-description-content-container'>
+                        <div className='projectsgrid-description-leftcol-container'>
+                            <div className='projectsgrid-description-title'>{this.state.descriptionShown && this.state.descriptionProject.name}</div>
+                            <div className='projectsgrid-description-institution'>{this.state.descriptionShown && this.state.descriptionProject.institution}</div>
+                            <div className='projectsgrid-description-date'>{this.state.descriptionShown && this.state.descriptionProject.date}</div>
+                            <div className='projectsgrid-description-text'>{this.state.descriptionShown && this.state.descriptionProject.description}</div>
+                            <div className='projectsgrid-description-tech'>{this.state.descriptionShown && this.state.descriptionProject.techs}</div>
+                            <div className='projectsgrid-description-links-container'>
+                                <a href={this.state.descriptionShown && this.state.descriptionProject.urls.prod} target="_blank" rel="noopener noreferrer" className='projectsgrid-description-link'>
+                                    {this.state.descriptionShown ? <OpenInNew className='projectsgrid-description-icon-new'/> : ''}  
+                                </a>
+                                <a href={this.state.descriptionShown && this.state.descriptionProject.urls.src} target="_blank" rel="noopener noreferrer" className='projectsgrid-description-link'>
+                                    <img src={this.state.descriptionShown && githubIcon} className='projectsgrid-description-icon-github' alt=''/>
+                                </a>
                             </div>
-                            <img src={require('../assets/projects/'+this.state.descriptionProject.pictures.square).default} alt='' className='projectsgrid-description-image'/>
+                            {this.state.descriptionShown ? <Close onClick={this.unrenderDescription} className='projectsgrid-description-icon-close'/> : ''}
                         </div>
+                        <img src={this.state.descriptionShown && require('../assets/projects/'+ this.state.descriptionProject.pictures.square).default} alt='' className={`projectsgrid-description-image${this.state.descriptionShown ? ' visible' : ''}`}/>
                     </div>
-                }
+                </div>
             </div>
         )
     }

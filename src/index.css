@@ -170,6 +170,16 @@ body {
                     height: 3vh;
                 }
 
+/*ProjectsGrid Preloaded*/
+.projectsgrid-description-container {
+    height: 0vh;
+    opacity: 0;
+}
+
+.projectsgrid-description-image {
+    height: 0vh;
+}
+
 /*ProjectsGrid*/
 .projectsgrid-container {
     display: flex;
@@ -185,13 +195,16 @@ body {
         margin-bottom: 2vh;
     }
 
-    .projectsgrid-description-container {
+    .projectsgrid-description-container.visible {
         background-color: var(--c);
         box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 
-        height: 40vh;
+        height: 37vh;
         width: 70vw;
         margin-left: 10vw;
+
+        opacity: 1;
+        transition: height 0.4s, opacity 0.4s;
     }
 
         .projectsgrid-description-content-container {
@@ -200,13 +213,15 @@ body {
             justify-content: space-between;
         }
 
-            .projectsgrid-description-image {
+            .projectsgrid-description-image.visible{
                 box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 
-                height: 20vw;
-                width: 20vw;
+                height: 18vw;
+                width: 18vw;
                 margin-left: 5vw;
                 margin-top: 2vh;
+
+                transition: height 0.4s;
             }
 
             .projectsgrid-description-leftcol-container {
@@ -214,6 +229,7 @@ body {
                 flex-flow: column nowrap;
                 justify-content: space-evenly;
                 margin-left: 1vw;
+                height: 18vw;
             }
 
                 .projectsgrid-description-title {
@@ -324,8 +340,7 @@ body {
 
             cursor: pointer;
 
-            transition: transform 0.4s;
-            transition: color 0.4s;
+            transition: transform 0.4s, color 0.4s;
         }
 
         .menu-link:hover {
@@ -391,8 +406,7 @@ body {
 
     cursor: pointer;
 
-    transition: transform 0.4s;
-    transition: color 0.4s;
+    transition: transform 0.4s, color 0.4s;
 }
 
     .introduction-icon:hover {
@@ -459,8 +473,7 @@ body {
         .contact-icon {
             height: 6vh;
 
-            transition: filter 0.4s;
-            transition: transform 0.4s;
+            transition: transform 0.4s, filter 0.4s;
         }
 
         .contact-icon:hover {
