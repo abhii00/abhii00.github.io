@@ -17,7 +17,8 @@ class App extends React.Component{
         animation1(scene, camera, renderer);
     }
 
-    /*TODO contact section
+    /*
+    TODO contact section
     TODO create template portfolio/experience/featured
     TODO write portfolio descriptions, update GitHubs, make public
     TODO create template experiences
@@ -29,7 +30,9 @@ class App extends React.Component{
 
     TODO dynamic resizing of canvas
     FIXME glitchy reflections at boundary
-    TODO responsiveness and mobile layout*/
+    FIXME read-more icon on introduction
+    TODO responsiveness and mobile layout
+    */
 
     render(){
         return(
