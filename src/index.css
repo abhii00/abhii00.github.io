@@ -204,6 +204,7 @@ body {
         margin-left: 10vw;
 
         opacity: 1;
+        
         transition: height 0.4s, opacity 0.4s;
     }
 
@@ -294,13 +295,13 @@ body {
     height: 15vw;
     width: 15vw;
 
-    transition: transform 0.4s;
-
     cursor: pointer;
 }
 
     .projecttile-container:hover {
         transform: scale(1.1);
+
+        transition: transform 0.4s;
     }
 
 /*Menu*/
@@ -339,13 +340,13 @@ body {
             font-size: 2.5vh;
 
             cursor: pointer;
-
-            transition: transform 0.4s, color 0.4s;
         }
 
         .menu-link:hover {
             transform: scale(1.1);
             color: var(--d);
+
+            transition: transform 0.4s, color 0.4s;
         }
 
 /*Introduction*/
@@ -392,7 +393,7 @@ body {
     }
 
     .introduction-text-tagline {
-        font-size: 8vh;
+        font-size: 7vh;
         text-align: center;
     }
 
@@ -405,13 +406,13 @@ body {
     margin-left: 49%;
 
     cursor: pointer;
-
-    transition: transform 0.4s, color 0.4s;
 }
 
     .introduction-icon:hover {
         transform: scale(2.5);
         color: var(--d);
+
+        transition: transform 0.4s, color 0.4s;
     }
 
 /*About*/
@@ -472,11 +473,11 @@ body {
 
         .contact-icon {
             height: 6vh;
-
-            transition: transform 0.4s, filter 0.4s;
         }
 
         .contact-icon:hover {
             transform: scale(1.1);
             filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+
+            transition: transform 0.4s, filter 0.4s;
         }

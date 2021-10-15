@@ -29,7 +29,6 @@ class App extends React.Component{
 
     TODO dynamic resizing of canvas
     FIXME glitchy reflections at boundary
-    FIXME read-more icon on introduction
     TODO responsiveness and mobile layout
     */
 
@@ -43,7 +42,7 @@ class App extends React.Component{
                     <div className='introduction-text-container'>
                         <div className='introduction-text-hi'>HI, I'M</div>
                         <div className='introduction-text-name'>ABHIJIT PANDIT</div>
-                        <div className='introduction-text-tagline'>AN ASPIRING SPACE ENGINEER</div>
+                        <div className='introduction-text-tagline'>AN ASPIRING SPACE ENGINEER AND CREATIVE</div>
                     </div>
                     <Link to='about'>
                         <ExpandMore className='introduction-icon'/>
