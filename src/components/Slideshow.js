@@ -31,7 +31,7 @@ class Slideshow extends React.Component{
     render(){ 
         return(
             <React.Fragment>
-                <img src={require('../assets/projects/'+this.state.project.pictures.tile).default} alt='' className='slideshow-background'/>
+                <img src={require('../assets/projects/'+this.state.project.pictures.main).default} alt='' className='slideshow-background'/>
                 <div className='slideshow-shadow'/>
                 <div className='slideshow-box-container'>
                     <div className='slideshow-content-container'>
@@ -48,7 +48,7 @@ class Slideshow extends React.Component{
                                 </a>
                             </div>
                         </div>
-                        <img src={require('../assets/projects/'+this.state.project.pictures.tile).default} alt='' className='slideshow-image'/>
+                        <img src={require('../assets/projects/'+this.state.project.pictures.square).default} alt='' className='slideshow-image'/>
                     </div>
                 </div>
             </React.Fragment>

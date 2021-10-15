@@ -69,7 +69,7 @@ class ProjectsGrid extends React.Component {
                                 </div>
                                 <Close onClick={this.unrenderDescription} className='projectsgrid-description-icon-close'/>
                             </div>
-                            <img src={require('../assets/projects/'+this.state.descriptionProject.pictures.tile).default} alt='' className='projectsgrid-description-image'/>
+                            <img src={require('../assets/projects/'+this.state.descriptionProject.pictures.square).default} alt='' className='projectsgrid-description-image'/>
                         </div>
                     </div>
                 }
