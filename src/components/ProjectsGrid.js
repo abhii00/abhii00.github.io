@@ -57,6 +57,8 @@ class ProjectsGrid extends React.Component {
                         <div className='projectsgrid-description-content-container'>
                             <div className='projectsgrid-description-leftcol-container'>
                                 <div className='projectsgrid-description-title'>{this.state.descriptionProject.name}</div>
+                                <div className='projectsgrid-description-institution'>{this.state.descriptionProject.institution}</div>
+                                <div className='projectsgrid-description-date'>{this.state.descriptionProject.date}</div>
                                 <div className='projectsgrid-description-text'>{this.state.descriptionProject.description}</div>
                                 <div className='projectsgrid-description-tech'>{this.state.descriptionProject.techs}</div>
                                 <div className='projectsgrid-description-links-container'>

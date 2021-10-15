@@ -125,6 +125,15 @@ body {
                 font-size: 5vh;
             }
 
+            .slideshow-institution {
+                font-size: 3vh;
+                font-style: italic;
+            }
+
+            .slideshow-date {
+                font-size: 2.5vh;
+            }
+
             .slideshow-text {
                 font-size: 2.5vh;
                 text-align: justify;
@@ -211,6 +220,15 @@ body {
                     font-size: 5vh;
                 }
 
+                .projectsgrid-description-institution {
+                    font-size: 3vh;
+                    font-style: italic;
+                }
+
+                .projectsgrid-description-date {
+                    font-size: 2.5vh;
+                }
+
                 .projectsgrid-description-text {
                     font-size: 2.5vh;
                     text-align: justify;
@@ -248,8 +266,7 @@ body {
                     }
 
                 .projectsgrid-description-icon-close {
-                    padding-top: 3vh;
-                    transform: scale(1.3);
+                    transform: scale(1.2);
                     cursor: pointer;
                 }
 
@@ -406,3 +423,47 @@ body {
 
         width: 45vw;
     }
+
+/*Contact*/
+.contact-container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+
+    height: 30vh;
+    width: 70vw;
+    padding-left: 15vw;
+}
+
+    .contact-text{
+        font-size: 3vh;
+        text-align: center;
+    }
+
+    .contact-email{
+        font-weight: bold;
+        font-size: 4vh;
+        text-align: center;
+    }
+
+    .contact-links-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+
+        width: 20vw;
+        padding-left: 25vw;
+    }
+
+        .contact-icon {
+            height: 6vh;
+
+            transition: filter 0.4s;
+            transition: transform 0.4s;
+        }
+
+        .contact-icon:hover {
+            transform: scale(1.1);
+            filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+        }

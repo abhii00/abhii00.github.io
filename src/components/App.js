@@ -5,9 +5,11 @@ import { Link } from 'react-scroll';
 import { Menu, Section, Slideshow, ProjectsGrid } from './components.js';
 import { setupScene } from './visuals/graphics.js';
 import { animation1 } from './visuals/animations.js';
-import featuredProjects from '../assets/projects/featured.json';
-import experienceProjects from '../assets/projects/experience.json';
-import portfolioProjects from '../assets/projects/portfolio.json';
+import featuredProjects from '../assets/projects/example.json';
+import experienceProjects from '../assets/projects/example.json';
+import portfolioProjects from '../assets/projects/example.json';
+import githubIcon from '../assets/icons/github.png';
+import linkedinIcon from '../assets/icons/linkedin.png';
 
 class App extends React.Component{
     componentDidMount() {
@@ -18,12 +20,12 @@ class App extends React.Component{
     }
 
     /*
-    TODO contact section
     TODO write portfolio descriptions, update GitHubs, make public
     TODO write experience descriptions
     TODO write about section
 
-    TODO on load/on slide animations
+    TODO on load animations
+    TODO slider animations
     TODO streamline aesthetics
 
     TODO dynamic resizing of canvas
@@ -70,7 +72,20 @@ class App extends React.Component{
                     <ProjectsGrid projectsJSON={portfolioProjects}/>
                 </Section>
 
-                <Section title='CONTACT' id='contact' sidebarLeft={false}/>
+                <Section title='CONTACT' id='contact' sidebarLeft={false}>
+                    <div className='contact-container'>
+                        <div className='contact-text'>You can always contact me at my email below, or reach out to me on another platform!</div>
+                        <div className='contact-email'>abhijit.pandit808[at]gmail.com</div>
+                        <div className='contact-links-container'>
+                            <a href={'https://github.com/abhii00'} target="_blank" rel="noopener noreferrer" className='contact-link'>
+                                <img src={githubIcon} className='contact-icon' alt=''/>
+                            </a>
+                            <a href={'https://www.linkedin.com/in/abhijit-pandit-029a8a183/'} target="_blank" rel="noopener noreferrer" className='contact-link'>
+                                <img src={linkedinIcon} className='contact-icon' alt=''/>
+                            </a>
+                        </div>
+                    </div>
+                </Section>
             </div>
         )
     }
