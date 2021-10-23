@@ -24,9 +24,6 @@ class App extends React.Component{
     TODO write experience descriptions
     TODO write about section
 
-    TODO slider animations
-    TODO streamline aesthetics
-
     TODO dynamic resizing of canvas
     FIXME glitchy reflections at boundary
     TODO responsiveness and mobile layout

@@ -5,7 +5,9 @@ class Menu extends React.Component{
     render(){
         return(
             <div className='menu-container'>
-                <div className='menu-icon'>AP</div>
+                <Link to='introduction'>
+                    <div className='menu-icon'>AP</div>
+                </Link>
                 <div className='menu-links-container'>
                     <Link to='about'>
                         <div className='menu-link'>ABOUT</div>

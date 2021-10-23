@@ -8,7 +8,9 @@ class Slideshow extends React.Component{
 
         this.state = {
             projectID: 0,
-            project: this.props.projectsJSON[0]
+            project: this.props.projectsJSON[0],
+            loadin: false,
+            loadout: false
         }
     }
 
@@ -19,21 +21,48 @@ class Slideshow extends React.Component{
         })
     }
 
+    transitionToggleloadin = () => {
+        this.setState({
+            loadin: !this.state.loadin
+        })
+    }
+
+    transitionToggleloadout = () => {
+        this.setState({
+            loadout: !this.state.loadout
+        })
+    }
+
     componentDidMount(){
-        const slideInterval = 4;
+        const slideInterval = 6;
+        const animationInterval = 0.4;
 
         this.updateSlideshow();
+
         setInterval(() => {
-            this.updateSlideshow()
+            this.transitionToggleloadout(); //start load out
+
+            setTimeout(() => {
+                this.transitionToggleloadout(); //stop load out
+                this.updateSlideshow(); //switch to new slide
+
+                this.transitionToggleloadin(); //start load in
+
+                setTimeout(() => {
+                    this.transitionToggleloadin(); //stop load in
+                },animationInterval*1000);
+
+            }, animationInterval*1000);
+
           }, slideInterval*1000);
     }
     
     render(){ 
         return(
             <React.Fragment>
-                <img src={require('../assets/projects/'+this.state.project.pictures.main).default} alt='' className='slideshow-background'/>
+                <img src={require('../assets/projects/'+this.state.project.pictures.main).default} alt='' className={`slideshow-background${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ''}`}`}/>
                 <div className='slideshow-shadow'/>
-                <div className='slideshow-box-container'>
+                <div className={`slideshow-box-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ''}`}`}>
                     <div className='slideshow-content-container'>
                         <div className='slideshow-leftcol-container'>
                             <div className='slideshow-title'>{this.state.project.name}</div>
@@ -50,7 +79,7 @@ class Slideshow extends React.Component{
                                 </a>
                             </div>
                         </div>
-                        <img src={require('../assets/projects/'+this.state.project.pictures.square).default} alt='' className='slideshow-image'/>
+                        <img src={require('../assets/projects/'+this.state.project.pictures.square).default} alt='' className={`slideshow-image${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ''}`}`}/>
                     </div>
                 </div>
             </React.Fragment>

@@ -14,5 +14,21 @@
             "tile": "pendula/tile.png",
             "square": "pendula/tile.png"
         }
+    },
+    {
+        "name": "PORTFOLIO",
+        "date": "October - December 2020",
+        "institution": "",
+        "urls": {
+            "prod": "https://abhii00.github.io/pendula",
+            "src": "https://github.com/abhii00/pendula"
+        },
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
+        "techs": "REACT.JS",
+        "pictures": {
+            "main": "portfolio/tile.png",
+            "tile": "portfolio/tile.png",
+            "square": "portfolio/tile.png"
+        }
     }
 ]
