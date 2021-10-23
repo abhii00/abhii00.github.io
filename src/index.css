@@ -361,7 +361,7 @@ body {
 }
 
     .menu-icon {
-        font-size: 5vh;
+        font-size: 4vh;
         font-weight: 100;
 
         width: 5vw;
@@ -460,9 +460,12 @@ body {
     transform: scale(2);
 
     position: absolute;
-    top: 95vh;
+    top: 96vh;
 
-    margin-left: 49%;
+    padding-right: 48vw;
+    padding-left: 48vw;
+
+    background-color: rgba(5, 7, 19, 0.55);
 
     cursor: pointer;
 }

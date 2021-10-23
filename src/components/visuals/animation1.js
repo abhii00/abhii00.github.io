@@ -81,17 +81,25 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
     const water = new Water(
         plane_geometry,
         {
-            sunColor: 0xffffff,
-            waterColor: 0x00000d,
-            distortionScale: 3.7
+          textureWidth: 512,
+          textureHeight: 512,
+          waterNormals: new THREE.TextureLoader().load('', function ( texture ) {
+            texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+          }),
+          alpha: 1.0,
+          sunDirection: new THREE.Vector3(),
+          sunColor: 0xffffff,
+          waterColor: 0x001e0f,
+          distortionScale: 3.7,
+          fog: scene.fog !== undefined
         }
-    );
+      );
     water.position.set(0,water_y_0,0);
     water.rotation.set(- Math.PI/2,0,0);
     scene.add(water);
 
     //create train
-    var train_x_0 = -250;
+    var train_x_0 = -280;
     var no_traincarriages = 6;
     var train_sep = 5;
     var traincarriage_sep = 8;
@@ -121,6 +129,24 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
         traincarriages_load = true;
     });  
 
+    //create walls 
+    const wall_x_0 = -250;
+    const wall_color = sky_color;
+
+    const wall_material = new THREE.MeshBasicMaterial({color: wall_color})
+    const left_wall = new THREE.Mesh(plane_geometry, wall_material);
+    left_wall.scale.set(1, 0.2, 1);
+    left_wall.rotation.set(0, Math.PI/5, Math.PI/2);
+    const right_wall = left_wall.clone();
+    right_wall.rotation.set(0, -Math.PI/5, Math.PI/2);
+
+    left_wall.position.set(wall_x_0,0,0);
+    right_wall.position.set(-wall_x_0,0,0);
+
+    scene.add(right_wall);
+    scene.add(left_wall);
+
+
     /**
      * animator
      */
@@ -130,14 +156,15 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
         const time = performance.now()*0.001;
         
         //bobbing moon and water
-        moon.position.y = -Math.sin(0.35*time)*5 + moon_y_0;
-        water.position.y = Math.sin(0.25*time)*2 + water_y_0; //twinkling stars
+        moon.position.y = -Math.sin(0.5*time)*5 + moon_y_0;
+        water.position.y = Math.sin(0.5*time)*2 + water_y_0; //twinkling stars
 
         //moving train
-        var train_v = 1;
+        var train_v = 2;
 
         if (train_load & traincarriages_load) {
             train.position.x += train_v;
+            camera.position.x += train_v;
             for (var j = 0; j < no_traincarriages; j++){
                 traincarriages[j].position.x += train_v;
             }
@@ -145,6 +172,7 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
             //wrap around
             if (train.position.x > -train_x_0){
                 train.position.x = train_x_0;
+                camera.position.x = train_x_0;
                 for (var k = 0; k < no_traincarriages; k++){
                     traincarriages[k].position.x = train_x_0-train_sep-k*traincarriage_sep;
                 }

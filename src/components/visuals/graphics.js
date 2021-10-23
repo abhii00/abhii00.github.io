@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import {OrbitControls} from "three/examples/jsm/controls/OrbitControls";
 
 /*ORIGINALLY FROM EOVISUALISER*/
 
@@ -22,9 +23,6 @@ function setupScene(starting_camera_pos){
 
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-
-    //const controls = new OrbitControls(camera, renderer.domElement);
-    //controls.update();
 
     return [scene, camera, renderer]
 }
