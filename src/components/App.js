@@ -13,7 +13,7 @@ import linkedinIcon from '../assets/icons/linkedin.png';
 
 class App extends React.Component{
     componentDidMount() {
-        const [scene, camera, renderer] = setupScene(new THREE.Vector3(-300,15,35));
+        const [scene, camera, renderer] = setupScene(new THREE.Vector3(-210,15,35));
         this.mount.appendChild(renderer.domElement);
 
         animation1(scene, camera, renderer);
@@ -24,9 +24,7 @@ class App extends React.Component{
     TODO write experience descriptions
     TODO write about section
 
-    FIXME Wall-Animation Transition
     TODO dynamic resizing of canvas
-    FIXME glitchy reflections at boundary
     TODO responsiveness and mobile layout
     */
 
