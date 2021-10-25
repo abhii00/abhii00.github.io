@@ -26,6 +26,19 @@ function setupScene(starting_camera_pos){
     return [scene, camera, renderer]
 }
 
+
+/**
+ * Resizes a scene
+ * @param camera the camera to be resized
+ * @param renderer the renderer to set the size of 
+ */
+function resizeScene(camera, renderer){
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+  
+    renderer.setSize(window.innerWidth, window.innerHeight);
+};
+
 /**
  * Loads a texture given an imported image object
  * @param {Image} image_object the image object
@@ -40,5 +53,6 @@ function loadTexture(image_object){
 
 export {
     setupScene,
+    resizeScene,
     loadTexture,
 }

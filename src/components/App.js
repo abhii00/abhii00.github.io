@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import { ExpandMore } from '@material-ui/icons';
 import { Link } from 'react-scroll';
 import { Menu, Section, Slideshow, ProjectsGrid } from './components.js';
-import { setupScene } from './visuals/graphics.js';
+import { setupScene, resizeScene } from './visuals/graphics.js';
 import { animation1 } from './visuals/animations.js';
 import featuredProjects from '../assets/projects/example.json';
 import experienceProjects from '../assets/projects/example.json';
@@ -17,6 +17,8 @@ class App extends React.Component{
         this.mount.appendChild(renderer.domElement);
 
         animation1(scene, camera, renderer);
+
+        window.addEventListener('resize', () => {resizeScene(camera, renderer)});
     }
 
     /*
