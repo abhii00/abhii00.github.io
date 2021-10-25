@@ -10,7 +10,7 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
         "techs": "REACT.JS",
         "pictures": {
-            "main": "pendula/tile.png",
+            "main": "pendula/main.png",
             "tile": "pendula/tile.png",
             "square": "pendula/tile.png"
         }
@@ -26,7 +26,7 @@
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
         "techs": "REACT.JS",
         "pictures": {
-            "main": "portfolio/tile.png",
+            "main": "portfolio/main.png",
             "tile": "portfolio/tile.png",
             "square": "portfolio/tile.png"
         }
