@@ -26,7 +26,6 @@ class App extends React.Component{
     TODO write experience descriptions
     TODO write about section
 
-    TODO dynamic resizing of canvas
     TODO responsiveness and mobile layout
     */
 

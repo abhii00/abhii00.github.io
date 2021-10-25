@@ -69,8 +69,8 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
 
     //create mountains 
     var wireframe_toggle = false;
-    var mountains_loaded = false;
-    var mountains_wire_loaded = false;
+    var mountains_load = false;
+    var mountains_wire_load = false;
     var mountains;
     var mountains_wire;
 
@@ -81,7 +81,7 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
         mountains.rotation.set(0,-Math.PI/2,0);
         mountains.scale.set(8,10,13);
         scene.add(mountains);
-        mountains_loaded = true;
+        mountains_load = true;
     });
 
     loader.load(mountains_wire_model, function (mountains_wire_gltf) {
@@ -89,9 +89,7 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
         mountains_wire.position.set(0,-25,global_offset-40);
         mountains_wire.rotation.set(0,-Math.PI/2,0);
         mountains_wire.scale.set(8,10,13);
-        scene.add(mountains_wire);
-        mountains_wire_loaded = true;
-        mountains_wire.visible = false;
+        mountains_wire_load = true;
     });
 
     //create ocean
@@ -174,7 +172,7 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
         water.position.y = Math.sin(0.5*time)*2 + water_y_0; //twinkling stars
 
         //moving train
-        var train_v = 3;
+        var train_v = 2.5;
 
         if (train_load & traincarriages_load) {
             train.position.x += train_v;
@@ -188,23 +186,24 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
                 train.position.x = train_x_0;
                 camera.position.x = train_x_0;
                 wireframe_toggle = !wireframe_toggle;
-                if (wireframe_toggle && mountains_loaded && mountains_wire_loaded){ 
-                    mountains.visible = false; 
+                if (wireframe_toggle && mountains_load && mountains_wire_load){ 
+                    scene.remove(mountains);  
+                    scene.add(mountains_wire); 
                     mountains_wire.visible = true;
                     ambient_light.intensity = 1.5;
                     point_light.intensity = 0;
-                    water.visible = false;
-                    moon.visible = false;
-                    for (let i = 0; i < no_stars; i++) {stars[i].visible = false;}
+                    scene.remove(water);
+                    scene.remove(moon);
+                    for (let i = 0; i < no_stars; i++) {scene.remove(stars[i]);}
                 }
-                else if (!wireframe_toggle && mountains_loaded && mountains_wire_loaded){ 
-                    mountains.visible = true; 
-                    mountains_wire.visible = false;
+                else if (!wireframe_toggle && mountains_load && mountains_wire_load){ 
+                    scene.add(mountains); 
+                    scene.remove(mountains_wire); 
                     ambient_light.intensity = 0.4;
                     point_light.intensity = 1;
-                    water.visible = true;
-                    moon.visible = true;
-                    for (let i = 0; i < no_stars; i++) {stars[i].visible = true;}
+                    scene.add(water);
+                    scene.add(moon);
+                    for (let i = 0; i < no_stars; i++) {scene.add(stars[i]);}
                 }
                 for (var k = 0; k < no_traincarriages; k++){
                     traincarriages[k].position.x = train_x_0-train_sep-k*traincarriage_sep;
