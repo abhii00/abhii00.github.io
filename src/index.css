@@ -29,14 +29,9 @@ body {
   height: 50px;
   width: 100vw;
 }
-@media (min-width: 400px) and (max-width: 1400px) {
-  .menu-container {
-    justify-content: center;
-  }
-}
 @media (max-width: 400px) {
   .menu-container {
-    justify-content: center;
+    height: 30px;
   }
 }
 
@@ -46,6 +41,11 @@ body {
   width: 5vw;
   margin-left: 1vw;
   cursor: pointer;
+}
+@media (max-width: 400px) {
+  .menu-icon {
+    font-size: 30px;
+  }
 }
 
 .menu-icon:hover {
