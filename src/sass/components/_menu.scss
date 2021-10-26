@@ -9,9 +9,7 @@
     height: 50px;
     width: 100vw;
 
-    @include breakpoint(mobile){
-        height: 30px;
-    }
+    @include breakpoint(mobile){height: 30px;}
 }
 
     .menu-icon {
@@ -23,9 +21,7 @@
 
         cursor: pointer;
 
-        @include breakpoint(mobile){
-            font-size: 30px;
-        }
+        @include breakpoint(mobile){font-size: 30px;}
     }
 
         .menu-icon:hover {
@@ -40,12 +36,8 @@
 
         width: 60vw;
 
-        @include breakpoint(tablet){
-            display: none;
-        }
-        @include breakpoint(mobile){
-            display: none;
-        }
+        @include breakpoint(tablet){display: none;}
+        @include breakpoint(mobile){display: none;}
     }
 
         .menu-link {
