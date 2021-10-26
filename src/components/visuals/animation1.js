@@ -1,10 +1,12 @@
 import * as THREE from "three";
+import { loadTexture } from "./graphics.js";
 import { Water } from 'three/examples/jsm/objects/Water.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import mountains_model from '../../assets/animations/1/mountainrange2.glb';
-import mountains_wire_model from '../../assets/animations/1/mountainrangewire1.glb';
+import mountains_wire_model from '../../assets/animations/1/mountainrange2wire.glb';
 import train_model from '../../assets/animations/1/train1.glb';
 import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
+import steam_texture from "../../assets/animations/1/steam.png";
 
 /**
  * Animation 1: Train Animation
@@ -125,7 +127,7 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
     var train = 0;
     loader.load(train_model, function (train_gltf) {
         train = train_gltf.scene;
-        train.position.set(train_x_0,25,global_offset-18);
+        train.position.set(train_x_0,25,global_offset-24);
         train.rotation.set(0,Math.PI/2,0);
         scene.add(train);
         train_load = true;
@@ -137,13 +139,24 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
         var traincarriage = traincarriage_gltf.scene;
         for (var i = 0; i < no_traincarriages; i++){
             traincarriages[i] = traincarriage.clone();
-            traincarriages[i].position.set(train_x_0-train_sep-i*traincarriage_sep,25,global_offset-18);
+            traincarriages[i].position.set(train_x_0-train_sep-i*traincarriage_sep,25,global_offset-24);
             traincarriages[i].rotation.set(0, Math.PI/2, 0);
             traincarriages[i].scale.set(1,1,2);
             scene.add(traincarriages[i]);
         }
         traincarriages_load = true;
-    });  
+    }); 
+    
+    //create steam
+    const steam_x_0 = train_x_0 - 5;
+    const steam_scale_x_0 = 0.012;
+    const steam_scale_y_0 = 0.005;
+
+    var steam_material = new THREE.MeshBasicMaterial({map: loadTexture(steam_texture),transparent: true});
+    var steam = new THREE.Mesh(plane_geometry, steam_material);
+    steam.scale.set(steam_scale_x_0, steam_scale_y_0, steam_scale_y_0);
+    steam.position.set(steam_x_0,28,global_offset-24);
+    scene.add(steam);
 
     //create walls 
     const wall_x_0 = -180;
@@ -173,9 +186,13 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
 
         //moving train
         var train_v = 2.5;
+        var steam_v = 1.02;
 
         if (train_load & traincarriages_load) {
             train.position.x += train_v;
+            steam.position.x += train_v;
+            steam.position.x -= steam.scale.x*1000*(steam_v-1)/2;
+            steam.scale.set(steam_v*steam.scale.x, steam_scale_y_0, steam_scale_y_0);
             camera.position.x += train_v;
             for (var j = 0; j < no_traincarriages; j++){
                 traincarriages[j].position.x += train_v;
@@ -184,14 +201,23 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
             //wrap around
             if (train.position.x > -train_x_0){
                 train.position.x = train_x_0;
+                steam.position.x = steam_x_0;
+                steam.scale.set(steam_scale_x_0, steam_scale_y_0, steam_scale_y_0);
                 camera.position.x = train_x_0;
+                for (var k = 0; k < no_traincarriages; k++){
+                    traincarriages[k].position.x = train_x_0-train_sep-k*traincarriage_sep;
+                }
+
                 wireframe_toggle = !wireframe_toggle;
+
+                //switch to different mode
                 if (wireframe_toggle && mountains_load && mountains_wire_load){ 
                     scene.remove(mountains);  
                     scene.add(mountains_wire); 
                     mountains_wire.visible = true;
                     ambient_light.intensity = 1.5;
                     point_light.intensity = 0;
+                    scene.remove(steam);
                     scene.remove(water);
                     scene.remove(moon);
                     for (let i = 0; i < no_stars; i++) {scene.remove(stars[i]);}
@@ -201,12 +227,10 @@ import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
                     scene.remove(mountains_wire); 
                     ambient_light.intensity = 0.4;
                     point_light.intensity = 1;
+                    scene.add(steam);
                     scene.add(water);
                     scene.add(moon);
                     for (let i = 0; i < no_stars; i++) {scene.add(stars[i]);}
-                }
-                for (var k = 0; k < no_traincarriages; k++){
-                    traincarriages[k].position.x = train_x_0-train_sep-k*traincarriage_sep;
                 }
             }
         }
