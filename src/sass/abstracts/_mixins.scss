@@ -1,0 +1,10 @@
+@mixin flexbox($flex-direction: column, $justify-content: space-evenly, $align-items: stretch){
+    display: flex;
+    flex-flow: $flex-direction nowrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin floatingboxshadow(){
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}

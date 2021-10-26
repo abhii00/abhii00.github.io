@@ -1,8 +1,5 @@
 .contact-container{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    align-content: center;
+    @include flexbox($align-items: center);
 
     height: 30vh;
     width: 70vw;
@@ -21,12 +18,9 @@
     }
 
     .contact-links-container {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
+        @include flexbox($flex-direction: row);
 
         width: 20vw;
-        padding-left: 25vw;
     }
 
         .contact-icon {

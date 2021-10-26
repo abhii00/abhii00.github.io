@@ -1,13 +1,13 @@
 .about-container {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
+    @include flexbox($flex-direction: row);
 
     margin-left: 10vw;
     margin-right: 10vw;
 }
 
     .about-image {
+        @include floatingboxshadow();
+        
         border: 2px solid white;
 
         height: 20vw;

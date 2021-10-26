@@ -10,22 +10,19 @@
 
 /*Main*/
 .projectsgrid-container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
+    @include flexbox();
 }
 
     .projectsgrid-row-container {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
+        @include flexbox($flex-direction: row);
 
         margin-bottom: 2vh;
     }
 
     .projectsgrid-description-container.visible {
+        @include floatingboxshadow();
+
         background-color: $color3;
-        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 
         height: 37vh;
         width: 70vw;
@@ -37,13 +34,13 @@
     }
 
         .projectsgrid-description-content-container {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
+            @include flexbox($flex-direction: row);
+
+            margin-left: 10vw;
         }
 
             .projectsgrid-description-image.visible{
-                box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+                @include floatingboxshadow();
 
                 height: 18vw;
                 width: 18vw;
@@ -54,9 +51,8 @@
             }
 
             .projectsgrid-description-leftcol-container {
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: space-evenly;
+                @include flexbox();
+
                 margin-left: 1vw;
                 height: 18vw;
             }
@@ -87,9 +83,7 @@
                 }
 
                 .projectsgrid-description-links-container {
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: space-evenly;
+                    @include flexbox($flex-direction: row);
 
                     width: 6vw;
                     margin-left: -0.8vw;

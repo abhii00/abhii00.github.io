@@ -1,6 +1,7 @@
 .projecttile-container {
+    @include floatingboxshadow();
+
     background-color: $color2;
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
     
     height: 15vw;
     width: 15vw;

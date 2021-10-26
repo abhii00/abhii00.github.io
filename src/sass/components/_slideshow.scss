@@ -54,8 +54,9 @@
 }
 
 .slideshow-box-container {
+    @include floatingboxshadow();
+
     background-color: $color3;
-    box-shadow: $box_shadow;
 
     position: absolute;
     top: 55vh;
@@ -69,13 +70,12 @@
 }
 
     .slideshow-content-container {
+        @include flexbox($flex-direction: row, $justify-content: space-between);
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
     }
 
         .slideshow-image {
-            box-shadow: $box_shadow;
+            @include floatingboxshadow();
 
             height: 18vw;
             width: 18vw;
@@ -84,9 +84,8 @@
         }
 
         .slideshow-leftcol-container {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-evenly;
+            @include flexbox();
+
             margin-left: 1vw;
         }
 
@@ -116,9 +115,7 @@
             }
 
             .slideshow-links-container {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-evenly;
+                @include flexbox($flex-direction: row);
 
                 width: 6vw;
                 margin-left: -0.8vw;

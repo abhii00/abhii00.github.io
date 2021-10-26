@@ -24,8 +24,7 @@
 }
 
 .introduction-text-container {
-    display: flex;
-    flex-flow: column nowrap;
+    @include flexbox();
     
     margin-top: 10%;
 

@@ -1,9 +1,7 @@
 .section-container {
-    position: relative;
+    @include flexbox($justify-content: center);
 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    position: relative;
 
     height: 100vh;
 }
