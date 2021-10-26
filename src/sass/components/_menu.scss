@@ -6,12 +6,20 @@
     position: fixed;
     z-index: 1;
 
-    height: 5vh;
+    height: 50px;
     width: 100vw;
+
+    @include breakpoint(tablet){
+        justify-content: center;
+    }
+
+    @include breakpoint(mobile){
+        justify-content: center;
+    }
 }
 
     .menu-icon {
-        font-size: 4vh;
+        font-size: 50px;
         font-weight: 100;
 
         width: 5vw;
@@ -31,10 +39,18 @@
         @include flexbox($flex-direction: row, $align-items: center);
 
         width: 60vw;
+
+        @include breakpoint(tablet){
+            display: none;
+        }
+
+        @include breakpoint(mobile){
+            display: none;
+        }
     }
 
         .menu-link {
-            font-size: 2.5vh;
+            font-size: 1.4vw;
 
             cursor: pointer;
         }
