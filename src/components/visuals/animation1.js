@@ -95,7 +95,7 @@ import steam_texture from "../../assets/animations/1/steam.png";
     });
 
     //create ocean
-    var water_y_0 = -10;
+    var water_y_0 = -55;
 
     const water = new Water(
         plane_geometry,
