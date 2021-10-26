@@ -1,0 +1,76 @@
+.introduction-animation-container {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    height: 100vh;
+}
+
+.introduction-animation-container canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.introduction-darkfilter {
+    background-color: rgba(0, 0, 0, 0.35);
+
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.introduction-text-container {
+    display: flex;
+    flex-flow: column nowrap;
+    
+    margin-top: 10%;
+
+    cursor: default;
+}
+
+    .introduction-text-hi {
+        font-size: 6vh;
+        text-align: center;
+    }
+
+    .introduction-text-name {
+        font-size: 18vh;
+        text-align: center;
+    }
+
+        .introduction-text-name:hover {
+            transform: scale(1.1);
+            color: $color4;
+            
+            transition: transform $transition_time, color $transition_time;
+        }
+
+    .introduction-text-tagline {
+        font-size: 7vh;
+        text-align: center;
+    }
+
+.introduction-icon {
+    transform: scale(2);
+
+    position: absolute;
+    top: 96vh;
+
+    padding-right: 48vw;
+    padding-left: 48vw;
+
+    background-color: rgba(5, 7, 19, 0.55);
+
+    cursor: pointer;
+}
+
+    .introduction-icon:hover {
+        transform: scale(2.5);
+        color: $color4;
+
+        transition: transform $transition_time, color $transition_time;
+    }

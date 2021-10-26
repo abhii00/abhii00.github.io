@@ -1,0 +1,39 @@
+.section-container {
+    position: relative;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    height: 100vh;
+}
+
+    .section-title {
+        font-size: 5vh;
+        text-align: center;
+        
+        margin-bottom: 2vh;
+    }
+
+    .section-sidebar-container-left {
+        position: absolute;
+        top: 20vh;
+        left: 8vw;
+    }
+
+    .section-sidebar-container-right {
+        position: absolute;
+        top: 20vh;
+        left: 90vw;
+    }
+
+        .section-sidebar-icon {
+            height: 7vh;
+        }
+
+        .section-sidebar-line {
+            border-left: 1px solid $color4;
+            
+            height: 53vh;
+            margin-left: 50%;
+        }

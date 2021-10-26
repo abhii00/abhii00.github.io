@@ -1,0 +1,52 @@
+.menu-container {
+    background-color: rgba(5, 7, 19, 0.35);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    
+    position: fixed;
+    z-index: 1;
+
+    height: 5vh;
+    width: 100vw;
+}
+
+    .menu-icon {
+        font-size: 4vh;
+        font-weight: 100;
+
+        width: 5vw;
+        margin-left: 1vw;
+
+        cursor: pointer;
+    }
+
+        .menu-icon:hover {
+            transform: scale(1.1);
+            color: $color4;
+
+            transition: transform $transition_time, color $transition_time;
+        }
+
+    .menu-links-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        width: 60vw;
+    }
+
+        .menu-link {
+            font-size: 2.5vh;
+
+            cursor: pointer;
+        }
+
+        .menu-link:hover {
+            transform: scale(1.1);
+            color: $color4;
+
+            transition: transform $transition_time, color $transition_time;
+        }

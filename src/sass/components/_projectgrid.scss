@@ -1,0 +1,116 @@
+/*Unloaded*/
+.projectsgrid-description-container {
+    height: 0vh;
+    opacity: 0;
+}
+
+.projectsgrid-description-image {
+    height: 0vh;
+}
+
+/*Main*/
+.projectsgrid-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+    .projectsgrid-row-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+
+        margin-bottom: 2vh;
+    }
+
+    .projectsgrid-description-container.visible {
+        background-color: $color3;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+
+        height: 37vh;
+        width: 70vw;
+        margin-left: 10vw;
+
+        opacity: 1;
+        
+        transition: height $transition_time, opacity $transition_time;
+    }
+
+        .projectsgrid-description-content-container {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+
+            .projectsgrid-description-image.visible{
+                box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+
+                height: 18vw;
+                width: 18vw;
+                margin-left: 5vw;
+                margin-top: 2vh;
+
+                transition: height $transition_time;
+            }
+
+            .projectsgrid-description-leftcol-container {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-evenly;
+                margin-left: 1vw;
+                height: 18vw;
+            }
+
+                .projectsgrid-description-title {
+                    font-size: 5vh;
+                }
+
+                .projectsgrid-description-institution {
+                    font-size: 3vh;
+                    font-style: italic;
+                }
+
+                .projectsgrid-description-date {
+                    font-size: 2.5vh;
+                }
+
+                .projectsgrid-description-text {
+                    font-size: 2.5vh;
+                    text-align: justify;
+
+                    width: 55vw;
+                }
+
+                .projectsgrid-description-tech {
+                    font-family: monospace, monospace;
+                    font-size: 2vh;
+                }
+
+                .projectsgrid-description-links-container {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-evenly;
+
+                    width: 6vw;
+                    margin-left: -0.8vw;
+                }
+
+                    .projectsgrid-description-link {
+                        color: white;
+                        text-decoration: none;
+
+                        display: block;
+                    }
+
+                    .projectsgrid-description-icon-new {
+                        transform: scale(1.3);
+                    }
+
+                    .projectsgrid-description-icon-github {
+                        height: 3vh;
+                    }
+
+                .projectsgrid-description-icon-close {
+                    transform: scale(1.2);
+                    cursor: pointer;
+                }

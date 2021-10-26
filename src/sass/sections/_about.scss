@@ -1,0 +1,28 @@
+.about-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+    .about-image {
+        border: 2px solid white;
+
+        height: 20vw;
+        width: 20vw;
+    }
+
+        .about-image:hover{
+            transform: scale(1.1);
+
+            transition: transform $transition_time;
+        }
+
+    .about-text {
+        font-size: 3vh;
+        text-align: justify;
+
+        width: 45vw;
+    }
