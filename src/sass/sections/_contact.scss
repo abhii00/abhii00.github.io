@@ -1,19 +1,19 @@
 .contact-container{
     @include flexbox($align-items: center);
 
-    height: 30vh;
+    height: 30%;
     width: 70vw;
-    padding-left: 15vw;
+    margin-left: 15vw;
 }
 
     .contact-text{
-        font-size: 3vh;
+        font-size: 2vw;
         text-align: center;
     }
 
     .contact-email{
         font-weight: bold;
-        font-size: 4vh;
+        font-size: 3.25vw;
         text-align: center;
     }
 
@@ -24,7 +24,7 @@
     }
 
         .contact-icon {
-            height: 6vh;
+            height: 3.75vw;
         }
 
         .contact-icon:hover {

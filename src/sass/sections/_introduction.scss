@@ -3,7 +3,7 @@
     top: 0;
     z-index: -1;
 
-    height: 100vh;
+    height: 100%;
 }
 
 .introduction-animation-container canvas {
@@ -13,14 +13,14 @@
 }
 
 .introduction-darkfilter {
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: $darker_translucent;
 
     position: absolute;
     top: 0;
     z-index: -1;
 
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
 }
 
 .introduction-text-container {
@@ -32,12 +32,12 @@
 }
 
     .introduction-text-hi {
-        font-size: 6vh;
+        font-size: 3.25vw;
         text-align: center;
     }
 
     .introduction-text-name {
-        font-size: 18vh;
+        font-size: 9vw;
         text-align: center;
     }
 
@@ -49,26 +49,27 @@
         }
 
     .introduction-text-tagline {
-        font-size: 7vh;
+        font-size: 3.75vw;
         text-align: center;
     }
 
 .introduction-icon {
-    transform: scale(2);
+    height: 3.25vw !important;
+    width: 3.25vw !important;
 
     position: absolute;
-    top: 96vh;
+    bottom: 0%;
 
     padding-right: 48vw;
     padding-left: 48vw;
 
-    background-color: rgba(5, 7, 19, 0.55);
+    background-color: $dark_translucent;
 
     cursor: pointer;
 }
 
     .introduction-icon:hover {
-        transform: scale(2.5);
+        transform: scale(1.1);
         color: $color4;
 
         transition: transform $transition_time, color $transition_time;

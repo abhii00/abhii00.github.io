@@ -1,6 +1,6 @@
 import React from 'react';
 import { ProjectTile } from './components.js';
-import { OpenInNew, Close } from '@material-ui/icons';
+import { OpenInNew} from '@material-ui/icons';
 import githubIcon from '../assets/icons/github.png';
 
 class ProjectsGrid extends React.Component {
@@ -15,7 +15,7 @@ class ProjectsGrid extends React.Component {
         }
 
         this.consts = {
-            projectsPerLine: 5
+            projectsPerLine: 4
         }
     }
 
@@ -67,7 +67,6 @@ class ProjectsGrid extends React.Component {
                                     <img src={this.state.descriptionShown && githubIcon} className='projectsgrid-description-icon-github' alt=''/>
                                 </a>
                             </div>
-                            {this.state.descriptionShown ? <Close onClick={this.unrenderDescription} className='projectsgrid-description-icon-close'/> : ''}
                         </div>
                         <img src={this.state.descriptionShown && require('../assets/projects/'+ this.state.descriptionProject.pictures.square).default} alt='' className={`projectsgrid-description-image${this.state.descriptionShown ? ' visible' : ''}`}/>
                     </div>

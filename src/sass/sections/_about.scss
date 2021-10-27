@@ -1,8 +1,10 @@
 .about-container {
     @include flexbox($flex-direction: row);
 
-    margin-left: 10vw;
-    margin-right: 10vw;
+    width: 80%;
+    padding-left: 10vw;
+
+    @include breakpoint(tablet){@include flexbox($align-items: center)};
 }
 
     .about-image {
@@ -21,8 +23,10 @@
         }
 
     .about-text {
-        font-size: 3vh;
+        font-size: 1.75vw;
         text-align: justify;
 
         width: 45vw;
+        
+        @include breakpoint(tablet){font-size: 2.25vw; width: 70vw};
     }
