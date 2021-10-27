@@ -1,8 +1,8 @@
 .menu-container {
+    @include flexbox($flex-direction: row, $justify-content: space-between);
+
     background-color: rgba(5, 7, 19, 0.35);
 
-    @include flexbox($flex-direction: row, $justify-content: space-between);
-    
     position: fixed;
     z-index: 1;
 
@@ -27,8 +27,6 @@
         .menu-icon:hover {
             transform: scale(1.1);
             color: $color4;
-
-            transition: transform $transition_time, color $transition_time;
         }
 
     .menu-links-container {
@@ -49,6 +47,4 @@
         .menu-link:hover {
             transform: scale(1.1);
             color: $color4;
-
-            transition: transform $transition_time, color $transition_time;
         }

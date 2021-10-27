@@ -44,8 +44,6 @@
         .introduction-text-name:hover {
             transform: scale(1.1);
             color: $color4;
-            
-            transition: transform $transition_time, color $transition_time;
         }
 
     .introduction-text-tagline {

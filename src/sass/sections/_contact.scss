@@ -38,6 +38,4 @@
         .contact-icon:hover {
             transform: scale(1.1);
             filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
-
-            transition: transform $transition_time, filter $transition_time;
         }

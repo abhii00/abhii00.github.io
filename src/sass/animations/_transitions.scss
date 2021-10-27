@@ -1,0 +1,54 @@
+/*Menu*/
+.menu-icon {
+    transition: transform $transition_time, color $transition_time;
+}
+
+.menu-link {
+    transition: transform $transition_time, color $transition_time;
+}
+
+/*ProjectGrid*/
+.projectsgrid-description-container {
+    transition: height $transition_time, opacity $transition_time, top $transition_time;
+}
+
+.projectsgrid-description-image {
+    transition: height $transition_time;
+}
+
+/*ProjectTile*/
+.projectstile-container {
+    transition: transform $transition_time;
+}   
+
+/*Slideshow*/
+.slideshow-background {
+    transition: opacity $transition_time;
+}
+
+.slideshow-box-container {
+    transition: height $transition_time, opacity $transition_time;
+}
+
+.slideshow-image {
+    transition: height $transition_time;
+}
+
+/*About*/
+.about-image {
+    transition: transform $transition_time;
+}
+
+/*Contact*/
+.contact-icon {
+    transition: transform $transition_time, filter $transition_time;
+}
+
+/*Introduction*/
+.introduction-text-name {
+    transition: transform $transition_time, color $transition_time;
+}
+
+.introduction-icon {
+    transition: transform $transition_time, color $transition_time;
+}

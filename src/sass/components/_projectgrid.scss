@@ -21,22 +21,20 @@
 .projectsgrid-container {
     @include flexbox();
 
-    margin-left: 10vw;
-    margin-right: 10vw;
-
     position: relative;
 
-    @include breakpoint(mobile){margin-top: auto}
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
     .projectsgrid-row-container {
         @include flexbox($flex-direction: row);
 
-        margin-bottom: 20px;
-
         position: relative;
 
-        @include breakpoint(mobile){@include flexbox($align-items: center); margin-bottom:0}
+        margin-bottom: 20px;
+
+        @include breakpoint(mobile){@include flexbox($align-items: center); margin-bottom: 0}
     }
 
     .projectsgrid-description-container.invisible {
@@ -53,8 +51,6 @@
         margin-bottom: 20px;
 
         opacity: 1;
-        
-        transition: height $transition_time, opacity $transition_time, top $transition_time;
 
         @include breakpoint(mobile){height: 80vw; width: 80vw; position: absolute; margin-bottom: 0}
     }
@@ -75,9 +71,7 @@
 
                 height: 18vw;
                 width: 18vw;
-
-                transition: height $transition_time;
-
+                
                 @include breakpoint(mobile){display: none}
             }
 
