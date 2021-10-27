@@ -5,6 +5,7 @@
     padding-left: 10vw;
 
     @include breakpoint(tablet){@include flexbox($align-items: center)};
+    @include breakpoint(mobile){@include flexbox($align-items: center)};
 }
 
     .about-image {
@@ -14,6 +15,8 @@
 
         height: 20vw;
         width: 20vw;
+
+        @include breakpoint(mobile){height: 55vw; width: 55vw;};
     }
 
         .about-image:hover{
@@ -29,4 +32,5 @@
         width: 45vw;
         
         @include breakpoint(tablet){font-size: 2.25vw; width: 70vw};
+        @include breakpoint(mobile){font-size: 4vw; width: 70vw};
     }

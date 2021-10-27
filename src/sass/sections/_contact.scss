@@ -9,22 +9,30 @@
     .contact-text{
         font-size: 2vw;
         text-align: center;
+
+        @include breakpoint(mobile){font-size: 4vw}
     }
 
     .contact-email{
         font-weight: bold;
         font-size: 3.25vw;
         text-align: center;
+
+        @include breakpoint(mobile){font-size: 5vw}
     }
 
     .contact-links-container {
         @include flexbox($flex-direction: row);
 
         width: 20vw;
+
+        @include breakpoint(mobile){width: 30vw}
     }
 
         .contact-icon {
             height: 3.75vw;
+
+            @include breakpoint(mobile){height: 8vw}
         }
 
         .contact-icon:hover {

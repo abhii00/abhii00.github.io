@@ -7,6 +7,8 @@
     width: 15vw;
 
     cursor: pointer;
+
+    @include breakpoint(mobile){height: 80vw; width: 80vw}
 }
 
     .projecttile-container:hover {

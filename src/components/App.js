@@ -27,14 +27,14 @@ class App extends React.Component{
     TODO write experience descriptions
     TODO write about section
 
-    TODO responsiveness and mobile layout
+    TODO final touches to responsive design
     */
 
     render(){
         return(
             <div className='app'>
                 <Menu/>
-                <Section id='introduction' titleShown={false} sidebarShown={false}>
+                <Section id='introduction' titleShown={false} sidebarShown={false} heightSpecified={true}>
                     <div className='introduction-animation-container' ref={ref => (this.mount = ref)}/>
                     <div className='introduction-darkfilter'/>
                     <div className='introduction-text-container'>
@@ -47,7 +47,7 @@ class App extends React.Component{
                     </Link>
                 </Section>
 
-                <Section title='ABOUT' id='about'>
+                <Section title='ABOUT' id='about' heightSpecified={true}>
                     <div className='about-container'>
                         <img src={aboutImage} alt='' className='about-image'/>
                         <div className='about-text'>
@@ -56,7 +56,7 @@ class App extends React.Component{
                     </div>
                 </Section>
 
-                <Section id='featured' titleShown={false} sidebarShown={false}>
+                <Section id='featured' titleShown={false} sidebarShown={false} heightSpecified={true}>
                     <Slideshow projectsJSON={featuredProjects}/>
                 </Section>
 
@@ -68,7 +68,7 @@ class App extends React.Component{
                     <ProjectsGrid projectsJSON={portfolioProjects}/>
                 </Section>
 
-                <Section title='CONTACT' id='contact' sidebarLeft={false}>
+                <Section title='CONTACT' id='contact' sidebarLeft={false} heightSpecified={true}>
                     <div className='contact-container'>
                         <div className='contact-text'>You can always contact me at my email below, or reach out to me on another platform!</div>
                         <div className='contact-email'>abhijit.pandit808[at]gmail.com</div>

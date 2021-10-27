@@ -67,6 +67,8 @@
     opacity: 1;
         
     transition: height $transition_time, opacity $transition_time;
+
+    @include breakpoint(mobile){display: none}
 }
 
     .slideshow-content-container {
