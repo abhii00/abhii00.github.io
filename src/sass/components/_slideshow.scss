@@ -1,38 +1,28 @@
-/*Transitions*/
+/*Loading In or Loading Out*/
 .slideshow-background.loadout {
     opacity: 0;
-
-    transition: opacity $transition_time;
 }
 
 .slideshow-background.loadin {
     opacity: 1;
-
-    transition: opacity $transition_time;
 }
 
 .slideshow-image.loadout {
-    height: 0vw;
-
-    transition: height $transition_time;
+    height: 0;
 }
 
 .slideshow-image.loadin {
     height: 18vw;
-
-    transition: height $transition_time;
 }
 
 .slideshow-box-container.loadout {
     opacity: 0;
-
-    transition: opacity $transition_time;
+    height: 0;
 }
 
 .slideshow-box-container.loadin {
     opacity: 1;
-
-    transition: opacity $transition_time;
+    height: 23vw;
 }
 
 /*Main*/
@@ -41,6 +31,8 @@
     width: 100%;
 
     opacity: 1;
+
+    transition: opacity $transition_time;
 }
 
 .slideshow-shadow {
@@ -83,6 +75,8 @@
 
             height: 18vw;
             width: 18vw;
+
+            transition: height $transition_time;
         }
 
         .slideshow-leftcol-container {

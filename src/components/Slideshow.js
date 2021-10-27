@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { OpenInNew } from '@material-ui/icons';
+
 import githubIcon from '../assets/icons/github.png';
 
 class Slideshow extends React.Component{
@@ -21,13 +23,13 @@ class Slideshow extends React.Component{
         })
     }
 
-    transitionToggleloadin = () => {
+    transitionToggleLoadIn = () => {
         this.setState({
             loadin: !this.state.loadin
         })
     }
 
-    transitionToggleloadout = () => {
+    transitionToggleLoadOut = () => {
         this.setState({
             loadout: !this.state.loadout
         })
@@ -40,16 +42,15 @@ class Slideshow extends React.Component{
         this.updateSlideshow();
 
         setInterval(() => {
-            this.transitionToggleloadout(); //start load out
+            this.transitionToggleLoadOut(); //start load out
 
             setTimeout(() => {
-                this.transitionToggleloadout(); //stop load out
-                this.updateSlideshow(); //switch to new slide
+                this.transitionToggleLoadOut(); //stop load out
 
-                this.transitionToggleloadin(); //start load in
+                this.transitionToggleLoadIn(); //start load in
 
                 setTimeout(() => {
-                    this.transitionToggleloadin(); //stop load in
+                    this.transitionToggleLoadIn(); //stop load in
                 },animationInterval*1000);
 
             }, animationInterval*1000);

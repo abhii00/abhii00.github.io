@@ -1,10 +1,12 @@
 import React from 'react';
 import * as THREE from 'three';
+
 import { ExpandMore } from '@material-ui/icons';
 import { Link } from 'react-scroll';
 import { Menu, Section, Slideshow, ProjectsGrid } from './components.js';
 import { setupScene, resizeScene } from './visuals/graphics.js';
 import { animation1 } from './visuals/animations.js';
+
 import aboutImage from '../assets/images/about.jpeg';
 import featuredProjects from '../assets/projects/example.json';
 import experienceProjects from '../assets/projects/example.json';

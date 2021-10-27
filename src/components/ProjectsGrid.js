@@ -1,6 +1,8 @@
 import React from 'react';
+
 import { ProjectTile } from './components.js';
 import { OpenInNew} from '@material-ui/icons';
+
 import githubIcon from '../assets/icons/github.png';
 
 class ProjectsGrid extends React.Component {
@@ -11,7 +13,11 @@ class ProjectsGrid extends React.Component {
             projectRows: [],
             descriptionShown: false,
             descriptionProjectID: 0,
-            descriptionProject: null
+            descriptionProject: null,
+            projectPreRows: [],
+            projectPostRows: [],
+            loadin: false,
+            loadout: false
         }
 
         this.consts = {
@@ -30,15 +36,48 @@ class ProjectsGrid extends React.Component {
                 projectTiles = [];
             }
         }
-        this.setState({projectRows: projectRows});
+        this.setState({
+            projectRows: projectRows,
+            projectPreRows: projectRows
+        });
     }
 
     renderDescription = (e) => {
+        var id = JSON.parse(e.currentTarget.getAttribute('projectID'));
+        var row = Math.floor(id/this.consts.projectsPerLine)
+
         this.setState({
             descriptionShown: true,
-            descriptionProjectID: JSON.parse(e.currentTarget.getAttribute('projectID')),
-            descriptionProject: this.props.projectsJSON[JSON.parse(e.currentTarget.getAttribute('projectID'))]
+            descriptionProjectID: id,
+            descriptionProject: this.props.projectsJSON[id],
+            projectPreRows: this.state.projectRows.slice(0, row+1),
+            projectPostRows: this.state.projectRows.slice(row+1)
         });
+
+        const animationInterval = 0.4;
+
+        //first load
+        if (this.state.descriptionProject == null){
+            this.transitionToggleLoadIn(); //start load in
+
+            setTimeout(() => {
+                this.transitionToggleLoadIn(); //stop load in
+            }, animationInterval*1000);
+        }
+        else {
+            this.transitionToggleLoadOut(); //start load out
+
+            setTimeout(() => {
+                this.transitionToggleLoadOut(); //stop load out
+
+                this.transitionToggleLoadIn(); //start load in
+
+                setTimeout(() => {
+                    this.transitionToggleLoadIn(); //stop load in
+                }, animationInterval*1000);
+
+            }, animationInterval*1000);
+        }
     }
 
     unrenderDescription = (e) => {
@@ -47,11 +86,23 @@ class ProjectsGrid extends React.Component {
         });
     }
 
+    transitionToggleLoadIn = () => {
+        this.setState({
+            loadin: !this.state.loadin
+        })
+    }
+
+    transitionToggleLoadOut = () => {
+        this.setState({
+            loadout: !this.state.loadout
+        })
+    }
+
     render(){
         return(
             <div className='projectsgrid-container'>
-                {this.state.projectRows}
-                <div className={`projectsgrid-description-container${this.state.descriptionShown ? ' visible' : ''}`}>
+                {this.state.projectPreRows}
+                <div className={`projectsgrid-description-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' ' : ' invisible'}`}`}`} style={{top: `${this.state.descriptionProjectID*80}vw`}}>
                     <div className='projectsgrid-description-content-container'>
                         <div className='projectsgrid-description-leftcol-container'>
                             <div className='projectsgrid-description-title'>{this.state.descriptionShown && this.state.descriptionProject.name}</div>
@@ -68,9 +119,10 @@ class ProjectsGrid extends React.Component {
                                 </a>
                             </div>
                         </div>
-                        <img src={this.state.descriptionShown && require('../assets/projects/'+ this.state.descriptionProject.pictures.square).default} alt='' className={`projectsgrid-description-image${this.state.descriptionShown ? ' visible' : ''}`}/>
+                        <img src={this.state.descriptionShown && require('../assets/projects/'+ this.state.descriptionProject.pictures.square).default} alt=''className={`projectsgrid-description-image${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' ' : ' invisible'}`}`}`}/>
                     </div>
                 </div>
+                {this.state.projectPostRows}
             </div>
         )
     }
