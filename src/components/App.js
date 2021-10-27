@@ -16,20 +16,18 @@ import linkedinIcon from '../assets/icons/linkedin.png';
 
 class App extends React.Component{
     componentDidMount() {
-        //const [scene, camera, renderer] = setupScene(new THREE.Vector3(-210,15,35));
-        //this.mount.appendChild(renderer.domElement);
+        const [scene, camera, renderer] = setupScene(new THREE.Vector3(-210,15,35));
+        this.mount.appendChild(renderer.domElement);
 
-        //animation1(scene, camera, renderer);
+        animation1(scene, camera, renderer);
 
-        //window.addEventListener('resize', () => {resizeScene(camera, renderer)});
+        window.addEventListener('resize', () => {resizeScene(camera, renderer)});
     }
 
     /*
     TODO write portfolio descriptions, update GitHubs, make public
     TODO write experience descriptions
     TODO write about section
-
-    TODO final touches to responsive design
     */
 
     render(){
@@ -53,7 +51,7 @@ class App extends React.Component{
                     <div className='about-container'>
                         <img src={aboutImage} alt='' className='about-image'/>
                         <div className='about-text'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt rutrum dictum. Vivamus posuere volutpat consequat. Cras leo lorem, fermentum sed lacus sit amet, faucibus molestie magna. Donec non nisl sit amet turpis dapibus pretium et nec mauris. Nulla porttitor ligula magna, eget pretium tortor laoreet non. Nam in ipsum auctor elit molestie convallis. Proin arcu mauris, dignissim eu purus id, posuere convallis tellus. Curabitur gravida dolor vitae enim ultrices, condimentum pretium nunc congue. Pellentesque sapien libero, congue quis mollis in, tempus molestie leo.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt rutrum dictum. Vivamus posuere volutpat consequat. Cras leo lorem, fermentum sed lacus sit amet, faucibus molestie magna. Donec non nisl sit amet turpis dapibus pretium et nec mauris. Nulla porttitor ligula magna, eget pretium tortor laoreet non. Nam in ipsum auctor elit molestie convallis. Proin arcu mauris, dignissim eu purus id, posuere convallis tellus. 
                         </div>
                     </div>
                 </Section>

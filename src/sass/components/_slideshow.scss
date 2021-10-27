@@ -16,13 +16,19 @@
 }
 
 .slideshow-box-container.loadout {
-    opacity: 0;
     height: 0;
 }
 
 .slideshow-box-container.loadin {
-    opacity: 1;
     height: 23vw;
+}
+
+.slideshow-content-container.loadout {
+    opacity: 0;
+}
+
+.slideshow-content-container.loadin {
+    opacity: 1;
 }
 
 /*Main*/
@@ -64,6 +70,8 @@
 
         height: 100%;
         width: 80vw;
+
+        opacity: 1;
     }
 
         .slideshow-image {
@@ -122,6 +130,16 @@
                     width: 2.4vw !important; 
                 }
 
+                    .slideshow-icon-new:hover {
+                        transform: scale(1.1);
+                        color: $color4;
+                    }
+
                 .slideshow-icon-github {
                     height: 2vw;
                 }
+
+                    .slideshow-icon-github:hover {
+                        transform: scale(1.1);
+                        filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+                    }

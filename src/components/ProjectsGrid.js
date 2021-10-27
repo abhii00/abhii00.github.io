@@ -44,20 +44,19 @@ class ProjectsGrid extends React.Component {
 
     renderDescription = (e) => {
         var id = JSON.parse(e.currentTarget.getAttribute('projectID'));
-        var row = Math.floor(id/this.consts.projectsPerLine)
 
-        this.setState({
-            descriptionShown: true,
-            descriptionProjectID: id,
-            descriptionProject: this.props.projectsJSON[id],
-            projectPreRows: this.state.projectRows.slice(0, row+1),
-            projectPostRows: this.state.projectRows.slice(row+1)
-        });
-
-        const animationInterval = 0.4;
+        const animationInterval = 0.5;
 
         //first load
         if (this.state.descriptionProject == null){
+            this.setState({
+                descriptionShown: true,
+                descriptionProjectID: id,
+                descriptionProject: this.props.projectsJSON[id],
+            });
+
+            this.calcRows();
+
             this.transitionToggleLoadIn(); //start load in
 
             setTimeout(() => {
@@ -70,6 +69,13 @@ class ProjectsGrid extends React.Component {
             setTimeout(() => {
                 this.transitionToggleLoadOut(); //stop load out
 
+                this.setState({
+                    descriptionShown: true,
+                    descriptionProjectID: id,
+                    descriptionProject: this.props.projectsJSON[id],
+                });
+                this.calcRows();
+
                 this.transitionToggleLoadIn(); //start load in
 
                 setTimeout(() => {
@@ -78,6 +84,15 @@ class ProjectsGrid extends React.Component {
 
             }, animationInterval*1000);
         }
+    }
+
+    calcRows = () => {
+        var row = Math.floor(this.state.descriptionProjectID/this.consts.projectsPerLine);
+
+        this.setState({
+            projectPreRows: this.state.projectRows.slice(0, row+1),
+            projectPostRows: this.state.projectRows.slice(row+1)
+        });
     }
 
     unrenderDescription = (e) => {
@@ -103,7 +118,7 @@ class ProjectsGrid extends React.Component {
             <div className='projectsgrid-container'>
                 {this.state.projectPreRows}
                 <div className={`projectsgrid-description-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' ' : ' invisible'}`}`}`} style={{top: `${this.state.descriptionProjectID*80}vw`}}>
-                    <div className='projectsgrid-description-content-container'>
+                    <div className={`projectsgrid-description-content-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ' '}`}`}>
                         <div className='projectsgrid-description-leftcol-container'>
                             <div className='projectsgrid-description-title'>{this.state.descriptionShown && this.state.descriptionProject.name}</div>
                             <div className='projectsgrid-description-institution'>{this.state.descriptionShown && this.state.descriptionProject.institution}</div>

@@ -36,8 +36,8 @@ class Slideshow extends React.Component{
     }
 
     componentDidMount(){
-        const slideInterval = 6;
-        const animationInterval = 0.4;
+        const slideInterval = 5;
+        const animationInterval = 0.5;
 
         this.updateSlideshow();
 
@@ -46,6 +46,8 @@ class Slideshow extends React.Component{
 
             setTimeout(() => {
                 this.transitionToggleLoadOut(); //stop load out
+
+                this.updateSlideshow();
 
                 this.transitionToggleLoadIn(); //start load in
 
@@ -64,7 +66,7 @@ class Slideshow extends React.Component{
                 <img src={require('../assets/projects/'+this.state.project.pictures.main).default} alt='' className={`slideshow-background${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ''}`}`}/>
                 <div className='slideshow-shadow'/>
                 <div className={`slideshow-box-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ''}`}`}>
-                    <div className='slideshow-content-container'>
+                    <div className={`slideshow-content-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ''}`}`}>
                         <div className='slideshow-leftcol-container'>
                             <div className='slideshow-title'>{this.state.project.name}</div>
                             <div className='slideshow-institution'>{this.state.project.institution}</div>

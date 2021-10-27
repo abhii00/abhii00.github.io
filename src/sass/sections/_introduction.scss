@@ -52,23 +52,20 @@
     }
 
 .introduction-icon {
-    height: 3.25vw !important;
-    width: 3.25vw !important;
+    background-color: $dark_translucent;
 
     position: absolute;
     bottom: 0%;
 
+    height: 3.25vw !important;
+    width: 3.25vw !important;
     padding-right: 48vw;
     padding-left: 48vw;
-
-    background-color: $dark_translucent;
-
+    
     cursor: pointer;
 }
 
     .introduction-icon:hover {
         transform: scale(1.1);
         color: $color4;
-
-        transition: transform $transition_time, color $transition_time;
     }

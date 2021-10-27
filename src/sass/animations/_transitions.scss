@@ -9,15 +9,39 @@
 
 /*ProjectGrid*/
 .projectsgrid-description-container {
-    transition: height $transition_time, opacity $transition_time, top $transition_time;
+    transition: top calc($transition_time/2) calc($transition_time/2);
+}
+
+.projectsgrid-description-container.loadout {
+    transition: height calc($transition_time/2) calc($transition_time/2);
+}
+
+.projectsgrid-description-content-container.loadout {
+    transition: opacity calc($transition_time/2);
+}
+
+.projectsgrid-description-container.loadin {
+    transition: height calc($transition_time/2);
+}
+
+.projectsgrid-description-content-container.loadin {
+    transition: opacity calc($transition_time/2) calc($transition_time/2);
 }
 
 .projectsgrid-description-image {
     transition: height $transition_time;
 }
 
+.projectsgrid-description-icon-new {
+    transition: transform $transition_time, color $transition_time;
+}
+
+.projectsgrid-description-icon-github {
+    transition: transform $transition_time, filter $transition_time;
+}
+
 /*ProjectTile*/
-.projectstile-container {
+.projecttile-container {
     transition: transform $transition_time;
 }   
 
@@ -26,12 +50,32 @@
     transition: opacity $transition_time;
 }
 
-.slideshow-box-container {
-    transition: height $transition_time, opacity $transition_time;
+.slideshow-box-container.loadout {
+    transition: height calc($transition_time/2) calc($transition_time/2);
+}
+
+.slideshow-content-container.loadout {
+    transition: opacity calc($transition_time/2);
+}
+
+.slideshow-box-container.loadin {
+    transition: height calc($transition_time/2);
+}
+
+.slideshow-content-container.loadin {
+    transition: opacity calc($transition_time/2) calc($transition_time/2);
 }
 
 .slideshow-image {
     transition: height $transition_time;
+}
+
+.slideshow-icon-new {
+    transition: transform $transition_time, color $transition_time;
+}
+
+.slideshow-icon-github {
+    transition: transform $transition_time, filter $transition_time;
 }
 
 /*About*/

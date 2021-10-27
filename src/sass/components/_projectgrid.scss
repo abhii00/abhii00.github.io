@@ -1,12 +1,20 @@
 /*Loading In or Loading Out*/
 .projectsgrid-description-container.loadout {
-    opacity: 0;
     height: 0;
 }
 
 .projectsgrid-description-container.loadin {
-    opacity: 1;
     height: 23vw;
+
+    @include breakpoint(mobile){height: 80vw;}
+}
+
+.projectsgrid-description-content-container.loadout {
+    opacity: 0;
+}
+
+.projectsgrid-description-content-container.loadin {
+    opacity: 1;
 }
 
 .projectsgrid-description-image.loadout {
@@ -50,8 +58,6 @@
         width: 70vw;
         margin-bottom: 20px;
 
-        opacity: 1;
-
         @include breakpoint(mobile){height: 80vw; width: 80vw; position: absolute; margin-bottom: 0}
     }
 
@@ -60,6 +66,8 @@
 
             height: 100%;
             width: 80vw;
+
+            opacity: 1;
         }
 
             .projectsgrid-description-image.invisible {
@@ -140,8 +148,18 @@
                         @include breakpoint(mobile){height: 7.5vw !important; width: 7.5vw !important}
                     }
 
+                        .projectsgrid-description-icon-new:hover {
+                            transform: scale(1.1);
+                            color: $color4;
+                        }
+
                     .projectsgrid-description-icon-github {
                         height: 2vw;
 
                         @include breakpoint(mobile){height: 7.5vw}
                     }
+
+                        .projectsgrid-description-icon-github:hover {
+                            transform: scale(1.1);
+                            filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+                        }
