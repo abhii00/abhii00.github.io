@@ -27,7 +27,6 @@ class App extends React.Component{
     /*
     TODO write portfolio descriptions, update GitHubs, make public
     TODO write experience descriptions
-    TODO write about section
     */
 
     render(){
@@ -51,7 +50,15 @@ class App extends React.Component{
                     <div className='about-container'>
                         <img src={aboutImage} alt='' className='about-image'/>
                         <div className='about-text'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt rutrum dictum. Vivamus posuere volutpat consequat. Cras leo lorem, fermentum sed lacus sit amet, faucibus molestie magna. Donec non nisl sit amet turpis dapibus pretium et nec mauris. Nulla porttitor ligula magna, eget pretium tortor laoreet non. Nam in ipsum auctor elit molestie convallis. Proin arcu mauris, dignissim eu purus id, posuere convallis tellus. 
+                            Hi! I'm Abhi. My goal is to work in the global space industry, contributing to a better future for humanity through the pursuit of space exploration. 
+                            <br/>
+                            Currently, I'm a 3rd year undergraduate engineer at the <span>University of Cambridge</span>, taking my very own eclectic mix of Aerothermal, Mechanical, Information and Bioengineering modules.
+                            <br/>
+                            Recently, I interned at <span>Thales Alenia Space UK</span> working on modelling propulsion systems. 
+                            <br/>
+                            Alongside this, I've been Launch and Safety Officer at <span>Cambridge University Spaceflight</span>, working to launch our UK altitude-record-breaking hybrid rocket, Martlet IV, as well as to develop our spaceshot-precusor liquid bipropellant rocket motor, White Dwarf.
+                            <br/>
+                            In my spare time, I've been working on software projects such as an Earth Observation Data Visualiser.
                         </div>
                     </div>
                 </Section>
@@ -70,7 +77,11 @@ class App extends React.Component{
 
                 <Section title='CONTACT' id='contact' sidebarLeft={false} heightSpecified={true}>
                     <div className='contact-container'>
-                        <div className='contact-text'>You can always contact me at my email below, or reach out to me on another platform!</div>
+                        <div className='contact-text'>
+                            I'm always looking for new opportunities!
+                            <br/>
+                            Get in touch via my email below, or reach out to me on another platform!
+                            </div>
                         <div className='contact-email'>abhijit.pandit808[at]gmail.com</div>
                         <div className='contact-links-container'>
                             <a href={'https://github.com/abhii00'} target="_blank" rel="noopener noreferrer" className='contact-link'>

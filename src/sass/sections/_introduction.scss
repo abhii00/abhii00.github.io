@@ -4,11 +4,11 @@
     z-index: -1;
 
     height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .introduction-animation-container canvas {
-    width: 100%;
-    height: 100%;
     display: block;
 }
 
@@ -63,6 +63,8 @@
     padding-left: 48vw;
     
     cursor: pointer;
+
+    @include breakpoint(mobile){display: none !important}
 }
 
     .introduction-icon:hover {

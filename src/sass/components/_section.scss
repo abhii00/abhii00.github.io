@@ -5,6 +5,7 @@
 
     height: 70vw;
 
+    @include breakpoint(tablet){height: auto};
     @include breakpoint(mobile){height: auto};
 }
 
@@ -33,7 +34,8 @@
         top: 200px;
         left: 6vw;
 
-        @include breakpoint(mobile){top: auto; bottom:20px; left: 0; padding-left: 48vw;};
+        @include breakpoint(tablet){top: auto; bottom: 20px; left: 0; padding-left: 48vw;};
+        @include breakpoint(mobile){top: auto; bottom: 20px; left: 0; padding-left: 48vw;};
     }
 
     .section-sidebar-container-right {
@@ -41,19 +43,22 @@
         top: 200px;
         left: 92vw;
 
+        @include breakpoint(tablet){top: auto; bottom: 20px; left: 0; padding-left: 48vw;};
         @include breakpoint(mobile){top: auto; bottom: 20px; left: 0; padding-left: 48vw;};
     }
 
         .section-sidebar-icon {
             height: 70px;
 
+            @include breakpoint(tablet){display: none};
             @include breakpoint(mobile){display: none};
         }
 
         .section-sidebar-icon-spec {
             height: 70px;
 
-            @include breakpoint(mobile){height: 30px};
+            @include breakpoint(mobile){height: 40px};
+            @include breakpoint(mobile){height: 20px};
         }
 
         .section-sidebar-line {
@@ -62,5 +67,6 @@
             height: 600px;
             margin-left: 50%;
 
+            @include breakpoint(tablet){display: none};
             @include breakpoint(mobile){display: none};
         }

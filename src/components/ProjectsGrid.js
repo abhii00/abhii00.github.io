@@ -55,7 +55,7 @@ class ProjectsGrid extends React.Component {
                 descriptionProject: this.props.projectsJSON[id],
             });
 
-            this.calcRows();
+            this.calcRows(id);
 
             this.transitionToggleLoadIn(); //start load in
 
@@ -74,7 +74,7 @@ class ProjectsGrid extends React.Component {
                     descriptionProjectID: id,
                     descriptionProject: this.props.projectsJSON[id],
                 });
-                this.calcRows();
+                this.calcRows(id);
 
                 this.transitionToggleLoadIn(); //start load in
 
@@ -86,8 +86,9 @@ class ProjectsGrid extends React.Component {
         }
     }
 
-    calcRows = () => {
-        var row = Math.floor(this.state.descriptionProjectID/this.consts.projectsPerLine);
+    calcRows = (id) => {
+        var row = Math.floor(id/this.consts.projectsPerLine);
+        console.log(row);
 
         this.setState({
             projectPreRows: this.state.projectRows.slice(0, row+1),

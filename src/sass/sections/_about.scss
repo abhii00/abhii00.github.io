@@ -4,14 +4,13 @@
     width: 80%;
     padding-left: 10vw;
 
-    @include breakpoint(tablet){@include flexbox($align-items: center)};
-    @include breakpoint(mobile){@include flexbox($align-items: center)};
+    @include breakpoint(mobile){@include flexbox($align-items: center); width: 80%; padding-left: 10%};
 }
 
     .about-image {
         @include floatingboxshadow();
         
-        border: 2px solid white;
+        border: 2px solid $color2;
 
         height: 20vw;
         width: 20vw;
@@ -24,11 +23,14 @@
         }
 
     .about-text {
-        font-size: 1.75vw;
+        font-size: 1.5vw;
         text-align: justify;
 
         width: 45vw;
         
-        @include breakpoint(tablet){font-size: 2.25vw; width: 70vw};
-        @include breakpoint(mobile){font-size: 3.75vw; width: 70vw};
+        @include breakpoint(mobile){font-size: 3.25vw; width: 80vw};
     }
+
+        .about-text span {
+            color: $color4;
+        }
