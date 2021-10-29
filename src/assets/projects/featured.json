@@ -1,0 +1,18 @@
+[
+    {
+        "name": "BA, MEng in Engineering",
+        "date": "2019-2023",
+        "institution": "Selwyn College, University of Cambridge",
+        "urls": {
+            "prod": "teaching.eng.cam.ac.uk/node/2979",
+            "src": ""
+        },
+        "description": "Specialisation in Aerothermal, Mechanical, Information and Bioengineering. Modules: 3A1/3, 3C5, 3E1, 3F1/2, 3G1, 4M12. \n Year 2: 79%, 1st Class, Official; Year 1: 75: 1st Class Equivalent, Unofficial.",
+        "techs": "",
+        "pictures": {
+            "main": "experience/cam/tile.png",
+            "tile": "experience/cam/tile.png",
+            "square": "experience/cam/tile.png"
+        }
+    }
+]

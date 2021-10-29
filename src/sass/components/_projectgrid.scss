@@ -101,6 +101,8 @@
                     font-size: 1.75vw;
                     font-style: italic;
 
+                    width: 55vw;
+
                     @include breakpoint(mobile){font-size: 5vw}
                 }
 

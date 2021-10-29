@@ -127,12 +127,18 @@ class ProjectsGrid extends React.Component {
                             <div className='projectsgrid-description-text'>{this.state.descriptionShown && this.state.descriptionProject.description}</div>
                             <div className='projectsgrid-description-tech'>{this.state.descriptionShown && this.state.descriptionProject.techs}</div>
                             <div className='projectsgrid-description-links-container'>
-                                <a href={this.state.descriptionShown && this.state.descriptionProject.urls.prod} target="_blank" rel="noopener noreferrer" className='projectsgrid-description-link'>
-                                    {this.state.descriptionShown ? <OpenInNew className='projectsgrid-description-icon-new'/> : ''}  
-                                </a>
-                                <a href={this.state.descriptionShown && this.state.descriptionProject.urls.src} target="_blank" rel="noopener noreferrer" className='projectsgrid-description-link'>
-                                    <img src={this.state.descriptionShown && githubIcon} className='projectsgrid-description-icon-github' alt=''/>
-                                </a>
+                                { 
+                                    this.state.descriptionShown && this.state.descriptionProject.urls.prod !== '' &&
+                                    <a href={this.state.descriptionShown && this.state.descriptionProject.urls.prod} target="_blank" rel="noopener noreferrer" className='projectsgrid-description-link'>
+                                        {this.state.descriptionShown ? <OpenInNew className='projectsgrid-description-icon-new'/> : ''}  
+                                    </a>
+                                }
+                                { 
+                                    this.state.descriptionShown && this.state.descriptionProject.urls.src !== ''  &&
+                                    <a href={this.state.descriptionShown && this.state.descriptionProject.urls.src} target="_blank" rel="noopener noreferrer" className='projectsgrid-description-link'>
+                                        <img src={this.state.descriptionShown && githubIcon} className='projectsgrid-description-icon-github' alt=''/>
+                                    </a>
+                                }
                             </div>
                         </div>
                         <img src={this.state.descriptionShown && require('../assets/projects/'+ this.state.descriptionProject.pictures.square).default} alt=''className={`projectsgrid-description-image${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' ' : ' invisible'}`}`}`}/>

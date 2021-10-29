@@ -309,6 +309,7 @@ body {
 .projectsgrid-description-institution {
   font-size: 1.75vw;
   font-style: italic;
+  width: 55vw;
 }
 @media (max-width: 500px) {
   .projectsgrid-description-institution {

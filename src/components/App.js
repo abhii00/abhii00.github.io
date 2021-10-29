@@ -8,9 +8,9 @@ import { setupScene, resizeScene } from './visuals/graphics.js';
 import { animation1 } from './visuals/animations.js';
 
 import aboutImage from '../assets/images/about.jpeg';
-import featuredProjects from '../assets/projects/example.json';
-import experienceProjects from '../assets/projects/example.json';
-import portfolioProjects from '../assets/projects/example.json';
+import featuredProjects from '../assets/projects/featured.json';
+import experienceProjects from '../assets/projects/experience.json';
+import portfolioProjects from '../assets/projects/portfolio.json';
 import githubIcon from '../assets/icons/github.png';
 import linkedinIcon from '../assets/icons/linkedin.png';
 
@@ -54,7 +54,7 @@ class App extends React.Component{
                             <br/>
                             Currently, I'm a 3rd year undergraduate engineer at the <span>University of Cambridge</span>, taking my very own eclectic mix of Aerothermal, Mechanical, Information and Bioengineering modules.
                             <br/>
-                            Recently, I interned at <span>Thales Alenia Space UK</span> working on modelling propulsion systems. 
+                            Recently, I interned at <span>Thales Alenia Space UK</span> working on modelling satellite propellant feed systems. 
                             <br/>
                             Alongside this, I've been Launch and Safety Officer at <span>Cambridge University Spaceflight</span>, working to launch our UK altitude-record-breaking hybrid rocket, Martlet IV, as well as to develop our spaceshot-precusor liquid bipropellant rocket motor, White Dwarf.
                             <br/>

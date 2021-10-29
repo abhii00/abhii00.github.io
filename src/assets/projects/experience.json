@@ -1,0 +1,66 @@
+[
+    {
+        "name": "BA, MEng in Engineering",
+        "date": "2019-2023",
+        "institution": "Selwyn College, University of Cambridge",
+        "urls": {
+            "prod": "teaching.eng.cam.ac.uk/node/2979",
+            "src": ""
+        },
+        "description": "Specialisation in Aerothermal, Mechanical, Information and Bioengineering. Modules: 3A1/3, 3C5, 3E1, 3F1/2, 3G1, 4M12. Year 2: 79%, 1st Class, Official; Year 1: 75: 1st Class Equivalent, Unofficial.",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "experience/cam/tile.png",
+            "square": "experience/cam/tile.png"
+        }
+    }, 
+    {
+        "name": "Senior Physics Challenge Participant",
+        "date": "2019-2023",
+        "institution": "Department of Physics, University of Cambridge",
+        "urls": {
+            "prod": "https://isaacphysics.org/pages/spc",
+            "src": ""
+        },
+        "description": "1-week selective course on understanding advanced problem solving in quantum mechanics.",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "experience/cam/tile.png",
+            "square": "experience/cam/tile.png"
+        }
+    },
+    {
+        "name": "GCSE and A-Level Student",
+        "date": "2019-2023",
+        "institution": "King Edward VI Camp Hill School for Boys",
+        "urls": {
+            "prod": "https://www.camphillboys.bham.sch.uk/",
+            "src": ""
+        },
+        "description": "A-Levels: A*A*A*A* in Mathematics, Further Mathematics, Physics and Chemistry, GCSEs: 3 9s, 8 A*s, FSMQ A",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "experience/kechb/tile.png",
+            "square": "experience/kechb/tile.png"
+        }
+    },
+    {
+        "name": "Research Student",
+        "date": "August 2021 - Present",
+        "institution": "Division A: Energy, Fluid Mechanics and Turbomachinery, Cambridge University Engineering Department",
+        "urls": {
+            "prod": "eng.cam.ac.uk/profiles/rsc10",
+            "src": ""
+        },
+        "description": "A CFD research project with Professor R.S. Cant involving creating a standard test case library for stationary laminar hydrogen flame speeds for proprietary code, automated with Linux and Python.",
+        "techs": "LINUX, PYTHON",
+        "pictures": {
+            "main": "",
+            "tile": "experience/cam/tile.png",
+            "square": "experience/cam/tile.png"
+        }
+    }
+]
