@@ -8,7 +8,6 @@ import { Menu, Section, Slideshow, ProjectsGrid } from './components.js';
 import { setupScene, resizeScene } from './visuals/graphics.js';
 import { animation0, animation1 } from './visuals/animations.js';
 
-
 import aboutImage from '../assets/images/about.jpeg';
 import featuredProjects from '../assets/projects/featured.json';
 import experienceProjects from '../assets/projects/experience.json';
@@ -18,13 +17,18 @@ import linkedinIcon from '../assets/icons/linkedin.png';
 
 class App extends React.Component{
     componentDidMount() {
-        const [scene, camera, renderer] = setupScene(new THREE.Vector3(-210,15,35));
-        this.mount.appendChild(renderer.domElement);
+        var scene;
+        var camera; 
+        var renderer;
 
         if (isMobile){
+            [scene, camera, renderer] = setupScene(new THREE.Vector3(0,0,3));
+            this.mount.appendChild(renderer.domElement);
             animation0(scene, camera, renderer);
         }
         else {
+            [scene, camera, renderer] = setupScene(new THREE.Vector3(-210,15,35));
+            this.mount.appendChild(renderer.domElement);
             animation1(scene, camera, renderer);
         }
 
