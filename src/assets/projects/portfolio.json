@@ -10,7 +10,7 @@
         "description": "A realistic Martian environment with complete 3D dynamics, and a Mars lander with two PID controllers, equipped with a genetic optimisation algorithm and real-time orbital trajectory prediction.",
         "techs": "C++, OPENGL",
         "pictures": {
-            "main": "",
+            "main": "portfolio/marslander/main.png",
             "tile": "portfolio/marslander/tile.png",
             "square": "portfolio/marslander/square.png"
         }

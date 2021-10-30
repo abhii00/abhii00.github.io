@@ -1,18 +1,50 @@
 [
     {
-        "name": "BA, MEng in Engineering",
-        "date": "2019-2023",
-        "institution": "Selwyn College, University of Cambridge",
+        "name": "Launch and Safety Officer",
+        "date": "March 2021 - Present",
+        "institution": "Cambridge University Spaceflight",
         "urls": {
-            "prod": "teaching.eng.cam.ac.uk/node/2979",
+            "prod": "https://cusf.co.uk",
             "src": ""
         },
-        "description": "Specialisation in Aerothermal, Mechanical, Information and Bioengineering. Modules: 3A1/3, 3C5, 3E1, 3F1/2, 3G1, 4M12. \n Year 2: 79%, 1st Class, Official; Year 1: 75: 1st Class Equivalent, Unofficial.",
+        "description": "Negotiation with 10+ launch sites for the launch of a UK record-breaking 20km, 5kN hybrid rocket. Safety procedure regarding Nitrous Oxide pressure vessels for cold flow and hot fire testing.",
         "techs": "",
         "pictures": {
-            "main": "experience/cam/tile.png",
-            "tile": "experience/cam/tile.png",
-            "square": "experience/cam/tile.png"
+            "main": "experience/cusf/main.png",
+            "tile": "experience/cusf/tile3.png",
+            "square": "experience/cusf/square3.png"
+        }
+    },
+    {
+        "name": "Propulsion Intern",
+        "date": "August - September 2021",
+        "institution": "Thales Alenia Space UK",
+        "urls": {
+            "prod": "https://www.thalesgroup.com/en/worldwide/space/news/thales-alenia-space-uk",
+            "src": ""
+        },
+        "description": "An internship involving the creation of a modular analytical suite to model spacecraft propellant feed systems on the basis of waterhammer protection and nominal performance.",
+        "techs": "MATLAB",
+        "pictures": {
+            "main": "experience/tasuk/main.png",
+            "tile": "experience/tasuk/tile.png",
+            "square": "experience/tasuk/tile.png"
+        }
+    },
+    {
+        "name": "Mars Re-Entry, Descent and Landing Simulation",
+        "date": "July - October 2020",
+        "institution": "",
+        "urls": {
+            "prod": "",
+            "src": ""
+        },
+        "description": "A realistic Martian environment with complete 3D dynamics, and a Mars lander with two PID controllers, equipped with a genetic optimisation algorithm and real-time orbital trajectory prediction.",
+        "techs": "C++, OPENGL",
+        "pictures": {
+            "main": "portfolio/marslander/main.png",
+            "tile": "portfolio/marslander/tile.png",
+            "square": "portfolio/marslander/square.png"
         }
     }
 ]

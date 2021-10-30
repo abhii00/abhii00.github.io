@@ -10,7 +10,7 @@
         "description": "An internship involving the creation of a modular analytical suite to model spacecraft propellant feed systems on the basis of waterhammer protection and nominal performance.",
         "techs": "MATLAB",
         "pictures": {
-            "main": "",
+            "main": "experience/tasuk/main.png",
             "tile": "experience/tasuk/tile.png",
             "square": "experience/tasuk/tile.png"
         }
@@ -42,7 +42,7 @@
         "description": "Negotiation with 10+ launch sites for the launch of a UK record-breaking 20km, 5kN hybrid rocket. Safety procedure regarding Nitrous Oxide pressure vessels for cold flow and hot fire testing.",
         "techs": "",
         "pictures": {
-            "main": "",
+            "main": "experience/cusf/main.png",
             "tile": "experience/cusf/tile3.png",
             "square": "experience/cusf/square3.png"
         }
