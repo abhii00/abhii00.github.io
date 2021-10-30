@@ -3,9 +3,11 @@ import * as THREE from 'three';
 
 import { ExpandMore } from '@material-ui/icons';
 import { Link } from 'react-scroll';
+import { isMobile } from 'react-device-detect';
 import { Menu, Section, Slideshow, ProjectsGrid } from './components.js';
 import { setupScene, resizeScene } from './visuals/graphics.js';
-import { animation1 } from './visuals/animations.js';
+import { animation0, animation1 } from './visuals/animations.js';
+
 
 import aboutImage from '../assets/images/about.jpeg';
 import featuredProjects from '../assets/projects/featured.json';
@@ -19,7 +21,12 @@ class App extends React.Component{
         const [scene, camera, renderer] = setupScene(new THREE.Vector3(-210,15,35));
         this.mount.appendChild(renderer.domElement);
 
-        animation1(scene, camera, renderer);
+        if (isMobile){
+            animation0(scene, camera, renderer);
+        }
+        else {
+            animation1(scene, camera, renderer);
+        }
 
         window.addEventListener('resize', () => {resizeScene(camera, renderer)});
     }

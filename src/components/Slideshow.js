@@ -37,7 +37,7 @@ class Slideshow extends React.Component{
 
     componentDidMount(){
         const slideInterval = 5;
-        const animationInterval = 0.5;
+        const animationInterval = 0.4;
 
         this.updateSlideshow();
 
@@ -45,9 +45,9 @@ class Slideshow extends React.Component{
             this.transitionToggleLoadOut(); //start load out
 
             setTimeout(() => {
-                this.transitionToggleLoadOut(); //stop load out
-
                 this.updateSlideshow();
+
+                this.transitionToggleLoadOut(); //stop load out
 
                 this.transitionToggleLoadIn(); //start load in
 
