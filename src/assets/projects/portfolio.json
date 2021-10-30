@@ -1,162 +1,210 @@
 [
     {
-        "name": "DOUBLE PENDULA",
-        "date": "October - December 2020",
-        "institution": "Alpha",
+        "name": "Mars Re-Entry, Descent and Landing Simulation",
+        "date": "July - October 2020",
+        "institution": "",
         "urls": {
-            "prod": "https://abhii00.github.io/pendula",
+            "prod": "",
+            "src": ""
+        },
+        "description": "A realistic Martian environment with complete 3D dynamics, and a Mars lander with two PID controllers, equipped with a genetic optimisation algorithm and real-time orbital trajectory prediction.",
+        "techs": "C++, OPENGL",
+        "pictures": {
+            "main": "",
+            "tile": "portfolio/marslander/tile.png",
+            "square": "portfolio/marslander/square.png"
+        }
+    },
+    {
+        "name": "Earth Observation Data Visualiser",
+        "date": "July 2021 - Present",
+        "institution": "",
+        "urls": {
+            "prod": "",
+            "src": "https://github.com/abhii00/eovisualiser"
+        },
+        "description": "An accessible visualiser for Earth Observation data and space object tracking.",
+        "techs": "REACTJS, JAVASCRIPT, THREEJS",
+        "pictures": {
+            "main": "",
+            "tile": "portfolio/eovisualiser/tile.png",
+            "square": "portfolio/eovisualiser/square.png"
+        }
+    },
+    {
+        "name": "Personal Website",
+        "date": "July - October 2021",
+        "institution": "",
+        "urls": {
+            "prod": "/",
+            "src": "https://github.com/abhii00/portfolio"
+        },
+        "description": "This website :)",
+        "techs": "REACTJS, SASS, JAVASCRIPT, THREEJS",
+        "pictures": {
+            "main": "",
+            "tile": "portfolio/portfolio/tile.png",
+            "square": "portfolio/portfolio/tile.png"
+        }
+    },
+    {
+        "name": "Orbit",
+        "date": "February - October 2019",
+        "institution": "",
+        "urls": {
+            "prod": "",
+            "src": "https://github.com/abhii00/orbit"
+        },
+        "description": "A physics engine to numerically solve many-body astrodynamics problems.",
+        "techs": "PYTHON, PYGAME",
+        "pictures": {
+            "main": "",
+            "tile": "portfolio/orbit/tile.png",
+            "square": "portfolio/orbit/tile.png"
+        }
+    },
+    {
+        "name": "WorldGen",
+        "date": "February - October 2019",
+        "institution": "",
+        "urls": {
+            "prod": "",
+            "src": "https://github.com/abhii00/worldgen"
+        },
+        "description": "A realistic terrain generator using Perlin and Value noise.",
+        "techs": "PYTHON",
+        "pictures": {
+            "main": "",
+            "tile": "portfolio/worldgen/tile.png",
+            "square": "portfolio/worldgen/square.png"
+        }
+    },
+    {
+        "name": "Evaluation of the Future of Spacecraft Propulsion",
+        "date": "April 2018 - January 2019",
+        "institution": "",
+        "urls": {
+            "prod": "",
+            "src": ""
+        },
+        "description": "A report exploring the technological readiness of chemical, electrical and nuclear propulsion systems in the context of manned interplanetary travel.",
+        "techs": "MATLAB",
+        "pictures": {
+            "main": "",
+            "tile": "portfolio/evaluation/tile.png",
+            "square": "portfolio/evaluation/tile.png"
+        }
+    },
+    {
+        "name": "Chaotic Double Pendulum Simulation",
+        "date": "June 2021",
+        "institution": "",
+        "urls": {
+            "prod": "/pendula",
             "src": "https://github.com/abhii00/pendula"
         },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
-        "techs": "REACT.JS",
+        "description": "A symplectic integrator to show the chaotic dynamics of double pendula.",
+        "techs": "REACTJS, JAVASCRIPT",
         "pictures": {
-            "main": "portfolio/pendula/main.png",
+            "main": "",
             "tile": "portfolio/pendula/tile.png",
             "square": "portfolio/pendula/tile.png"
         }
     },
     {
-        "name": "DOUBLE PENDULA",
-        "date": "October - December 2020",
-        "institution": "Alpha",
+        "name": "Computer Vision Keyboard",
+        "date": "October 2021 - Present",
+        "institution": "",
         "urls": {
-            "prod": "https://abhii00.github.io/pendula",
-            "src": "https://github.com/abhii00/pendula"
+            "prod": "",
+            "src": "https://github.com/abhii00/vkeyboard"
         },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
-        "techs": "REACT.JS",
+        "description": "A computer vision-controlled hand-tracking keyboard to provide accessibility to those unable to use traditional keyboards.",
+        "techs": "PYTHON, OPENCV",
         "pictures": {
-            "main": "portfolio/pendula/main.png",
-            "tile": "portfolio/pendula/tile.png",
-            "square": "portfolio/pendula/tile.png"
+            "main": "",
+            "tile": "portfolio/vkeyboard/tile.png",
+            "square": "portfolio/vkeyboard/tile.png"
         }
     },
     {
-        "name": "DOUBLE PENDULA",
-        "date": "October - December 2020",
-        "institution": "Alpha",
+        "name": "My Indoor Garden",
+        "date": "July 2021 - Present",
+        "institution": "",
         "urls": {
-            "prod": "https://abhii00.github.io/pendula",
-            "src": "https://github.com/abhii00/pendula"
+            "prod": "",
+            "src": "https://github.com/abhii00/myindoorgarden"
         },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
-        "techs": "REACT.JS",
+        "description": "A web-app to allow plant-owners to better track their plant watering schedule.",
+        "techs": "REACTJS",
         "pictures": {
-            "main": "portfolio/pendula/main.png",
-            "tile": "portfolio/pendula/tile.png",
-            "square": "portfolio/pendula/tile.png"
+            "main": "",
+            "tile": "portfolio/myindoorgarden/tile.png",
+            "square": "portfolio/myindoorgarden/tile.png"
         }
     },
     {
-        "name": "DOUBLE PENDULA",
-        "date": "October - December 2020",
-        "institution": "Alpha",
+        "name": "Personal Server",
+        "date": "July 2021 - Present",
+        "institution": "",
         "urls": {
-            "prod": "https://abhii00.github.io/pendula",
-            "src": "https://github.com/abhii00/pendula"
+            "prod": "",
+            "src": "https://github.com/abhii00/portfolioserver"
         },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
-        "techs": "REACT.JS",
+        "description": "A cohesive and modular backend to serve data to my software projects.",
+        "techs": "NODEJS, EXPRESS, MONGODB",
         "pictures": {
-            "main": "portfolio/pendula/main.png",
-            "tile": "portfolio/pendula/tile.png",
-            "square": "portfolio/pendula/tile.png"
+            "main": "",
+            "tile": "portfolio/portfolioserver/tile.png",
+            "square": "portfolio/portfolioserver/tile.png"
         }
     },
     {
-        "name": "DOUBLE PENDULA",
-        "date": "October - December 2020",
-        "institution": "Alpha",
+        "name": "Typing Test",
+        "date": "June 2021 - Present",
+        "institution": "",
         "urls": {
-            "prod": "https://abhii00.github.io/pendula",
-            "src": "https://github.com/abhii00/pendula"
+            "prod": "",
+            "src": "https://github.com/abhii00/typingtest"
         },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
-        "techs": "REACT.JS",
+        "description": "A typing test with the ability to select various word lists and to measure wpm performance over time.",
+        "techs": "REACTJS, PYTHON",
         "pictures": {
-            "main": "portfolio/pendula/main.png",
-            "tile": "portfolio/pendula/tile.png",
-            "square": "portfolio/pendula/tile.png"
+            "main": "",
+            "tile": "portfolio/typingtest/tile.png",
+            "square": "portfolio/typingtest/tile.png"
         }
     },
     {
-        "name": "DOUBLE PENDULA",
-        "date": "October - December 2020",
-        "institution": "Alpha",
+        "name": "Aortic Valve Replacement Design",
+        "date": "January 2021 - Present",
+        "institution": "",
         "urls": {
-            "prod": "https://abhii00.github.io/pendula",
-            "src": "https://github.com/abhii00/pendula"
+            "prod": "",
+            "src": ""
         },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
-        "techs": "REACT.JS",
+        "description": "A project to design a functional mechanical replacement avoiding cavitation and blood cell damage after generating detailed 3D models of the tissue from real scans.",
+        "techs": "3DSLICER, SOLIDWORKS",
         "pictures": {
-            "main": "portfolio/pendula/main.png",
-            "tile": "portfolio/pendula/tile.png",
-            "square": "portfolio/pendula/tile.png"
+            "main": "",
+            "tile": "portfolio/aorticvalve/tile.png",
+            "square": "portfolio/aorticvalve/tile.png"
         }
     },
     {
-        "name": "DOUBLE PENDULA",
-        "date": "October - December 2020",
-        "institution": "Alpha",
+        "name": "PDF Tools",
+        "date": "June 2021",
+        "institution": "",
         "urls": {
-            "prod": "https://abhii00.github.io/pendula",
-            "src": "https://github.com/abhii00/pendula"
+            "prod": "",
+            "src": "https://github.com/abhii00/pdftools"
         },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
-        "techs": "REACT.JS",
+        "description": "A set of tools to modify, split and merge PDF files from the command line.",
+        "techs": "PYTHON",
         "pictures": {
-            "main": "portfolio/pendula/main.png",
-            "tile": "portfolio/pendula/tile.png",
-            "square": "portfolio/pendula/tile.png"
-        }
-    },
-    {
-        "name": "DOUBLE PENDULA",
-        "date": "October - December 2020",
-        "institution": "Alpha",
-        "urls": {
-            "prod": "https://abhii00.github.io/pendula",
-            "src": "https://github.com/abhii00/pendula"
-        },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
-        "techs": "REACT.JS",
-        "pictures": {
-            "main": "portfolio/pendula/main.png",
-            "tile": "portfolio/pendula/tile.png",
-            "square": "portfolio/pendula/tile.png"
-        }
-    },
-    {
-        "name": "DOUBLE PENDULA",
-        "date": "October - December 2020",
-        "institution": "Alpha",
-        "urls": {
-            "prod": "https://abhii00.github.io/pendula",
-            "src": "https://github.com/abhii00/pendula"
-        },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
-        "techs": "REACT.JS",
-        "pictures": {
-            "main": "portfolio/pendula/main.png",
-            "tile": "portfolio/pendula/tile.png",
-            "square": "portfolio/pendula/tile.png"
-        }
-    },
-    {
-        "name": "DOUBLE PENDULA",
-        "date": "October - December 2020",
-        "institution": "Alpha",
-        "urls": {
-            "prod": "https://abhii00.github.io/pendula",
-            "src": "https://github.com/abhii00/pendula"
-        },
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id dolor et nunc vestibulum maximus in vestibulum metus. Vivamus vitae lacinia sem. Aenean facilisis neque ut ante aliquam mattis. Nam dolor quam, consectetur eget tortor sit amet, lobortis fermentum augue.",
-        "techs": "REACT.JS",
-        "pictures": {
-            "main": "portfolio/pendula/main.png",
-            "tile": "portfolio/pendula/tile.png",
-            "square": "portfolio/pendula/tile.png"
+            "main": "",
+            "tile": "portfolio/pdftools/tile.png",
+            "square": "portfolio/pdftools/tile.png"
         }
     }
 ]
