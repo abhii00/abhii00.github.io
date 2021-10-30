@@ -425,7 +425,6 @@ body {
   justify-content: center;
   align-items: stretch;
   position: relative;
-  height: 70vw;
 }
 @media (min-width: 500px) and (max-width: 1400px) {
   .section-container {
