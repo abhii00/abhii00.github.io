@@ -26,7 +26,6 @@ class App extends React.Component{
 
     /*
     TODO write portfolio descriptions, update GitHubs, make public
-    TODO write experience descriptions
     */
 
     render(){

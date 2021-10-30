@@ -1,10 +1,26 @@
 [
     {
+        "name": "Propulsion Intern",
+        "date": "August - September 2021",
+        "institution": "Thales Alenia Space UK",
+        "urls": {
+            "prod": "https://www.thalesgroup.com/en/worldwide/space/news/thales-alenia-space-uk",
+            "src": ""
+        },
+        "description": "An internship involving the creation of a modular analytical suite to model spacecraft propellant feed systems on the basis of waterhammer protection and nominal performance.",
+        "techs": "MATLAB",
+        "pictures": {
+            "main": "",
+            "tile": "experience/tasuk/tile.png",
+            "square": "experience/tasuk/tile.png"
+        }
+    },
+    {
         "name": "BA, MEng in Engineering",
         "date": "2019-2023",
         "institution": "Selwyn College, University of Cambridge",
         "urls": {
-            "prod": "teaching.eng.cam.ac.uk/node/2979",
+            "prod": "https://teaching.eng.cam.ac.uk/node/2979",
             "src": ""
         },
         "description": "Specialisation in Aerothermal, Mechanical, Information and Bioengineering. Modules: 3A1/3, 3C5, 3E1, 3F1/2, 3G1, 4M12. Year 2: 79%, 1st Class, Official; Year 1: 75: 1st Class Equivalent, Unofficial.",
@@ -12,55 +28,103 @@
         "pictures": {
             "main": "",
             "tile": "experience/cam/tile.png",
-            "square": "experience/cam/tile.png"
+            "square": "experience/cam/square.png"
         }
     }, 
     {
-        "name": "Senior Physics Challenge Participant",
-        "date": "2019-2023",
-        "institution": "Department of Physics, University of Cambridge",
+        "name": "Launch and Safety Officer",
+        "date": "March 2021 - Present",
+        "institution": "Cambridge University Spaceflight",
         "urls": {
-            "prod": "https://isaacphysics.org/pages/spc",
+            "prod": "https://cusf.co.uk",
             "src": ""
         },
-        "description": "1-week selective course on understanding advanced problem solving in quantum mechanics.",
+        "description": "Negotiation with 10+ launch sites for the launch of a UK record-breaking 20km, 5kN hybrid rocket. Safety procedure regarding Nitrous Oxide pressure vessels for cold flow and hot fire testing.",
         "techs": "",
         "pictures": {
             "main": "",
-            "tile": "experience/cam/tile.png",
-            "square": "experience/cam/tile.png"
+            "tile": "experience/cusf/tile3.png",
+            "square": "experience/cusf/square3.png"
         }
     },
     {
-        "name": "GCSE and A-Level Student",
-        "date": "2019-2023",
-        "institution": "King Edward VI Camp Hill School for Boys",
+        "name": "Cooling Sub-Team Propulsion Engineer",
+        "date": "January 2021 - Present",
+        "institution": "Cambridge University Spaceflight",
         "urls": {
-            "prod": "https://www.camphillboys.bham.sch.uk/",
+            "prod": "https://cusf.co.uk/white-giant",
             "src": ""
         },
-        "description": "A-Levels: A*A*A*A* in Mathematics, Further Mathematics, Physics and Chemistry, GCSEs: 3 9s, 8 A*s, FSMQ A",
-        "techs": "",
+        "description": "A manufacturing-oriented design of a 10kN Nitrous Oxide-Isopyropyl Alcohol, after analysis of temperatures, stresses and material compatibility.",
+        "techs": "PYTHON, SOLIDWORKS",
         "pictures": {
             "main": "",
-            "tile": "experience/kechb/tile.png",
-            "square": "experience/kechb/tile.png"
+            "tile": "experience/cusf/tile1.png",
+            "square": "experience/cusf/square1.png"
         }
     },
     {
-        "name": "Research Student",
+        "name": "Lead Website Developer",
         "date": "August 2021 - Present",
-        "institution": "Division A: Energy, Fluid Mechanics and Turbomachinery, Cambridge University Engineering Department",
+        "institution": "Cambridge University Spaceflight",
         "urls": {
-            "prod": "eng.cam.ac.uk/profiles/rsc10",
+            "prod": "https://cusf.co.uk",
             "src": ""
         },
-        "description": "A CFD research project with Professor R.S. Cant involving creating a standard test case library for stationary laminar hydrogen flame speeds for proprietary code, automated with Linux and Python.",
-        "techs": "LINUX, PYTHON",
+        "description": "A total redesign of the website as part of a new marketing strategy, built in Wordpress and complete with my own design, and Blender renders.",
+        "techs": "WORDPRESS",
         "pictures": {
             "main": "",
-            "tile": "experience/cam/tile.png",
-            "square": "experience/cam/tile.png"
+            "tile": "experience/cusf/tile2.png",
+            "square": "experience/cusf/square2.png"
+        }
+    },
+    {
+        "name": "Engineering in Education Scheme Student",
+        "date": "September 2017 - April 2018",
+        "institution": "Rolls-Royce",
+        "urls": {
+            "prod": "https://www.rolls-royce.com/products-and-services/civil-aerospace.aspx",
+            "src": ""
+        },
+        "description": "A project overseeing a 3-person team to validate high-temperature laser sensors in measurement of actuator displacement in jet engines.",
+        "techs": "ARDUINO",
+        "pictures": {
+            "main": "",
+            "tile": "experience/rr/tile.png",
+            "square": "experience/rr/tile.png"
+        }
+    },
+    {
+        "name": "Co-Founder",
+        "date": "September 2021 - Present",
+        "institution": "Cambridge University Plant Society",
+        "urls": {
+            "prod": "",
+            "src": ""
+        },
+        "description": "Plant Society!!!!",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "experience/cups/tile.png",
+            "square": "experience/cups/tile.png"
+        }
+    },
+    {
+        "name": "Vice President & IIA Representative",
+        "date": "November 2020 - Present",
+        "institution": "Staff Student Joint Council, Cambridge University Engineering Department",
+        "urls": {
+            "prod": "https://teaching.eng.cam.ac.uk/content/ssjc-remit-roles-officers",
+            "src": ""
+        },
+        "description": "Formerly IB Representative. Responsible for collecting and relaying student opinion to senior professors within the department.",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "experience/cued/tile.png",
+            "square": "experience/cued/tile.png"
         }
     }
 ]

@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Senior Physics Challenge Participant",
+        "date": "2019-2023",
+        "institution": "Department of Physics, University of Cambridge",
+        "urls": {
+            "prod": "https://isaacphysics.org/pages/spc",
+            "src": ""
+        },
+        "description": "1-week selective course on understanding advanced problem solving in quantum mechanics.",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "experience/cam/tile.png",
+            "square": "experience/cam/tile.png"
+        }
+    },
+    {
+        "name": "GCSE and A-Level Student",
+        "date": "2019-2023",
+        "institution": "King Edward VI Camp Hill School for Boys",
+        "urls": {
+            "prod": "https://www.camphillboys.bham.sch.uk/",
+            "src": ""
+        },
+        "description": "A-Levels: A*A*A*A* in Mathematics, Further Mathematics, Physics and Chemistry, GCSEs: 3 9s, 8 A*s, FSMQ A",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "experience/kechb/tile.png",
+            "square": "experience/kechb/tile.png"
+        }
+    },
+    {
+        "name": "Research Student",
+        "date": "August 2021 - Present",
+        "institution": "Division A: Energy, Fluid Mechanics and Turbomachinery, Cambridge University Engineering Department",
+        "urls": {
+            "prod": "https://eng.cam.ac.uk/profiles/rsc10",
+            "src": ""
+        },
+        "description": "A CFD research project with Professor R.S. Cant involving creating a standard test case library for stationary laminar hydrogen flame speeds for proprietary code, automated with Linux and Python.",
+        "techs": "LINUX, PYTHON",
+        "pictures": {
+            "main": "",
+            "tile": "experience/cam/tile.png",
+            "square": "experience/cam/tile.png"
+        }
+    },
+    {
+        "name": "Work Experience Student",
+        "date": "June 2017",
+        "institution": "SAIC Motor Technical Centre UK",
+        "urls": {
+            "prod": "https://saicmotor.com/",
+            "src": ""
+        },
+        "description": "A project reproducing VR controllers using CAD and 3D printing to integrate into a visualisation system for automotive interiors.",
+        "techs": "CATIA V5",
+        "pictures": {
+            "main": "",
+            "tile": "experience/saic/tile.png",
+            "square": "experience/saic/tile.png"
+        }
+    },
+    {
+        "name": "Mentor",
+        "date": "September 2021 - Present",
+        "institution": "Zero Gravity",
+        "urls": {
+            "prod": "",
+            "src": ""
+        },
+        "description": "Mentored a sixth-form student through the admissions process for studying Engineering at university.",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "experience/zerog/tile.png",
+            "square": "experience/zerog/tile.png"
+        }
+    }
+]

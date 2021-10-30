@@ -94,7 +94,7 @@
                 .projectsgrid-description-title {
                     font-size: 2.75vw;
 
-                    @include breakpoint(mobile){font-size: 8vw}
+                    @include breakpoint(mobile){font-size: 8vw; text-align: center;}
                 }
 
                 .projectsgrid-description-institution {
@@ -103,7 +103,7 @@
 
                     width: 55vw;
 
-                    @include breakpoint(mobile){font-size: 5vw}
+                    @include breakpoint(mobile){font-size: 5vw; text-align: center;}
                 }
 
                 .projectsgrid-description-date {

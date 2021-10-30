@@ -303,6 +303,7 @@ body {
 @media (max-width: 500px) {
   .projectsgrid-description-title {
     font-size: 8vw;
+    text-align: center;
   }
 }
 
@@ -314,6 +315,7 @@ body {
 @media (max-width: 500px) {
   .projectsgrid-description-institution {
     font-size: 5vw;
+    text-align: center;
   }
 }
 
