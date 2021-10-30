@@ -41,6 +41,10 @@
   transition: transform 0.35s, filter 0.35s;
 }
 
+.projectsgrid-loadmore-button {
+  transition: transform 0.35s, color 0.35s, background-color 0.35s;
+}
+
 /*ProjectTile*/
 .projecttile-container {
   transition: transform 0.35s;
@@ -135,7 +139,7 @@ body {
 }
 
 .menu-icon {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 100;
   width: 5vw;
   margin-left: 1vw;
@@ -401,6 +405,36 @@ body {
   filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
 }
 
+.projectsgrid-loadmore-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+.projectsgrid-loadmore-button {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  background-color: #18474E;
+  text-align: center;
+  font-size: 1.25vw;
+  width: 20%;
+}
+@media (max-width: 500px) {
+  .projectsgrid-loadmore-button {
+    margin-top: 20px;
+    width: 80%;
+    font-size: 5vw;
+  }
+}
+
+.projectsgrid-loadmore-button:hover {
+  color: #368F8B;
+  background-color: #E7E7E7;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .projecttile-container {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
   background-color: #E7E7E7;
@@ -425,6 +459,7 @@ body {
   justify-content: center;
   align-items: stretch;
   position: relative;
+  min-height: 70vw;
 }
 @media (min-width: 500px) and (max-width: 1400px) {
   .section-container {

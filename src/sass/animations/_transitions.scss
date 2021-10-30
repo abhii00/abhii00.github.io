@@ -40,6 +40,10 @@
     transition: transform $transition_time, filter $transition_time;
 }
 
+.projectsgrid-loadmore-button {
+    transition: transform $transition_time, color $transition_time, background-color $transition_time;
+}
+
 /*ProjectTile*/
 .projecttile-container {
     transition: transform $transition_time;

@@ -3,6 +3,8 @@
 
     position: relative;
 
+    min-height: 70vw;
+
     @include breakpoint(tablet){height: auto};
     @include breakpoint(mobile){height: auto};
 }

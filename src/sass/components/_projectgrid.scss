@@ -165,3 +165,29 @@
                             transform: scale(1.1);
                             filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
                         }
+
+    .projectsgrid-loadmore-container {
+        @include flexbox($flex-direction: row, $justify-content: center);
+
+        width: 100%;
+    }
+
+        .projectsgrid-loadmore-button {
+            @include floatingboxshadow();
+
+            background-color: $color3;
+            
+            text-align: center;
+            font-size: 1.25vw;
+            
+            width: 20%;
+
+            @include breakpoint(mobile){margin-top: 20px; width: 80%; font-size: 5vw};
+        }
+
+            .projectsgrid-loadmore-button:hover {
+                color: $color4;
+                background-color: $color2;
+                transform: scale(1.1);
+                cursor: pointer;
+            }

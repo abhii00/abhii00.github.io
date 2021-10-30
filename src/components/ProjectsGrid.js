@@ -10,18 +10,21 @@ class ProjectsGrid extends React.Component {
         super(props);
 
         this.state = {
-            projectRows: [],
             descriptionShown: false,
             descriptionProjectID: 0,
             descriptionProject: null,
+            projectRows: [],
             projectPreRows: [],
             projectPostRows: [],
+            loadRest: false,
+            showButton: true,
             loadin: false,
             loadout: false
         }
 
         this.consts = {
-            projectsPerLine: 4
+            projectsPerLine: 4,
+            defaultLines: 2
         }
     }
 
@@ -38,7 +41,9 @@ class ProjectsGrid extends React.Component {
         }
         this.setState({
             projectRows: projectRows,
-            projectPreRows: projectRows
+            projectPreRows: projectRows[0],
+            projectPostRows: projectRows.slice(1,),
+            showButton: (projectRows.length > 2) ? true : false
         });
     }
 
@@ -114,6 +119,12 @@ class ProjectsGrid extends React.Component {
         })
     }
 
+    renderRest = (e) => {
+        this.setState({
+            loadRest: true
+        })
+    }
+
     render(){
         return(
             <div className='projectsgrid-container'>
@@ -144,7 +155,11 @@ class ProjectsGrid extends React.Component {
                         <img src={this.state.descriptionShown && require('../assets/projects/'+ this.state.descriptionProject.pictures.square).default} alt=''className={`projectsgrid-description-image${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' ' : ' invisible'}`}`}`}/>
                     </div>
                 </div>
-                {this.state.projectPostRows}
+                {this.state.projectPostRows[0]}
+                {
+                    this.state.loadRest ?
+                    this.state.projectPostRows.slice(1,) : this.state.showButton && <div className='projectsgrid-loadmore-container'><div className='projectsgrid-loadmore-button' onClick={this.renderRest}> Load Rest </div></div>
+                }
             </div>
         )
     }
