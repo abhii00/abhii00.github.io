@@ -21,7 +21,7 @@
 }
 
 .projectsgrid-description-container.loadin {
-    transition: transform calc($transition_time/2);
+    transition: transform calc($transition_time/2), height calc($transition_time/2);
 }
 
 .projectsgrid-description-content-container.loadin {

@@ -22,7 +22,7 @@
 }
 
 .projectsgrid-description-container.loadin {
-  transition: transform 0.175s;
+  transition: transform 0.175s, height 0.175s;
 }
 
 .projectsgrid-description-content-container.loadin {
@@ -269,7 +269,7 @@ body {
 }
 
 .projectsgrid-description-image.invisible {
-  height: 0vw;
+  transform: scaleY(0);
 }
 
 .projectsgrid-description-image {

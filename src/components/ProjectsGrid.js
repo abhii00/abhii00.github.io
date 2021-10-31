@@ -58,18 +58,17 @@ class ProjectsGrid extends React.Component {
                 descriptionShown: true,
                 descriptionProjectID: id,
                 descriptionProject: this.props.projectsJSON[id],
+                loadin: true
             });
 
             this.calcRows(id);
 
-            this.transitionToggleLoadIn(); //start load in
-
             setTimeout(() => {
-                this.transitionToggleLoadIn(); //stop load in
+                this.setState({loadin: false}); //stop loading in
             }, animationInterval*1000);
         }
         else {
-            this.transitionToggleLoadOut(); //start load out
+            this.setState({loadout: true}); //start loading out
 
             setTimeout(() => {
                 this.setState({
@@ -77,14 +76,17 @@ class ProjectsGrid extends React.Component {
                     descriptionProjectID: id,
                     descriptionProject: this.props.projectsJSON[id],
                 });
+
                 this.calcRows(id);
 
-                this.transitionToggleLoadIn(); //start load in
-
                 setTimeout(() => {
-                    this.transitionToggleLoadIn(); //stop transition
-                    this.transitionToggleLoadOut();  
-                }, animationInterval*1000);
+                    this.setState({loadout: false, loadin: true}); //stop loading out, start loading in
+
+                    setTimeout(() => {
+                        this.setState({loadin: false}); //stop loading in
+                    }, animationInterval*1000);
+
+                }, animationInterval*200);
 
             }, animationInterval*1000);
         }
@@ -92,7 +94,6 @@ class ProjectsGrid extends React.Component {
 
     calcRows = (id) => {
         var row = Math.floor(id/this.consts.projectsPerLine);
-        console.log(row);
 
         this.setState({
             projectPreRows: this.state.projectRows.slice(0, row+1),
@@ -106,18 +107,6 @@ class ProjectsGrid extends React.Component {
         });
     }
 
-    transitionToggleLoadIn = () => {
-        this.setState({
-            loadin: !this.state.loadin
-        })
-    }
-
-    transitionToggleLoadOut = () => {
-        this.setState({
-            loadout: !this.state.loadout
-        })
-    }
-
     renderRest = (e) => {
         this.setState({
             loadRest: true
@@ -128,7 +117,7 @@ class ProjectsGrid extends React.Component {
         return(
             <div className='projectsgrid-container'>
                 {this.state.projectPreRows}
-                <div className={`projectsgrid-description-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' loadin' : ' invisible'}`}`}`} style={{top: `${this.state.descriptionProjectID*80}vw`}}>
+                <div className={`projectsgrid-description-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' ' : ' invisible'}`}`}`} style={{top: `${this.state.descriptionProjectID*80}vw`}}>
                     <div className={`projectsgrid-description-content-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ' '}`}`}>
                         <div className='projectsgrid-description-leftcol-container'>
                             <div className='projectsgrid-description-title'>{this.state.descriptionShown && this.state.descriptionProject.name}</div>
