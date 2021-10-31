@@ -32,18 +32,19 @@ import steam_texture from "../../assets/animations/1/steam.png";
     scene.add(sky);
 
     //create stars
-    const no_stars = 800;
+    const no_stars = 500;
 
     const star_material = new THREE.MeshBasicMaterial({color: 0xffffff});
     const stars = [];
+    const star = new THREE.Mesh(small_sphere_geometry, star_material);
     for (let i = 0; i < no_stars; i++) {
-        const star = new THREE.Mesh(small_sphere_geometry, star_material);
+        var new_star = star.clone();
         const x = THREE.MathUtils.randFloatSpread(500);
         const y = THREE.MathUtils.randFloatSpread(200) + 100;
         const z = THREE.MathUtils.randFloatSpread(100) - 100;
-        star.position.set(x,y,z);
-        stars.push(star);
-        scene.add(star);
+        new_star.position.set(x,y,z);
+        stars.push(new_star);
+        scene.add(new_star);
     }
     
     //create point light
