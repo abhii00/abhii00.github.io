@@ -93,7 +93,7 @@ class App extends React.Component{
                             <a href={'https://github.com/abhii00'} target="_blank" rel="noopener noreferrer" className='contact-link'>
                                 <img src={githubIcon} className='contact-icon' alt=''/>
                             </a>
-                            <a href={'https://www.linkedin.com/in/abhijit-pandit-029a8a183/'} target="_blank" rel="noopener noreferrer" className='contact-link'>
+                            <a href={'https://www.linkedin.com/in/abhii00'} target="_blank" rel="noopener noreferrer" className='contact-link'>
                                 <img src={linkedinIcon} className='contact-icon' alt=''/>
                             </a>
                         </div>
