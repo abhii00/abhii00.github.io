@@ -52,27 +52,27 @@
 
 /*Slideshow*/
 .slideshow-background {
-  transition: opacity 0.35s;
+  transition: opacity 0.7s;
 }
 
 .slideshow-box-container.loadout {
-  transition: height 0.175s 0.175s;
+  transition: height 0.35s 0.35s;
 }
 
 .slideshow-content-container.loadout {
-  transition: opacity 0.175s;
+  transition: opacity 0.35s;
 }
 
 .slideshow-box-container.loadin {
-  transition: height 0.175s;
+  transition: height 0.35s;
 }
 
 .slideshow-content-container.loadin {
-  transition: opacity 0.175s 0.175s;
+  transition: opacity 0.35s 0.35s;
 }
 
 .slideshow-image {
-  transition: height 0.35s;
+  transition: height 0.7s;
 }
 
 .slideshow-icon-new {

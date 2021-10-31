@@ -51,27 +51,27 @@
 
 /*Slideshow*/
 .slideshow-background {
-    transition: opacity $transition_time;
+    transition: opacity calc($transition_time*2);
 }
 
 .slideshow-box-container.loadout {
-    transition: height calc($transition_time/2) calc($transition_time/2);
+    transition: height calc($transition_time*2/2) calc($transition_time*2/2);
 }
 
 .slideshow-content-container.loadout {
-    transition: opacity calc($transition_time/2);
+    transition: opacity calc($transition_time*2/2);
 }
 
 .slideshow-box-container.loadin {
-    transition: height calc($transition_time/2);
+    transition: height calc($transition_time*2/2);
 }
 
 .slideshow-content-container.loadin {
-    transition: opacity calc($transition_time/2) calc($transition_time/2);
+    transition: opacity calc($transition_time*2/2) calc($transition_time*2/2);
 }
 
 .slideshow-image {
-    transition: height $transition_time;
+    transition: height calc($transition_time*2);
 }
 
 .slideshow-icon-new {
