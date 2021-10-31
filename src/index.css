@@ -14,7 +14,7 @@
 }
 
 .projectsgrid-description-container.loadout {
-  transition: height 0.175s 0.175s;
+  transition: transform 0.175s 0.175s;
 }
 
 .projectsgrid-description-content-container.loadout {
@@ -22,7 +22,7 @@
 }
 
 .projectsgrid-description-container.loadin {
-  transition: height 0.175s;
+  transition: transform 0.175s;
 }
 
 .projectsgrid-description-content-container.loadin {
@@ -30,7 +30,7 @@
 }
 
 .projectsgrid-description-image {
-  transition: height 0.35s;
+  transition: transform 0.35s;
 }
 
 .projectsgrid-description-icon-new {
@@ -56,7 +56,7 @@
 }
 
 .slideshow-box-container.loadout {
-  transition: height 0.35s 0.35s;
+  transition: transform 0.35s 0.35s;
 }
 
 .slideshow-content-container.loadout {
@@ -64,7 +64,7 @@
 }
 
 .slideshow-box-container.loadin {
-  transition: height 0.35s;
+  transition: transform 0.35s;
 }
 
 .slideshow-content-container.loadin {
@@ -72,7 +72,7 @@
 }
 
 .slideshow-image {
-  transition: height 0.7s;
+  transition: transform 0.7s;
 }
 
 .slideshow-icon-new {
@@ -186,16 +186,11 @@ body {
 
 /*Loading In or Loading Out*/
 .projectsgrid-description-container.loadout {
-  height: 0;
+  transform: scaleY(0);
 }
 
 .projectsgrid-description-container.loadin {
-  height: 23vw;
-}
-@media (max-width: 500px) {
-  .projectsgrid-description-container.loadin {
-    height: 80vw;
-  }
+  transform: scaleY(1);
 }
 
 .projectsgrid-description-content-container.loadout {
@@ -207,11 +202,11 @@ body {
 }
 
 .projectsgrid-description-image.loadout {
-  height: 0;
+  transform: scaleY(0);
 }
 
 .projectsgrid-description-image.loadin {
-  height: 18vw;
+  transform: scaleY(1);
 }
 
 /*Main*/
@@ -596,19 +591,19 @@ body {
 }
 
 .slideshow-image.loadout {
-  height: 0;
+  transform: scaleY(0);
 }
 
 .slideshow-image.loadin {
-  height: 18vw;
+  transform: scaleY(1);
 }
 
 .slideshow-box-container.loadout {
-  height: 0;
+  transform: scaleY(0);
 }
 
 .slideshow-box-container.loadin {
-  height: 23vw;
+  transform: scaleY(1);
 }
 
 .slideshow-content-container.loadout {

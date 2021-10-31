@@ -16,48 +16,30 @@ class Slideshow extends React.Component{
         }
     }
 
-    updateSlideshow = () => {
-        this.setState({
-            projectID: (this.state.projectID+1)%this.props.projectsJSON.length,
-            project: this.props.projectsJSON[(this.state.projectID+1)%this.props.projectsJSON.length]
-        })
-    }
-
-    transitionToggleLoadIn = () => {
-        this.setState({
-            loadin: !this.state.loadin
-        })
-    }
-
-    transitionToggleLoadOut = () => {
-        this.setState({
-            loadout: !this.state.loadout
-        })
-    }
-
     componentDidMount(){
         const slideInterval = 5;
         const animationInterval = 0.8;
 
-        this.updateSlideshow();
-
         setInterval(() => {
-            this.transitionToggleLoadOut(); //start load out
+            this.setState({loadout: true}); //start loading out
 
             setTimeout(() => {
-                this.transitionToggleLoadOut(); //stop load out
-
-                this.updateSlideshow();
-
-                this.transitionToggleLoadIn(); //start load in
+                this.setState({
+                    projectID: (this.state.projectID+1)%this.props.projectsJSON.length,
+                    project: this.props.projectsJSON[(this.state.projectID+1)%this.props.projectsJSON.length]
+                })
 
                 setTimeout(() => {
-                    this.transitionToggleLoadIn(); //stop load in
-                },animationInterval*1000);
+                    this.setState({loadout: false, loadin: true}); //stop loading out, start loading in
 
-            }, animationInterval*1000);
+                    setTimeout(() => {
+                        this.setState({loadin: false}); //start loading in
+                    }, animationInterval*1000)
 
-          }, slideInterval*1000);
+                }, animationInterval*200)
+
+            }, animationInterval*1000)
+        }, slideInterval*1000);
     }
     
     render(){ 

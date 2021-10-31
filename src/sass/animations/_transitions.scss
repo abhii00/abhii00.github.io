@@ -13,7 +13,7 @@
 }
 
 .projectsgrid-description-container.loadout {
-    transition: height calc($transition_time/2) calc($transition_time/2);
+    transition: transform calc($transition_time/2) calc($transition_time/2);
 }
 
 .projectsgrid-description-content-container.loadout {
@@ -21,7 +21,7 @@
 }
 
 .projectsgrid-description-container.loadin {
-    transition: height calc($transition_time/2);
+    transition: transform calc($transition_time/2);
 }
 
 .projectsgrid-description-content-container.loadin {
@@ -29,7 +29,7 @@
 }
 
 .projectsgrid-description-image {
-    transition: height $transition_time;
+    transition: transform $transition_time;
 }
 
 .projectsgrid-description-icon-new {
@@ -55,7 +55,7 @@
 }
 
 .slideshow-box-container.loadout {
-    transition: height calc($transition_time*2/2) calc($transition_time*2/2);
+    transition: transform calc($transition_time*2/2) calc($transition_time*2/2);
 }
 
 .slideshow-content-container.loadout {
@@ -63,7 +63,7 @@
 }
 
 .slideshow-box-container.loadin {
-    transition: height calc($transition_time*2/2);
+    transition: transform calc($transition_time*2/2);
 }
 
 .slideshow-content-container.loadin {
@@ -71,7 +71,7 @@
 }
 
 .slideshow-image {
-    transition: height calc($transition_time*2);
+    transition: transform calc($transition_time*2);
 }
 
 .slideshow-icon-new {

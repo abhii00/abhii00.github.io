@@ -1,12 +1,10 @@
 /*Loading In or Loading Out*/
 .projectsgrid-description-container.loadout {
-    height: 0;
+    transform: scaleY(0);
 }
 
 .projectsgrid-description-container.loadin {
-    height: 23vw;
-
-    @include breakpoint(mobile){height: 80vw;}
+    transform: scaleY(1);
 }
 
 .projectsgrid-description-content-container.loadout {
@@ -18,11 +16,11 @@
 }
 
 .projectsgrid-description-image.loadout {
-    height: 0;
+    transform: scaleY(0);
 }
 
 .projectsgrid-description-image.loadin {
-    height: 18vw;
+    transform: scaleY(1);
 }
 
 /*Main*/

@@ -8,19 +8,19 @@
 }
 
 .slideshow-image.loadout {
-    height: 0;
+    transform: scaleY(0);
 }
 
 .slideshow-image.loadin {
-    height: 18vw;
+    transform: scaleY(1);
 }
 
 .slideshow-box-container.loadout {
-    height: 0;
+    transform: scaleY(0);
 }
 
 .slideshow-box-container.loadin {
-    height: 23vw;
+    transform: scaleY(1);
 }
 
 .slideshow-content-container.loadout {

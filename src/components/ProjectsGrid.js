@@ -50,7 +50,7 @@ class ProjectsGrid extends React.Component {
     renderDescription = (e) => {
         var id = JSON.parse(e.currentTarget.getAttribute('projectID'));
 
-        const animationInterval = 0.5;
+        const animationInterval = 0.4;
 
         //first load
         if (this.state.descriptionProject == null){
@@ -72,8 +72,6 @@ class ProjectsGrid extends React.Component {
             this.transitionToggleLoadOut(); //start load out
 
             setTimeout(() => {
-                this.transitionToggleLoadOut(); //stop load out
-
                 this.setState({
                     descriptionShown: true,
                     descriptionProjectID: id,
@@ -84,7 +82,8 @@ class ProjectsGrid extends React.Component {
                 this.transitionToggleLoadIn(); //start load in
 
                 setTimeout(() => {
-                    this.transitionToggleLoadIn(); //stop load in
+                    this.transitionToggleLoadIn(); //stop transition
+                    this.transitionToggleLoadOut();  
                 }, animationInterval*1000);
 
             }, animationInterval*1000);
@@ -129,7 +128,7 @@ class ProjectsGrid extends React.Component {
         return(
             <div className='projectsgrid-container'>
                 {this.state.projectPreRows}
-                <div className={`projectsgrid-description-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' ' : ' invisible'}`}`}`} style={{top: `${this.state.descriptionProjectID*80}vw`}}>
+                <div className={`projectsgrid-description-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' loadin' : ' invisible'}`}`}`} style={{top: `${this.state.descriptionProjectID*80}vw`}}>
                     <div className={`projectsgrid-description-content-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ' '}`}`}>
                         <div className='projectsgrid-description-leftcol-container'>
                             <div className='projectsgrid-description-title'>{this.state.descriptionShown && this.state.descriptionProject.name}</div>
