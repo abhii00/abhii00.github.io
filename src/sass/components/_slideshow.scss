@@ -1,44 +1,9 @@
-/*Loading In or Loading Out*/
-.slideshow-background.loadout {
-    opacity: 0;
-}
-
-.slideshow-background.loadin {
-    opacity: 1;
-}
-
-.slideshow-image.loadout {
-    transform: scaleY(0);
-}
-
-.slideshow-image.loadin {
-    transform: scaleY(1);
-}
-
-.slideshow-box-container.loadout {
-    transform: scaleY(0);
-}
-
-.slideshow-box-container.loadin {
-    transform: scaleY(1);
-}
-
-.slideshow-content-container.loadout {
-    opacity: 0;
-}
-
-.slideshow-content-container.loadin {
-    opacity: 1;
-}
-
 /*Main*/
 .slideshow-background {
     height: 100%;
     width: 100%;
 
     object-fit: cover;
-
-    opacity: 1;
 }
 
 .slideshow-shadow {

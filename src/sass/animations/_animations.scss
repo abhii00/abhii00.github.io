@@ -17,12 +17,12 @@
 
 /*Loading*/
 .loading-logo {
-    animation-name: loading_fill, loading_fadeout;
+    animation-name: loading_logo_fill, loading_logo_fadeout;
     animation-duration: 0.6s, 0.6s; 
     animation-delay: 0s, calc(0.6s - 0.1s);
 }
 
-    @keyframes loading_fill {
+    @keyframes loading_logo_fill {
         from {
             transform: scale(1);
             filter: auto;
@@ -34,7 +34,7 @@
         }
     }
 
-    @keyframes loading_fadeout {
+    @keyframes loading_logo_fadeout {
         from {
             opacity: 1;
             filter: $color4_filter;
@@ -45,5 +45,74 @@
             opacity: 0;
             filter: $color4_filter;
             transform: scale(1.3);
+        }
+    }
+
+/*Slideshow*/
+.slideshow-background.loading {
+    animation-name: slideshow_background_fade;
+    animation-duration: $transition-time;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+    @keyframes slideshow_background_fade {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+.slideshow-image.loading {
+    animation-name: slideshow_image_scale;
+    animation-duration: $transition-time;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+    @keyframes slideshow_image_scale {
+        from {
+            transform: scaleY(1);
+        }
+        
+        to {
+            transform: scaleY(0);
+        }
+    }
+
+.slideshow-box-container.loading {
+    animation-name: slideshow_boxcontainer_scale;
+    animation-duration: $transition-time;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+    @keyframes slideshow_boxcontainer_scale {
+        from {
+            transform: scaleY(1);
+        }
+        
+        to {
+            transform: scaleY(0);
+        }
+    }
+
+.slideshow-content-container.loading {
+    animation-name: slideshow_content_fade;
+    animation-duration: $transition-time;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+    @keyframes slideshow_content_fade {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
         }
     }

@@ -16,12 +16,12 @@
 }
 /*Loading*/
 .loading-logo {
-  animation-name: loading_fill, loading_fadeout;
+  animation-name: loading_logo_fill, loading_logo_fadeout;
   animation-duration: 0.6s, 0.6s;
   animation-delay: 0s, 0.5s;
 }
 
-@keyframes loading_fill {
+@keyframes loading_logo_fill {
   from {
     transform: scale(1);
     filter: auto;
@@ -31,7 +31,7 @@
     filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
   }
 }
-@keyframes loading_fadeout {
+@keyframes loading_logo_fadeout {
   from {
     opacity: 1;
     filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
@@ -43,111 +43,168 @@
     transform: scale(1.3);
   }
 }
+/*Slideshow*/
+.slideshow-background.loading {
+  animation-name: slideshow_background_fade;
+  animation-duration: 0.4s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes slideshow_background_fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.slideshow-image.loading {
+  animation-name: slideshow_image_scale;
+  animation-duration: 0.4s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes slideshow_image_scale {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+.slideshow-box-container.loading {
+  animation-name: slideshow_boxcontainer_scale;
+  animation-duration: 0.4s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes slideshow_boxcontainer_scale {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+.slideshow-content-container.loading {
+  animation-name: slideshow_content_fade;
+  animation-duration: 0.4s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes slideshow_content_fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 /*Menu*/
 .menu-icon {
-  transition: transform 0.35s, filter 0.35s;
+  transition: transform 0.4s, filter 0.4s;
 }
 
 .menu-link {
-  transition: transform 0.35s, color 0.35s;
+  transition: transform 0.4s, color 0.4s;
 }
 
 /*ProjectGrid*/
 .projectsgrid-description-container {
-  transition: top 0.175s 0.175s;
+  transition: top 0.2s 0.2s;
 }
 
 .projectsgrid-description-container.loadout {
-  transition: transform 0.175s 0.175s;
+  transition: transform 0.2s 0.2s;
 }
 
 .projectsgrid-description-content-container.loadout {
-  transition: opacity 0.175s;
+  transition: opacity 0.2s;
 }
 
 .projectsgrid-description-container.loadin {
-  transition: transform 0.175s, height 0.175s;
+  transition: transform 0.2s, height 0.2s;
 }
 
 .projectsgrid-description-content-container.loadin {
-  transition: opacity 0.175s 0.175s;
+  transition: opacity 0.2s 0.2s;
 }
 
 .projectsgrid-description-image {
-  transition: transform 0.35s;
+  transition: transform 0.4s;
 }
 
 .projectsgrid-description-icon-new {
-  transition: transform 0.35s, color 0.35s;
+  transition: transform 0.4s, color 0.4s;
 }
 
 .projectsgrid-description-icon-github {
-  transition: transform 0.35s, filter 0.35s;
+  transition: transform 0.4s, filter 0.4s;
 }
 
 .projectsgrid-loadmore-button {
-  transition: transform 0.35s, color 0.35s, background-color 0.35s;
+  transition: transform 0.4s, color 0.4s, background-color 0.4s;
 }
 
 /*ProjectTile*/
 .projecttile-container {
-  transition: transform 0.35s;
+  transition: transform 0.4s;
 }
 
 /*Slideshow*/
-.slideshow-background {
-  transition: opacity 0.7s;
-}
-
 .slideshow-box-container.loadout {
-  transition: transform 0.35s 0.35s;
+  transition: transform 0.4s 0.4s;
 }
 
 .slideshow-content-container.loadout {
-  transition: opacity 0.35s;
+  transition: opacity 0.4s;
 }
 
 .slideshow-box-container.loadin {
-  transition: transform 0.35s;
+  transition: transform 0.4s;
 }
 
 .slideshow-content-container.loadin {
-  transition: opacity 0.35s 0.35s;
+  transition: opacity 0.4s 0.4s;
 }
 
 .slideshow-image {
-  transition: transform 0.7s;
+  transition: transform 0.8s;
 }
 
 .slideshow-icon-new {
-  transition: transform 0.35s, color 0.35s;
+  transition: transform 0.4s, color 0.4s;
 }
 
 .slideshow-icon-github {
-  transition: transform 0.35s, filter 0.35s;
+  transition: transform 0.4s, filter 0.4s;
 }
 
 /*About*/
 .about-image {
-  transition: transform 0.35s;
+  transition: transform 0.4s;
 }
 
 /*Contact*/
 .contact-icon {
-  transition: transform 0.35s, filter 0.35s;
+  transition: transform 0.4s, filter 0.4s;
 }
 
 .contact-email {
-  transition: transform 0.35s, color 0.35s;
+  transition: transform 0.4s, color 0.4s;
 }
 
 /*Introduction*/
 .introduction-text-name {
-  transition: transform 0.35s, color 0.35s;
+  transition: transform 0.4s, color 0.4s;
 }
 
 .introduction-icon {
-  transition: transform 0.35s, color 0.35s;
+  transition: transform 0.4s, color 0.4s;
 }
 
 html {
@@ -642,45 +699,11 @@ body {
   }
 }
 
-/*Loading In or Loading Out*/
-.slideshow-background.loadout {
-  opacity: 0;
-}
-
-.slideshow-background.loadin {
-  opacity: 1;
-}
-
-.slideshow-image.loadout {
-  transform: scaleY(0);
-}
-
-.slideshow-image.loadin {
-  transform: scaleY(1);
-}
-
-.slideshow-box-container.loadout {
-  transform: scaleY(0);
-}
-
-.slideshow-box-container.loadin {
-  transform: scaleY(1);
-}
-
-.slideshow-content-container.loadout {
-  opacity: 0;
-}
-
-.slideshow-content-container.loadin {
-  opacity: 1;
-}
-
 /*Main*/
 .slideshow-background {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  opacity: 1;
 }
 
 .slideshow-shadow {

@@ -50,10 +50,6 @@
 }   
 
 /*Slideshow*/
-.slideshow-background {
-    transition: opacity calc($transition_time*2);
-}
-
 .slideshow-box-container.loadout {
     transition: transform calc($transition_time*2/2) calc($transition_time*2/2);
 }

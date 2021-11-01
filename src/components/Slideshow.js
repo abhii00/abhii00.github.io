@@ -11,44 +11,38 @@ class Slideshow extends React.Component{
         this.state = {
             projectID: 0,
             project: this.props.projectsJSON[0],
-            loadin: false,
-            loadout: false
+            loading: false
         }
     }
 
     componentDidMount(){
         const slideInterval = 5;
-        const animationInterval = 0.8;
+        const animationInterval = 0.4;
 
         setInterval(() => {
-            this.setState({loadout: true}); //start loading out
+            this.setState({loading: true}); //start loading
 
             setTimeout(() => {
                 this.setState({
                     projectID: (this.state.projectID+1)%this.props.projectsJSON.length,
                     project: this.props.projectsJSON[(this.state.projectID+1)%this.props.projectsJSON.length]
                 })
-
-                setTimeout(() => {
-                    this.setState({loadout: false, loadin: true}); //stop loading out, start loading in
-
-                    setTimeout(() => {
-                        this.setState({loadin: false}); //start loading in
-                    }, animationInterval*1000)
-
-                }, animationInterval*200)
-
             }, animationInterval*1000)
+
+            setTimeout(() => {
+                this.setState({loading: false}); //stop loading
+            }, animationInterval*2000)
+
         }, slideInterval*1000);
     }
     
     render(){ 
         return(
             <React.Fragment>
-                <img src={require('../assets/projects/'+this.state.project.pictures.main).default} alt='' className={`slideshow-background${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ''}`}`}/>
+                <img src={require('../assets/projects/'+this.state.project.pictures.main).default} alt='' className={`slideshow-background${this.state.loading ? ' loading' : ''}`}/>
                 <div className='slideshow-shadow'/>
-                <div className={`slideshow-box-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ''}`}`}>
-                    <div className={`slideshow-content-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ''}`}`}>
+                <div className={`slideshow-box-container${this.state.loading ? ' loading' : ''}`}>
+                    <div className={`slideshow-content-container${this.state.loading ? ' loading' : ''}`}>
                         <div className='slideshow-leftcol-container'>
                             <div className='slideshow-title'>{this.state.project.name}</div>
                             <div className='slideshow-institution'>{this.state.project.institution}</div>
