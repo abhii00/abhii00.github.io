@@ -102,12 +102,12 @@ class App extends React.Component{
                                     <br/>
                                     Get in touch via my email below, or reach out to me on another platform!
                                     </div>
-                                <div className='contact-email'>abhijit.pandit808[at]gmail.com</div>
+                                <a href='mailto:abhijit.pandit808@gmail.com' className='contact-email'>abhijit.pandit808[at]gmail.com</a>
                                 <div className='contact-links-container'>
-                                    <a href={'https://github.com/abhii00'} target="_blank" rel="noopener noreferrer" className='contact-link'>
+                                    <a href='https://github.com/abhii00' target="_blank" rel="noopener noreferrer" className='contact-link'>
                                         <img src={githubIcon} className='contact-icon' alt=''/>
                                     </a>
-                                    <a href={'https://www.linkedin.com/in/abhii00'} target="_blank" rel="noopener noreferrer" className='contact-link'>
+                                    <a href='https://www.linkedin.com/in/abhii00' target="_blank" rel="noopener noreferrer" className='contact-link'>
                                         <img src={linkedinIcon} className='contact-icon' alt=''/>
                                     </a>
                                 </div>

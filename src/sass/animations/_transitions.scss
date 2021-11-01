@@ -92,6 +92,10 @@
     transition: transform $transition_time, filter $transition_time;
 }
 
+.contact-email {
+    transition: transform $transition_time, color $transition_time;
+}
+
 /*Introduction*/
 .introduction-text-name {
     transition: transform $transition_time, color $transition_time;

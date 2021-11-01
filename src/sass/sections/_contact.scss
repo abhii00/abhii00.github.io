@@ -14,12 +14,21 @@
     }
 
     .contact-email{
+        color: $color2;
         font-weight: bold;
         font-size: 3.25vw;
         text-align: center;
+        text-decoration: none;
 
         @include breakpoint(mobile){font-size: 5vw}
     }
+
+        .contact-email:hover {
+            transform: scale(1.1);
+            color: $color4;
+
+            cursor: pointer;
+        }
 
     .contact-links-container {
         @include flexbox($flex-direction: row);
