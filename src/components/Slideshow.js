@@ -17,7 +17,7 @@ class Slideshow extends React.Component{
 
     componentDidMount(){
         const slideInterval = 5;
-        const animationInterval = 0.4;
+        const animationInterval = 0.6;
 
         setInterval(() => {
             this.setState({loading: true}); //start loading

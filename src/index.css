@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 .app {
   animation: app_fadein;
-  animation-duration: 1s;
-  animation-delay: 1.1s;
+  animation-duration: 1.5s;
+  animation-delay: 1.7s;
 }
 
 @keyframes app_fadein {
@@ -17,8 +17,8 @@
 /*Loading*/
 .loading-logo {
   animation-name: loading_logo_fill, loading_logo_fadeout;
-  animation-duration: 0.6s, 0.6s;
-  animation-delay: 0s, 0.5s;
+  animation-duration: 0.9s, 0.9s;
+  animation-delay: 0s, 0.8s;
 }
 
 @keyframes loading_logo_fill {
@@ -46,14 +46,14 @@
 /*ProjectsGrid*/
 .projectsgrid-description-container.loading {
   animation-name: projectsgrid_descriptioncontainer_scale;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   animation-direction: alternate;
   animation-iteration-count: 2;
 }
 
 .projectsgrid-description-container.loadingfirst {
   animation-name: projectsgrid_descriptioncontainer_scale;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   animation-direction: reverse;
 }
 
@@ -67,14 +67,14 @@
 }
 .projectsgrid-description-content-container.loading {
   animation-name: projectsgrid_descriptioncontentcontainer_fade;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   animation-direction: alternate;
   animation-iteration-count: 2;
 }
 
 .projectsgrid-description-content-container.loadingfirst {
   animation-name: projectsgrid_descriptioncontentcontainer_fade;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   animation-direction: reverse;
 }
 
@@ -88,14 +88,14 @@
 }
 .projectsgrid-description-image.loading {
   animation-name: projectsgrid_descriptionimage_scale;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   animation-direction: alternate;
   animation-iteration-count: 2;
 }
 
 .projectsgrid-description-image.loadingfirst {
   animation-name: projectsgrid_descriptionimage_scale;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   animation-direction: reverse;
 }
 
@@ -110,7 +110,7 @@
 /*Slideshow*/
 .slideshow-background.loading {
   animation-name: slideshow_background_fade;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   animation-direction: alternate;
   animation-iteration-count: 2;
 }
@@ -125,7 +125,7 @@
 }
 .slideshow-image.loading {
   animation-name: slideshow_image_scale;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   animation-direction: alternate;
   animation-iteration-count: 2;
 }
@@ -140,7 +140,7 @@
 }
 .slideshow-box-container.loading {
   animation-name: slideshow_boxcontainer_scale;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   animation-direction: alternate;
   animation-iteration-count: 2;
 }
@@ -155,7 +155,7 @@
 }
 .slideshow-content-container.loading {
   animation-name: slideshow_content_fade;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   animation-direction: alternate;
   animation-iteration-count: 2;
 }
@@ -170,61 +170,61 @@
 }
 /*Menu*/
 .menu-icon {
-  transition: transform 0.4s, filter 0.4s;
+  transition: transform 0.6s, filter 0.6s;
 }
 
 .menu-link {
-  transition: transform 0.4s, color 0.4s;
+  transition: transform 0.6s, color 0.6s;
 }
 
 /*ProjectGrid*/
 .projectsgrid-description-icon-new {
-  transition: transform 0.4s, color 0.4s;
+  transition: transform 0.6s, color 0.6s;
 }
 
 .projectsgrid-description-icon-github {
-  transition: transform 0.4s, filter 0.4s;
+  transition: transform 0.6s, filter 0.6s;
 }
 
 .projectsgrid-loadmore-button {
-  transition: transform 0.4s, color 0.4s, background-color 0.4s;
+  transition: transform 0.6s, color 0.6s, background-color 0.6s;
 }
 
 /*ProjectTile*/
 .projecttile-container {
-  transition: transform 0.4s;
+  transition: transform 0.6s;
 }
 
 /*Slideshow*/
 .slideshow-icon-new {
-  transition: transform 0.4s, color 0.4s;
+  transition: transform 0.6s, color 0.6s;
 }
 
 .slideshow-icon-github {
-  transition: transform 0.4s, filter 0.4s;
+  transition: transform 0.6s, filter 0.6s;
 }
 
 /*About*/
 .about-image {
-  transition: transform 0.4s;
+  transition: transform 0.6s;
 }
 
 /*Contact*/
 .contact-icon {
-  transition: transform 0.4s, filter 0.4s;
+  transition: transform 0.6s, filter 0.6s;
 }
 
 .contact-email {
-  transition: transform 0.4s, color 0.4s;
+  transition: transform 0.6s, color 0.6s;
 }
 
 /*Introduction*/
 .introduction-text-name {
-  transition: transform 0.4s, color 0.4s;
+  transition: transform 0.6s, color 0.6s;
 }
 
 .introduction-icon {
-  transition: transform 0.4s, color 0.4s;
+  transition: transform 0.6s, color 0.6s;
 }
 
 html {

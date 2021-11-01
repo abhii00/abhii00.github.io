@@ -49,7 +49,7 @@ class ProjectsGrid extends React.Component {
         var id = JSON.parse(e.currentTarget.getAttribute('projectID'));
         var projectRows = this.state.showButton ? this.state.projectRows.slice(0, this.consts.defaultLines) : this.state.projectRows
 
-        const animationInterval = 0.4;
+        const animationInterval = 0.6;
 
         //first load
         if (this.state.descriptionProject == null){

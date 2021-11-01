@@ -42,7 +42,7 @@ class App extends React.Component{
             }
 
             window.addEventListener('resize', () => {resizeScene(camera, renderer)});
-        }, 1000)        
+        }, 1600)        
     }
 
     render(){
