@@ -27,8 +27,6 @@
     height: 23vw;
     width: 70vw;
 
-    opacity: 1;
-
     @include breakpoint(mobile){display: none}
 }
 
@@ -37,8 +35,6 @@
 
         height: 100%;
         width: 80vw;
-
-        opacity: 1;
     }
 
         .slideshow-image {

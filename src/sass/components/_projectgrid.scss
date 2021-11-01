@@ -1,28 +1,3 @@
-/*Loading In or Loading Out*/
-.projectsgrid-description-container.loadout {
-    transform: scaleY(0);
-}
-
-.projectsgrid-description-container.loadin {
-    transform: scaleY(1);
-}
-
-.projectsgrid-description-content-container.loadout {
-    opacity: 0;
-}
-
-.projectsgrid-description-content-container.loadin {
-    opacity: 1;
-}
-
-.projectsgrid-description-image.loadout {
-    transform: scaleY(0);
-}
-
-.projectsgrid-description-image.loadin {
-    transform: scaleY(1);
-}
-
 /*Main*/
 .projectsgrid-container {
     @include flexbox();
@@ -64,8 +39,6 @@
 
             height: 100%;
             width: 80vw;
-
-            opacity: 1;
         }
 
             .projectsgrid-description-image.invisible {

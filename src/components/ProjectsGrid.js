@@ -17,8 +17,7 @@ class ProjectsGrid extends React.Component {
             projectShownPreRows: [],
             projectShownPostRows: [],
             showButton: true,
-            loadin: false,
-            loadout: false
+            loading: 0 //can be set to 0 for not loading, 1 for first load and 2 for second load
         }
 
         this.consts = {
@@ -58,17 +57,17 @@ class ProjectsGrid extends React.Component {
                 descriptionShown: true,
                 descriptionProjectID: id,
                 descriptionProject: this.props.projectsJSON[id],
-                loadin: true
+                loading: 1
             });
 
             this.calcRows(projectRows, id);
 
             setTimeout(() => {
-                this.setState({loadin: false}); //stop loading in
+                this.setState({loading: 0}); //stop loading
             }, animationInterval*1000);
         }
         else {
-            this.setState({loadout: true}); //start loading out
+            this.setState({loading: 2}); //start loading
 
             setTimeout(() => {
                 this.setState({
@@ -78,17 +77,11 @@ class ProjectsGrid extends React.Component {
                 });
 
                 this.calcRows(projectRows, id);
-
-                setTimeout(() => {
-                    this.setState({loadout: false, loadin: true}); //stop loading out, start loading in
-
-                    setTimeout(() => {
-                        this.setState({loadin: false}); //stop loading in
-                    }, animationInterval*1000);
-
-                }, animationInterval*200);
-
             }, animationInterval*1000);
+
+            setTimeout(() => {
+                this.setState({loading: 0}); //stop loading
+            }, animationInterval*2000);
         }
     }
 
@@ -116,11 +109,12 @@ class ProjectsGrid extends React.Component {
     }
 
     render(){
+        var loadingClass = `${this.state.loading === 1 ? ' loadingfirst' : `${this.state.loading === 2 ? ' loading' : `${this.state.descriptionShown ? '' : ' invisible'}`}`}`;
         return(
             <div className='projectsgrid-container'>
                 {this.state.projectShownPreRows}
-                <div className={`projectsgrid-description-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' ' : ' invisible'}`}`}`} style={{top: `${this.state.descriptionProjectID*80}vw`}}>
-                    <div className={`projectsgrid-description-content-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ' '}`}`}>
+                <div className={`projectsgrid-description-container${loadingClass}`} style={{top: `${this.state.descriptionProjectID*80}vw`}}>
+                    <div className={`projectsgrid-description-content-container${loadingClass}`}>
                         <div className='projectsgrid-description-leftcol-container'>
                             <div className='projectsgrid-description-title'>{this.state.descriptionShown && this.state.descriptionProject.name}</div>
                             <div className='projectsgrid-description-institution'>{this.state.descriptionShown && this.state.descriptionProject.institution}</div>
@@ -142,7 +136,7 @@ class ProjectsGrid extends React.Component {
                                 }
                             </div>
                         </div>
-                        <img src={this.state.descriptionShown && require('../assets/projects/'+ this.state.descriptionProject.pictures.square).default} alt=''className={`projectsgrid-description-image${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' ' : ' invisible'}`}`}`}/>
+                        <img src={this.state.descriptionShown && require('../assets/projects/'+ this.state.descriptionProject.pictures.square).default} alt=''className={`projectsgrid-description-image${loadingClass}`}/>
                     </div>
                 </div>
                 {this.state.projectShownPostRows}

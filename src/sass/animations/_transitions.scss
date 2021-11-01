@@ -8,30 +8,6 @@
 }
 
 /*ProjectGrid*/
-.projectsgrid-description-container {
-    transition: top calc($transition_time/2) calc($transition_time/2);
-}
-
-.projectsgrid-description-container.loadout {
-    transition: transform calc($transition_time/2) calc($transition_time/2);
-}
-
-.projectsgrid-description-content-container.loadout {
-    transition: opacity calc($transition_time/2);
-}
-
-.projectsgrid-description-container.loadin {
-    transition: transform calc($transition_time/2), height calc($transition_time/2);
-}
-
-.projectsgrid-description-content-container.loadin {
-    transition: opacity calc($transition_time/2) calc($transition_time/2);
-}
-
-.projectsgrid-description-image {
-    transition: transform $transition_time;
-}
-
 .projectsgrid-description-icon-new {
     transition: transform $transition_time, color $transition_time;
 }
@@ -50,26 +26,6 @@
 }   
 
 /*Slideshow*/
-.slideshow-box-container.loadout {
-    transition: transform calc($transition_time*2/2) calc($transition_time*2/2);
-}
-
-.slideshow-content-container.loadout {
-    transition: opacity calc($transition_time*2/2);
-}
-
-.slideshow-box-container.loadin {
-    transition: transform calc($transition_time*2/2);
-}
-
-.slideshow-content-container.loadin {
-    transition: opacity calc($transition_time*2/2) calc($transition_time*2/2);
-}
-
-.slideshow-image {
-    transition: transform calc($transition_time*2);
-}
-
 .slideshow-icon-new {
     transition: transform $transition_time, color $transition_time;
 }
