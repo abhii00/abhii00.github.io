@@ -4,6 +4,12 @@
     animation-delay: 0s, 0.5s;
 }
 
+.app {
+    animation: app_fadein;
+    animation-duration: 1s;
+    animation-delay: 1.1s;
+}
+
 @keyframes loading_fill {
     from {
         transform: scale(1);
@@ -27,5 +33,15 @@
         opacity: 0;
         filter: $color4_filter;
         transform: scale(1.3);
+    }
+}
+
+@keyframes app_fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
