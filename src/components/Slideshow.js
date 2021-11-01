@@ -56,12 +56,18 @@ class Slideshow extends React.Component{
                             <div className='slideshow-text'>{this.state.project.description}</div>
                             <div className='slideshow-tech'>{this.state.project.techs}</div>
                             <div className='slideshow-links-container'>
-                                <a href={this.state.project.urls.prod} target="_blank" rel="noopener noreferrer" className='slideshow-link'>
-                                    <OpenInNew className='slideshow-icon-new'/>   
-                                </a>
-                                <a href={this.state.project.urls.src} target="_blank" rel="noopener noreferrer" className='slideshow-link'>
-                                    <img src={githubIcon} className='slideshow-icon-github' alt=''/>
-                                </a>
+                                {
+                                    this.state.project.urls.prod !== '' &&
+                                    <a href={this.state.project.urls.prod} target="_blank" rel="noopener noreferrer" className='slideshow-link'>
+                                        <OpenInNew className='slideshow-icon-new'/>   
+                                    </a>
+                                }
+                                {
+                                    this.state.project.urls.src !== '' &&
+                                    <a href={this.state.project.urls.src} target="_blank" rel="noopener noreferrer" className='slideshow-link'>
+                                        <img src={githubIcon} className='slideshow-icon-github' alt=''/>
+                                    </a>
+                                }                                
                             </div>
                         </div>
                         <img src={require('../assets/projects/'+this.state.project.pictures.square).default} alt='' className={`slideshow-image${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ''}`}`}/>
