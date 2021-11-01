@@ -2,12 +2,14 @@ import React from 'react';
 
 import { Link } from 'react-scroll';
 
+import logo from '../assets/icons/logo.png';
+
 class Menu extends React.Component{
     render(){
         return(
             <div className='menu-container'>
                 <Link to='introduction'>
-                    <div className='menu-icon'>AP</div>
+                    <img src={logo} alt='' className='menu-icon'/>
                 </Link>
                 <div className='menu-links-container'>
                     <Link to='about'>

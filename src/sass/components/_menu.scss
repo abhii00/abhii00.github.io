@@ -13,20 +13,17 @@
 }
 
     .menu-icon {
-        font-size: 40px;
-        font-weight: 100;
-
-        width: 5vw;
+        height: 50px;
         margin-left: 1vw;
 
         cursor: pointer;
 
-        @include breakpoint(mobile){font-size: 30px;}
+        @include breakpoint(mobile){height: 30px;}
     }
 
         .menu-icon:hover {
             transform: scale(1.1);
-            color: $color4;
+            filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
         }
 
     .menu-links-container {

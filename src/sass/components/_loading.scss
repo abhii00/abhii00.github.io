@@ -1,0 +1,12 @@
+.loading-logo-container {
+    @include flexbox($justify-content: center, $align-items:center);
+    width: 100%;
+
+    position: absolute;
+    top: calc(50vh - 10vw);
+}
+
+.loading-logo {
+    height: 10vw;
+    width: 10vw;
+}

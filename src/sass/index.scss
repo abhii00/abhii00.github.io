@@ -2,11 +2,13 @@
 @import 'abstracts/mixins';
 @import 'abstracts/breakpoints';
 
+@import 'animations/animations';
 @import 'animations/transitions';
 
 @import 'base/base';
 
 @import 'components/app';
+@import 'components/loading';
 @import 'components/menu';
 @import 'components/projectgrid';
 @import 'components/projecttile';
