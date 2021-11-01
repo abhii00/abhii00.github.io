@@ -14,9 +14,8 @@ class ProjectsGrid extends React.Component {
             descriptionProjectID: 0,
             descriptionProject: null,
             projectRows: [],
-            projectPreRows: [],
-            projectPostRows: [],
-            loadRest: false,
+            projectShownPreRows: [],
+            projectShownPostRows: [],
             showButton: true,
             loadin: false,
             loadout: false
@@ -41,14 +40,15 @@ class ProjectsGrid extends React.Component {
         }
         this.setState({
             projectRows: projectRows,
-            projectPreRows: projectRows[0],
-            projectPostRows: projectRows.slice(1,),
-            showButton: (projectRows.length > 2) ? true : false
+            projectShownPreRows: projectRows[0],
+            projectShownPostRows: projectRows.slice(1, this.consts.defaultLines),
+            showButton: (projectRows.length > this.consts.defaultLines) ? true : false
         });
     }
 
     renderDescription = (e) => {
         var id = JSON.parse(e.currentTarget.getAttribute('projectID'));
+        var projectRows = this.state.showButton ? this.state.projectRows.slice(0, this.consts.defaultLines) : this.state.projectRows
 
         const animationInterval = 0.4;
 
@@ -61,7 +61,7 @@ class ProjectsGrid extends React.Component {
                 loadin: true
             });
 
-            this.calcRows(id);
+            this.calcRows(projectRows, id);
 
             setTimeout(() => {
                 this.setState({loadin: false}); //stop loading in
@@ -77,7 +77,7 @@ class ProjectsGrid extends React.Component {
                     descriptionProject: this.props.projectsJSON[id],
                 });
 
-                this.calcRows(id);
+                this.calcRows(projectRows, id);
 
                 setTimeout(() => {
                     this.setState({loadout: false, loadin: true}); //stop loading out, start loading in
@@ -92,12 +92,12 @@ class ProjectsGrid extends React.Component {
         }
     }
 
-    calcRows = (id) => {
+    calcRows = (projectSelectRows, id) => {
         var row = Math.floor(id/this.consts.projectsPerLine);
 
         this.setState({
-            projectPreRows: this.state.projectRows.slice(0, row+1),
-            projectPostRows: this.state.projectRows.slice(row+1)
+            projectShownPreRows: projectSelectRows.slice(0,row+1),
+            projectShownPostRows: projectSelectRows.slice(row+1,projectSelectRows.length+1)
         });
     }
 
@@ -109,14 +109,16 @@ class ProjectsGrid extends React.Component {
 
     renderRest = (e) => {
         this.setState({
-            loadRest: true
-        })
+            showButton: false
+        });
+
+        this.calcRows(this.state.projectRows, this.state.descriptionProjectID); //update
     }
 
     render(){
         return(
             <div className='projectsgrid-container'>
-                {this.state.projectPreRows}
+                {this.state.projectShownPreRows}
                 <div className={`projectsgrid-description-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' ' : ' invisible'}`}`}`} style={{top: `${this.state.descriptionProjectID*80}vw`}}>
                     <div className={`projectsgrid-description-content-container${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ' '}`}`}>
                         <div className='projectsgrid-description-leftcol-container'>
@@ -143,10 +145,9 @@ class ProjectsGrid extends React.Component {
                         <img src={this.state.descriptionShown && require('../assets/projects/'+ this.state.descriptionProject.pictures.square).default} alt=''className={`projectsgrid-description-image${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : `${this.state.descriptionShown ? ' ' : ' invisible'}`}`}`}/>
                     </div>
                 </div>
-                {this.state.projectPostRows[0]}
-                {
-                    this.state.loadRest ?
-                    this.state.projectPostRows.slice(1,) : this.state.showButton && <div className='projectsgrid-loadmore-container'><div className='projectsgrid-loadmore-button' onClick={this.renderRest}> Load Rest </div></div>
+                {this.state.projectShownPostRows}
+                { 
+                    this.state.showButton && <div className='projectsgrid-loadmore-container'><div className='projectsgrid-loadmore-button' onClick={this.renderRest}> Load Rest </div></div>
                 }
             </div>
         )
