@@ -3,7 +3,6 @@ import { loadTexture } from "./graphics.js";
 import { Water } from 'three/examples/jsm/objects/Water.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import mountains_model from '../../assets/animations/1/mountainrange2.glb';
-import mountains_wire_model from '../../assets/animations/1/mountainrange2wire.glb';
 import train_model from '../../assets/animations/1/train1.glb';
 import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
 import steam_texture from "../../assets/animations/1/steam.png";
@@ -18,10 +17,9 @@ import steam_texture from "../../assets/animations/1/steam.png";
     const global_offset = -20;
 
     //create reusable geometries
-    const sphere_geometry = new THREE.SphereBufferGeometry(30, 50, 50);
-    const small_sphere_geometry = new THREE.SphereBufferGeometry(0.3, 4, 4);
-    const plane_geometry = new THREE.PlaneBufferGeometry(1000, 1000, 300, 300);
-    const box_geometry = new THREE.BoxBufferGeometry(100, 100, 100, 10, 10, 10);
+    const sphere_geometry = new THREE.SphereBufferGeometry(30, 25, 25);
+    const plane_geometry = new THREE.PlaneBufferGeometry(1000, 1000, 3, 3);
+    const box_geometry = new THREE.BoxBufferGeometry(100, 100, 100, 3, 3, 3);
 
     //create sky
     const sky_color = 0x050713;
@@ -34,19 +32,20 @@ import steam_texture from "../../assets/animations/1/steam.png";
     //create stars
     const no_stars = 500;
 
-    const star_material = new THREE.MeshBasicMaterial({color: 0xffffff});
-    const stars = [];
-    const star = new THREE.Mesh(small_sphere_geometry, star_material);
-    for (let i = 0; i < no_stars; i++) {
-        var new_star = star.clone();
+    const star_coords = [];
+    for ( let i = 0; i < no_stars; i ++ ) {
         const x = THREE.MathUtils.randFloatSpread(500);
         const y = THREE.MathUtils.randFloatSpread(200) + 100;
         const z = THREE.MathUtils.randFloatSpread(100) - 100;
-        new_star.position.set(x,y,z);
-        stars.push(new_star);
-        scene.add(new_star);
+        star_coords.push(x, y, z);
     }
-    
+
+    const star_geometry = new THREE.BufferGeometry();
+    star_geometry.setAttribute('position', new THREE.Float32BufferAttribute(star_coords, 3));
+    const star_material = new THREE.PointsMaterial({size: 0.5, sizeAttenuation: true});
+    const stars = new THREE.Points(star_geometry, star_material);
+    scene.add(stars);
+
     //create point light
     const point_light = new THREE.PointLight(0xffffff,1,0,2);
     point_light.position.set(80,80,global_offset-60);
@@ -60,11 +59,8 @@ import steam_texture from "../../assets/animations/1/steam.png";
     //create moon
     var moon_y_0 = 80;
     var moon_x_0 = 110;
-    var moon_color = 0xffffff
 
-    const moon_material = new THREE.MeshBasicMaterial({
-        color: moon_color,
-        transparent: true,});
+    const moon_material = new THREE.MeshBasicMaterial();
     const moon = new THREE.Mesh(sphere_geometry, moon_material);
     moon.scale.set(0.8, 0.8, 0.8);
     moon.position.set(moon_x_0,moon_y_0,global_offset-80);
@@ -73,9 +69,7 @@ import steam_texture from "../../assets/animations/1/steam.png";
     //create mountains 
     var wireframe_toggle = false;
     var mountains_load = false;
-    var mountains_wire_load = false;
     var mountains;
-    var mountains_wire;
 
     const loader = new GLTFLoader();
     loader.load(mountains_model, function (mountains_gltf) {
@@ -87,16 +81,8 @@ import steam_texture from "../../assets/animations/1/steam.png";
         mountains_load = true;
     });
 
-    loader.load(mountains_wire_model, function (mountains_wire_gltf) {
-        mountains_wire = mountains_wire_gltf.scene;
-        mountains_wire.position.set(0,-25,global_offset-40);
-        mountains_wire.rotation.set(0,-Math.PI/2,0);
-        mountains_wire.scale.set(8,10,13);
-        mountains_wire_load = true;
-    });
-
     //create ocean
-    var water_y_0 = -55;
+    var water_y_0 = -15;
 
     const water = new Water(
         plane_geometry,
@@ -113,16 +99,16 @@ import steam_texture from "../../assets/animations/1/steam.png";
           distortionScale: 3.7,
           fog: scene.fog !== undefined
         }
-      );
+    );
     water.position.set(0,water_y_0,0);
-    water.rotation.set(- Math.PI/2,0,0);
+    water.rotation.set(- Math.PI/2.5,0,0);
     scene.add(water);
 
     //create train
     var train_x_0 = -210;
-    var no_traincarriages = 6;
+    var no_traincarriages = 5;
     var train_sep = 5;
-    var traincarriage_sep = 8;
+    var traincarriage_sep = 10;
 
     var train_load = false;
     var train = 0;
@@ -138,11 +124,11 @@ import steam_texture from "../../assets/animations/1/steam.png";
     var traincarriages = [];
     loader.load(traincarriage_model, function (traincarriage_gltf) {
         var traincarriage = traincarriage_gltf.scene;
+        traincarriage.rotation.set(0, Math.PI/2, 0);
+        traincarriage.scale.set(1,1,2.5);
         for (var i = 0; i < no_traincarriages; i++){
             traincarriages[i] = traincarriage.clone();
             traincarriages[i].position.set(train_x_0-train_sep-i*traincarriage_sep,25,global_offset-24);
-            traincarriages[i].rotation.set(0, Math.PI/2, 0);
-            traincarriages[i].scale.set(1,1,2);
             scene.add(traincarriages[i]);
         }
         traincarriages_load = true;
@@ -183,7 +169,7 @@ import steam_texture from "../../assets/animations/1/steam.png";
         
         //bobbing moon and water
         moon.position.y = -Math.sin(0.5*time)*5 + moon_y_0;
-        water.position.y = Math.sin(0.5*time)*2 + water_y_0; //twinkling stars
+        water.position.y = Math.sin(0.5*time)*5 + water_y_0; //twinkling stars
 
         //moving train
         var train_v = 2.5;
@@ -212,32 +198,44 @@ import steam_texture from "../../assets/animations/1/steam.png";
                 wireframe_toggle = !wireframe_toggle;
 
                 //switch to different mode
-                if (wireframe_toggle && mountains_load && mountains_wire_load){ 
-                    scene.remove(mountains);  
-                    scene.add(mountains_wire); 
-                    mountains_wire.visible = true;
+                if (wireframe_toggle && mountains_load){ 
+                    mountains.traverse((node) => {
+                        if (!node.isMesh) return;
+                        node.material.wireframe = true;
+                    });
+
                     ambient_light.intensity = 1.5;
                     point_light.intensity = 0;
+
                     scene.remove(steam);
                     scene.remove(water);
                     scene.remove(moon);
-                    for (let i = 0; i < no_stars; i++) {scene.remove(stars[i]);}
+                    scene.remove(stars);
                 }
-                else if (!wireframe_toggle && mountains_load && mountains_wire_load){ 
-                    scene.add(mountains); 
-                    scene.remove(mountains_wire); 
+                else if (!wireframe_toggle && mountains_load){ 
+                    mountains.traverse((node) => {
+                        if (!node.isMesh) return;
+                        node.material.wireframe = false;
+                    });
+
                     ambient_light.intensity = 0.4;
                     point_light.intensity = 1;
+
                     scene.add(steam);
                     scene.add(water);
                     scene.add(moon);
-                    for (let i = 0; i < no_stars; i++) {scene.add(stars[i]);}
+                    scene.add(stars);
                 }
             }
         }
 
-        renderer.render(scene, camera);
+        render()
     };
+
+    function render() {
+        renderer.render(scene, camera);
+    }
+
     animate();    
 }
 

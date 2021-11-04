@@ -15,7 +15,7 @@
         height: 20vw;
         width: 20vw;
 
-        @include breakpoint(mobile){height: 55vw; width: 55vw; margin-bottom: 20px;};
+        @include breakpoint(mobile){height: 55vw; width: 55vw; margin-bottom: 10px;};
     }
 
         .about-image:hover{
@@ -28,7 +28,7 @@
 
         width: 45vw;
         
-        @include breakpoint(mobile){font-size: 3.25vw; width: 80vw};
+        @include breakpoint(mobile){font-size: 3.15vw; width: 80vw};
     }
 
         .about-text span {

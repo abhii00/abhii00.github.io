@@ -70,15 +70,15 @@ class App extends React.Component{
                             <div className='about-container'>
                                 <img src={aboutImage} alt='' className='about-image'/>
                                 <div className='about-text'>
-                                    Hi! I'm Abhi. My goal is to work in the global space industry, contributing to a better future for humanity through the pursuit of space exploration. 
+                                    Hi! I'm Abhi. My goal is to work in the global space industry, contributing to a better future for humanity through the pursuit of space exploration. My other interests lie in software development, deep technologies such as genetics and quantum technology, and medicine. 
                                     <br/>
                                     Currently, I'm a 3rd year undergraduate engineer at the <span>University of Cambridge</span>, taking my very own eclectic mix of Aerothermal, Mechanical, Information and Bioengineering modules.
                                     <br/>
-                                    Recently, I interned at <span>Thales Alenia Space UK</span> working on modelling satellite propellant feed systems. 
+                                    Recently, I interned at <span>Thales Alenia Space UK</span> working on modelling satellite propellant feed systems. I also received an IET Diamond Jubilee Scholarship sponsored by Thales. 
                                     <br/>
                                     Alongside this, I've been Launch and Safety Officer at <span>Cambridge University Spaceflight</span>, working to launch our UK altitude-record-breaking hybrid rocket, Martlet IV, as well as to develop our spaceshot-precusor liquid bipropellant rocket motor, White Dwarf.
                                     <br/>
-                                    In my spare time, I've been working on software projects such as an Earth Observation Data Visualiser.
+                                    In my spare time, I've been working on projects such as an Earth Observation Data Visualiser, and an Aortic Valve Replacement Design.
                                 </div>
                             </div>
                         </Section>

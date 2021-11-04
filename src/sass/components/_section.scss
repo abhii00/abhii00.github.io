@@ -57,7 +57,7 @@
         .section-sidebar-icon-spec {
             height: 70px;
 
-            @include breakpoint(mobile){height: 40px};
+            @include breakpoint(tablet){height: 30px};
             @include breakpoint(mobile){height: 20px};
         }
 

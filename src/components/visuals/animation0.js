@@ -33,8 +33,13 @@ import sphere_texture from "../../assets/animations/0/mercury.jpg";
 
         sphere.rotation.y += 0.005;
 
-        renderer.render(scene, camera);
+        render();
     };
+
+    function render() {
+        renderer.render(scene, camera);
+    }
+
     animate();    
 }
 

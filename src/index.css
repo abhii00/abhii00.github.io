@@ -666,9 +666,9 @@ body {
 .section-sidebar-icon-spec {
   height: 70px;
 }
-@media (max-width: 500px) {
+@media (min-width: 500px) and (max-width: 1400px) {
   .section-sidebar-icon-spec {
-    height: 40px;
+    height: 30px;
   }
 }
 @media (max-width: 500px) {
@@ -833,7 +833,7 @@ body {
   .about-image {
     height: 55vw;
     width: 55vw;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -848,7 +848,7 @@ body {
 }
 @media (max-width: 500px) {
   .about-text {
-    font-size: 3.25vw;
+    font-size: 3.15vw;
     width: 80vw;
   }
 }
