@@ -10,18 +10,25 @@ _July - October 2021_
 
 ### **Implemented Features**
 
-* Animated introductions using ThreeJS.
+* Animated introductions using ThreeJS, with models made in Blender.
 * Responsive design for mobile, tablet and desktop.
 * CSS Animations for loading, unloading and user interactions.
 * Cohesive aesthetic design.
+* Concise and effective display of work, experience and projects.
 
 ### **Planned Features**
+
+* Multiple different introduction animations.
 
 ## **Skills**
 
 ### **New Skills**
 
+* SASS.
+* Blender modelling.
+
 ### **Skills Developed**
 
+* ReactJS and ThreeJS.
 * Aesthetic design.
 * User interfaces and Frontend design.
