@@ -1,5 +1,5 @@
 # tif assets
-/src/assets/icons/*.tif
+*.tif
 
 # dependencies
 /node_modules

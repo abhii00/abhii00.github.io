@@ -5,8 +5,8 @@ import { ExpandMore } from '@material-ui/icons';
 import { Link } from 'react-scroll';
 import { isMobile } from 'react-device-detect';
 import { Loading, Menu, Section, Slideshow, ProjectsGrid } from './components.js';
-import { setupScene, resizeScene } from './visuals/graphics.js';
-import { animation0, animation1 } from './visuals/animations.js';
+import { setupScene, resizeScene } from '../graphics/graphics.js';
+import { animation0, animation1 } from '../graphics/animations.js';
 
 import aboutImage from '../assets/images/about.jpeg';
 import featuredProjects from '../assets/projects/featured.json';

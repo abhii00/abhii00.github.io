@@ -1,7 +1,5 @@
 import * as THREE from "three";
 
-/*ORIGINALLY FROM EOVISUALISER*/
-
 /**
  * Sets up scene with camera, and renderer 
  * @param starting_camera_pos the starting y position of the camera
@@ -12,7 +10,7 @@ function setupScene(starting_camera_pos){
     const scene = new THREE.Scene();
     
     //setup camera
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 10**10);
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1);
     camera.position.copy(starting_camera_pos)
 
     //setup renderer
@@ -26,11 +24,10 @@ function setupScene(starting_camera_pos){
     return [scene, camera, renderer]
 }
 
-
 /**
  * Resizes a scene
  * @param camera the camera to be resized
- * @param renderer the renderer to set the size of 
+ * @param renderer the renderer to be resized
  */
 function resizeScene(camera, renderer){
     camera.aspect = window.innerWidth / window.innerHeight;
