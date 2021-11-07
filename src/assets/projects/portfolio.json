@@ -20,7 +20,7 @@
         "date": "July 2021 - Present",
         "institution": "",
         "urls": {
-            "prod": "",
+            "prod": "/eovisualiser",
             "src": "https://github.com/abhii00/eovisualiser"
         },
         "description": "An accessible visualiser for Earth Observation data and space object tracking.",
