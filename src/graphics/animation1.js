@@ -1,11 +1,13 @@
 import * as THREE from "three";
-import { loadTexture } from "./graphics.js";
 import { Water } from 'three/examples/jsm/objects/Water.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import mountains_model from '../../assets/animations/1/mountainrange2.glb';
-import train_model from '../../assets/animations/1/train1.glb';
-import traincarriage_model from '../../assets/animations/1/traincarriage1.glb';
-import steam_texture from "../../assets/animations/1/steam.png";
+
+import { loadTexture } from "./graphics.js";
+
+import mountains_model from '../assets/animations/1/mountainrange2.glb';
+import train_model from '../assets/animations/1/train1.glb';
+import traincarriage_model from '../assets/animations/1/traincarriage1.glb';
+import steam_texture from "../assets/animations/1/steam.png";
 
 /**
  * Animation 1: Train Animation
