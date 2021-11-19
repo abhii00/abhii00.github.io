@@ -23,7 +23,7 @@
             "prod": "https://www.thalesgroup.com/en/worldwide/space/news/thales-alenia-space-uk",
             "src": ""
         },
-        "description": "An internship involving the creation of a modular analytical suite to model spacecraft propellant feed systems on the basis of waterhammer protection and nominal performance.",
+        "description": "An internship involving the creation of a modular analytical suite comparing flow restriction device performance in spacecraft propellant feed systems.",
         "techs": "MATLAB",
         "pictures": {
             "main": "experience/tasuk/main.jpg",

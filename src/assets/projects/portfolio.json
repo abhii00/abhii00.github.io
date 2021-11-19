@@ -183,7 +183,7 @@
             "prod": "",
             "src": ""
         },
-        "description": "A project to design a functional mechanical replacement avoiding cavitation and blood cell damage after generating detailed 3D models of the tissue from real scans.",
+        "description": "A project to design a functional mechanical replacement avoiding cavitation and blood cell damage after generating detailed 3D models of the tissue from clinical scans.",
         "techs": "3DSLICER, SOLIDWORKS",
         "pictures": {
             "main": "",
