@@ -1,5 +1,6 @@
 .projecttile-container {
     @include floatingboxshadow();
+    @include roundedcorners();
 
     background-color: $color2;
     

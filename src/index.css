@@ -253,12 +253,12 @@ body {
   align-items: center;
   width: 100%;
   position: absolute;
-  top: calc(50vh - 10vw);
+  top: calc(50vh - 7.5vw);
 }
 
 .loading-logo {
-  height: 10vw;
-  width: 10vw;
+  height: 15vw;
+  width: 15vw;
 }
 
 .menu-container {
@@ -266,7 +266,7 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: stretch;
-  background-color: rgba(5, 7, 19, 0.35);
+  background-color: rgba(0, 0, 0, 0.35);
   position: fixed;
   z-index: 1;
   height: 50px;
@@ -357,6 +357,7 @@ body {
 
 .projectsgrid-description-container {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  border-radius: 5px;
   background-color: #18474E;
   height: 23vw;
   width: 70vw;
@@ -386,6 +387,7 @@ body {
 
 .projectsgrid-description-image {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  border-radius: 5px;
   height: 18vw;
   width: 18vw;
 }
@@ -522,9 +524,12 @@ body {
 
 .projectsgrid-loadmore-button {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  border-radius: 5px;
   background-color: #18474E;
   text-align: center;
   font-size: 1.25vw;
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 20%;
 }
 @media (max-width: 500px) {
@@ -544,6 +549,7 @@ body {
 
 .projecttile-container {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  border-radius: 5px;
   background-color: #E7E7E7;
   height: 15vw;
   width: 15vw;

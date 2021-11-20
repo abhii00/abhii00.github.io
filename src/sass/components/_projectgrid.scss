@@ -24,6 +24,7 @@
 
     .projectsgrid-description-container {
         @include floatingboxshadow();
+        @include roundedcorners();
 
         background-color: $color3;
 
@@ -47,6 +48,7 @@
 
             .projectsgrid-description-image{
                 @include floatingboxshadow();
+                @include roundedcorners();
 
                 height: 18vw;
                 width: 18vw;
@@ -145,12 +147,15 @@
 
         .projectsgrid-loadmore-button {
             @include floatingboxshadow();
+            @include roundedcorners();
 
             background-color: $color3;
             
             text-align: center;
             font-size: 1.25vw;
             
+            padding-top: 5px;
+            padding-bottom: 5px;
             width: 20%;
 
             @include breakpoint(mobile){margin-top: 20px; width: 80%; font-size: 5vw};

@@ -16,7 +16,7 @@ class Slideshow extends React.Component{
     }
 
     componentDidMount(){
-        const slideInterval = 5;
+        const slideInterval = 10;
         const animationInterval = 0.6;
 
         setInterval(() => {

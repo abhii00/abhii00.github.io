@@ -1,7 +1,7 @@
 .menu-container {
     @include flexbox($flex-direction: row, $justify-content: space-between);
 
-    background-color: rgba(5, 7, 19, 0.35);
+    background-color: $darker_translucent;
 
     position: fixed;
     z-index: 1;
@@ -23,7 +23,7 @@
 
         .menu-icon:hover {
             transform: scale(1.1);
-            filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+            filter: $color4_filter;
         }
 
     .menu-links-container {
