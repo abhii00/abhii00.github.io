@@ -5,7 +5,6 @@
 
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 
 .introduction-animation-container canvas {
@@ -25,6 +24,9 @@
 
 .introduction-text-container {
     @include flexbox();
+
+    color: $color1;
+    font-family: 'Lato', 'sans-serif';
     
     margin-top: 10%;
 
@@ -49,25 +51,4 @@
     .introduction-text-tagline {
         font-size: 3.75vw;
         text-align: center;
-    }
-
-.introduction-icon {
-    background-color: $dark_translucent;
-
-    position: absolute;
-    bottom: 0%;
-
-    height: 3.25vw !important;
-    width: 3.25vw !important;
-    padding-right: 48vw;
-    padding-left: 48vw;
-    
-    cursor: pointer;
-
-    @include breakpoint(mobile){display: none !important}
-}
-
-    .introduction-icon:hover {
-        transform: scale(1.1);
-        color: $color4;
     }

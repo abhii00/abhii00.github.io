@@ -1,8 +1,6 @@
 import React from 'react';
 import * as THREE from 'three';
 
-import { ExpandMore } from '@material-ui/icons';
-import { Link } from 'react-scroll';
 import { isMobile } from 'react-device-detect';
 import { Loading, Menu, Section, Slideshow, ProjectsGrid } from './components.js';
 import { setupScene, resizeScene } from '../graphics/graphics.js';
@@ -61,9 +59,6 @@ class App extends React.Component{
                                 <div className='introduction-text-name'>ABHIJIT PANDIT</div>
                                 <div className='introduction-text-tagline'>AN ASPIRING SPACE ENGINEER AND CREATIVE</div>
                             </div>
-                            <Link to='about'>
-                                <ExpandMore className='introduction-icon'/>
-                            </Link>
                         </Section>
 
                         <Section title='ABOUT' id='about' heightSpecified={true}>

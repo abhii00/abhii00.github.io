@@ -1,11 +1,13 @@
-$color1: #05080F;
-$color2: #E7E7E7;
-$color3: #18474E;
+$color1: #F5F5F5;
+$color2: #05080F;
+$color3: #cfcfcf;//#18474E;
 $color4: #368F8B;
 
 $color4_filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+$color1_filter: invert(89%) sepia(18%) saturate(24%) hue-rotate(57deg) brightness(122%) contrast(92%);
 
+$darkest_translucent: rgba(0, 0, 0, 0.55);
 $darker_translucent: rgba(0, 0, 0, 0.35);
-$dark_translucent: rgba(5, 7, 19, 0.55);
+$dark_translucent: rgba(0, 0, 0, 0.15);
 
 $transition_time: 0.6s;

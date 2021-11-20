@@ -1,5 +1,6 @@
 /*App*/
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 .app {
   animation: app_fadein;
   animation-duration: 1.5s;
@@ -187,7 +188,7 @@
 }
 
 .projectsgrid-loadmore-button {
-  transition: transform 0.6s, color 0.6s, background-color 0.6s;
+  transition: transform 0.6s, color 0.6s;
 }
 
 /*ProjectTile*/
@@ -238,9 +239,9 @@ html::-webkit-scrollbar {
 }
 
 body {
-  background-color: #05080F;
-  color: #E7E7E7;
-  font-family: "Lato", sans-serif;
+  background-color: #F5F5F5;
+  color: #05080F;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   margin: 0;
   padding: 0;
@@ -267,6 +268,7 @@ body {
   justify-content: space-between;
   align-items: stretch;
   background-color: rgba(0, 0, 0, 0.35);
+  color: #F5F5F5;
   position: fixed;
   z-index: 1;
   height: 50px;
@@ -357,11 +359,16 @@ body {
 
 .projectsgrid-description-container {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
-  border-radius: 5px;
-  background-color: #18474E;
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #F5F5F5;
+  font-weight: 100;
   height: 23vw;
   width: 70vw;
   margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media (max-width: 500px) {
   .projectsgrid-description-container {
@@ -369,6 +376,8 @@ body {
     width: 80vw;
     position: absolute;
     margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -387,7 +396,7 @@ body {
 
 .projectsgrid-description-image {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
-  border-radius: 5px;
+  border-radius: 6px;
   height: 18vw;
   width: 18vw;
 }
@@ -412,6 +421,7 @@ body {
 
 .projectsgrid-description-title {
   font-size: 2.75vw;
+  font-family: "Lato", "sans-serif";
 }
 @media (max-width: 500px) {
   .projectsgrid-description-title {
@@ -502,6 +512,7 @@ body {
 
 .projectsgrid-description-icon-github {
   height: 2vw;
+  filter: invert(89%) sepia(18%) saturate(24%) hue-rotate(57deg) brightness(122%) contrast(92%);
 }
 @media (max-width: 500px) {
   .projectsgrid-description-icon-github {
@@ -524,8 +535,8 @@ body {
 
 .projectsgrid-loadmore-button {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
-  border-radius: 5px;
-  background-color: #18474E;
+  border-radius: 6px;
+  background-color: #cfcfcf;
   text-align: center;
   font-size: 1.25vw;
   padding-top: 5px;
@@ -542,15 +553,14 @@ body {
 
 .projectsgrid-loadmore-button:hover {
   color: #368F8B;
-  background-color: #E7E7E7;
   transform: scale(1.1);
   cursor: pointer;
 }
 
 .projecttile-container {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
-  border-radius: 5px;
-  background-color: #E7E7E7;
+  border-radius: 6px;
+  background-color: #05080F;
   height: 15vw;
   width: 15vw;
   cursor: pointer;
@@ -591,7 +601,7 @@ body {
   justify-content: center;
   align-items: stretch;
   position: relative;
-  height: 70vw;
+  height: 100vh;
 }
 @media (max-width: 500px) {
   .section-container-spec {
@@ -601,6 +611,7 @@ body {
 
 .section-title {
   font-size: 4vw;
+  font-family: "Lato", "sans-serif";
   text-align: center;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -685,7 +696,7 @@ body {
 
 .section-sidebar-line {
   border-left: 1px solid #368F8B;
-  height: 600px;
+  height: 50vh;
   margin-left: 50%;
 }
 @media (min-width: 500px) and (max-width: 1400px) {
@@ -715,7 +726,11 @@ body {
 
 .slideshow-box-container {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
-  background-color: #18474E;
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #F5F5F5;
+  font-weight: 100;
   position: absolute;
   top: 50%;
   left: 10vw;
@@ -740,6 +755,7 @@ body {
 
 .slideshow-image {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  border-radius: 6px;
   height: 18vw;
   width: 18vw;
 }
@@ -754,6 +770,7 @@ body {
 
 .slideshow-title {
   font-size: 2.75vw;
+  font-family: "Lato", "sans-serif";
 }
 
 .slideshow-institution {
@@ -761,19 +778,10 @@ body {
   font-style: italic;
 }
 
-.slideshow-date {
-  font-size: 1.5vw;
-}
-
 .slideshow-text {
   font-size: 1.5vw;
   text-align: justify;
   width: 55vw;
-}
-
-.slideshow-tech {
-  font-family: monospace, monospace;
-  font-size: 1.25vw;
 }
 
 .slideshow-links-container {
@@ -803,6 +811,7 @@ body {
 
 .slideshow-icon-github {
   height: 2vw;
+  filter: invert(89%) sepia(18%) saturate(24%) hue-rotate(57deg) brightness(122%) contrast(92%);
 }
 
 .slideshow-icon-github:hover {
@@ -831,7 +840,7 @@ body {
 
 .about-image {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
-  border: 2px solid #E7E7E7;
+  border: 2px solid #05080F;
   height: 20vw;
   width: 20vw;
 }
@@ -884,7 +893,7 @@ body {
 }
 
 .contact-email {
-  color: #E7E7E7;
+  color: #05080F;
   font-weight: bold;
   font-size: 3.25vw;
   text-align: center;
@@ -935,7 +944,6 @@ body {
   z-index: -1;
   height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 .introduction-animation-container canvas {
@@ -956,6 +964,8 @@ body {
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: stretch;
+  color: #F5F5F5;
+  font-family: "Lato", "sans-serif";
   margin-top: 10%;
   cursor: default;
 }
@@ -978,27 +988,6 @@ body {
 .introduction-text-tagline {
   font-size: 3.75vw;
   text-align: center;
-}
-
-.introduction-icon {
-  background-color: rgba(5, 7, 19, 0.55);
-  position: absolute;
-  bottom: 0%;
-  height: 3.25vw !important;
-  width: 3.25vw !important;
-  padding-right: 48vw;
-  padding-left: 48vw;
-  cursor: pointer;
-}
-@media (max-width: 500px) {
-  .introduction-icon {
-    display: none !important;
-  }
-}
-
-.introduction-icon:hover {
-  transform: scale(1.1);
-  color: #368F8B;
 }
 
 /*# sourceMappingURL=index.css.map */

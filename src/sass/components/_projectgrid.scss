@@ -25,14 +25,19 @@
     .projectsgrid-description-container {
         @include floatingboxshadow();
         @include roundedcorners();
+        @include frostedglass();
 
-        background-color: $color3;
+        background-color: $darkest_translucent;
+        color: $color1;
+        font-weight: 100;
 
         height: 23vw;
         width: 70vw;
         margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
 
-        @include breakpoint(mobile){height: 80vw; width: 80vw; position: absolute; margin-bottom: 0}
+        @include breakpoint(mobile){height: 80vw; width: 80vw; position: absolute; margin-bottom: 0; padding-left: 0; padding-right: 0}
     }
 
         .projectsgrid-description-content-container {
@@ -66,6 +71,7 @@
 
                 .projectsgrid-description-title {
                     font-size: 2.75vw;
+                    font-family: 'Lato', 'sans-serif';
 
                     @include breakpoint(mobile){font-size: 8vw; text-align: center;}
                 }
@@ -130,6 +136,7 @@
 
                     .projectsgrid-description-icon-github {
                         height: 2vw;
+                        filter: $color1_filter;
 
                         @include breakpoint(mobile){height: 7.5vw}
                     }
@@ -163,7 +170,6 @@
 
             .projectsgrid-loadmore-button:hover {
                 color: $color4;
-                background-color: $color2;
                 transform: scale(1.1);
                 cursor: pointer;
             }

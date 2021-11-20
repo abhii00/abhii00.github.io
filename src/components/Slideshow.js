@@ -46,9 +46,7 @@ class Slideshow extends React.Component{
                         <div className='slideshow-leftcol-container'>
                             <div className='slideshow-title'>{this.state.project.name}</div>
                             <div className='slideshow-institution'>{this.state.project.institution}</div>
-                            <div className='slideshow-date'>{this.state.project.date}</div>
                             <div className='slideshow-text'>{this.state.project.description}</div>
-                            <div className='slideshow-tech'>{this.state.project.techs}</div>
                             <div className='slideshow-links-container'>
                                 {
                                     this.state.project.urls.prod !== '' &&

@@ -10,5 +10,9 @@
 }
 
 @mixin roundedcorners(){
-    border-radius: 5px;
+    border-radius: 6px;
+}
+
+@mixin frostedglass(){
+    backdrop-filter: blur(10px);
 }

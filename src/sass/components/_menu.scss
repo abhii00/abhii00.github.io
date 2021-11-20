@@ -2,6 +2,7 @@
     @include flexbox($flex-direction: row, $justify-content: space-between);
 
     background-color: $darker_translucent;
+    color: $color1;
 
     position: fixed;
     z-index: 1;
