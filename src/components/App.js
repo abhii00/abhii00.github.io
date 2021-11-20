@@ -17,12 +17,12 @@ class App extends React.Component{
     constructor(props){
         super(props)
 
-        this.state = {loading: true}
+        this.state = {loading: 0} //0 for initial load, 1 for component animations, 2 for loaded
     }
 
     componentDidMount() {
         setTimeout(() => {
-            this.setState({loading: false})
+            this.setState({loading: 1})
 
             var scene;
             var camera; 
@@ -43,11 +43,11 @@ class App extends React.Component{
         }, 1600)        
     }
 
-    render(){
+    render(){       
         return(
             <div className='app'>
                 {
-                    this.state.loading ?
+                    (this.state.loading === 0) ?
                     <Loading/> :
                     <React.Fragment>
                         <Menu/>
@@ -61,7 +61,7 @@ class App extends React.Component{
                             </div>
                         </Section>
 
-                        <Section title='ABOUT' id='about' heightSpecified={false}>
+                        <Section title='ABOUT' id='about' heightSpecified={true}>
                             <div className='about-container'>
                                 <img src={aboutImage} alt='' className='about-image'/>
                                 <div className='about-text'>
