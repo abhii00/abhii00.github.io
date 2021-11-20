@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.88c0a23a.chunk.css",
-    "main.js": "/static/js/main.901cd765.chunk.js",
-    "main.js.map": "/static/js/main.901cd765.chunk.js.map",
+    "main.css": "/static/css/main.6156ce7d.chunk.css",
+    "main.js": "/static/js/main.79dad897.chunk.js",
+    "main.js.map": "/static/js/main.79dad897.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5ebc510a.js",
     "runtime-main.js.map": "/static/js/runtime-main.5ebc510a.js.map",
     "static/js/2.599611dd.chunk.js": "/static/js/2.599611dd.chunk.js",
     "static/js/2.599611dd.chunk.js.map": "/static/js/2.599611dd.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.88c0a23a.chunk.css.map": "/static/css/main.88c0a23a.chunk.css.map",
+    "static/css/main.6156ce7d.chunk.css.map": "/static/css/main.6156ce7d.chunk.css.map",
     "static/js/2.599611dd.chunk.js.LICENSE.txt": "/static/js/2.599611dd.chunk.js.LICENSE.txt",
     "static/media/about.0349deaf.jpeg": "/static/media/about.0349deaf.jpeg",
     "static/media/cusf.tif": "/static/media/cusf.7b62ac5d.tif",
@@ -35,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.5ebc510a.js",
     "static/js/2.599611dd.chunk.js",
-    "static/css/main.88c0a23a.chunk.css",
-    "static/js/main.901cd765.chunk.js"
+    "static/css/main.6156ce7d.chunk.css",
+    "static/js/main.79dad897.chunk.js"
   ]
 }
