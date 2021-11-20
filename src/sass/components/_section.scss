@@ -16,7 +16,7 @@
 
     height: 100vh;
 
-    @include breakpoint(mobile){height: 170vw;};
+    @include breakpoint(mobile){height: 170vw};
 }
 
     .section-title {

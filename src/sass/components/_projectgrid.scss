@@ -37,7 +37,7 @@
         padding-left: 10px;
         padding-right: 10px;
 
-        @include breakpoint(mobile){height: 80vw; width: 80vw; position: absolute; margin-bottom: 0; padding-left: 0; padding-right: 0}
+        @include breakpoint(mobile){height: 80vw; width: 80vw; position: absolute; margin-bottom: 0; padding-left: 0; padding-right: 0;}
     }
 
         .projectsgrid-description-content-container {
