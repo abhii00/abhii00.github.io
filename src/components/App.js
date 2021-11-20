@@ -61,7 +61,7 @@ class App extends React.Component{
                             </div>
                         </Section>
 
-                        <Section title='ABOUT' id='about' heightSpecified={true}>
+                        <Section title='ABOUT' id='about' heightSpecified={false}>
                             <div className='about-container'>
                                 <img src={aboutImage} alt='' className='about-image'/>
                                 <div className='about-text'>
