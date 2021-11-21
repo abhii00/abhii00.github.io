@@ -31,6 +31,8 @@
     height: 23vw;
     width: 70vw;
 
+    transform-origin: top left;
+
     @include breakpoint(mobile){display: none}
 }
 

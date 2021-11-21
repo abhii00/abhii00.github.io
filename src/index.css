@@ -78,6 +78,10 @@
   animation-direction: reverse;
 }
 
+.projectsgrid-description-container {
+  transform-origin: top left;
+}
+
 @keyframes projectsgrid_descriptioncontainer_scale {
   from {
     transform: scaleY(1);
@@ -120,6 +124,10 @@
   animation-direction: reverse;
 }
 
+.projectsgrid-description-image {
+  transform-origin: top left;
+}
+
 @keyframes projectsgrid_descriptionimage_scale {
   from {
     transform: scaleY(1);
@@ -151,6 +159,10 @@
   animation-iteration-count: 2;
 }
 
+.slideshow-image {
+  transform-origin: top left;
+}
+
 @keyframes slideshow_image_scale {
   from {
     transform: scaleY(1);
@@ -164,6 +176,10 @@
   animation-duration: 0.6s;
   animation-direction: alternate;
   animation-iteration-count: 2;
+}
+
+.slideshow-box-container {
+  transform-origin: top left;
 }
 
 @keyframes slideshow_boxcontainer_scale {
@@ -753,6 +769,7 @@ body {
   z-index: 0;
   height: 23vw;
   width: 70vw;
+  transform-origin: top left;
 }
 @media (max-width: 500px) {
   .slideshow-box-container {
