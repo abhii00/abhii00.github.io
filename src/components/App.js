@@ -2,7 +2,7 @@ import React from 'react';
 import * as THREE from 'three';
 
 import { isMobile } from 'react-device-detect';
-import { Loading, Menu, Section, Slideshow, ProjectsGrid } from './components.js';
+import { Loading, Menu, Sidebar, Section, Slideshow, ProjectsGrid } from './components.js';
 import { setupScene, resizeScene } from '../graphics/graphics.js';
 import { animation0, animation1 } from '../graphics/animations.js';
 
@@ -51,7 +51,8 @@ class App extends React.Component{
                     <Loading/> :
                     <React.Fragment>
                         <Menu/>
-                        <Section id='introduction' titleShown={false} sidebarShown={false} heightSpecified={true}>
+                        <Sidebar/>
+                        <Section id='introduction' titleShown={false} heightSpecified={true}>
                             <div className='introduction-animation-container' ref={ref => (this.mount = ref)}/>
                             <div className='introduction-darkfilter'/>
                             <div className='introduction-text-container'>
@@ -78,11 +79,11 @@ class App extends React.Component{
                             </div>
                         </Section>
 
-                        <Section id='featured' titleShown={false} sidebarShown={false} heightSpecified={true}>
+                        <Section id='featured' titleShown={false} heightSpecified={true}>
                             <Slideshow projectsJSON={featuredProjects}/>
                         </Section>
 
-                        <Section title='EXPERIENCE AND EDUCATION' id='experience' sidebarLeft={false}>
+                        <Section title='EXPERIENCE AND EDUCATION' id='experience'>
                             <ProjectsGrid projectsJSON={experienceProjects}/>
                         </Section>
 
@@ -90,7 +91,7 @@ class App extends React.Component{
                             <ProjectsGrid projectsJSON={portfolioProjects}/>
                         </Section>
 
-                        <Section title='CONTACT' id='contact' sidebarLeft={false} heightSpecified={true}>
+                        <Section title='CONTACT' id='contact' heightSpecified={true}>
                             <div className='contact-container'>
                                 <div className='contact-text'>
                                     I'm always looking for new opportunities!

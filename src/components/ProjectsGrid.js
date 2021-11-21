@@ -141,7 +141,7 @@ class ProjectsGrid extends React.Component {
                 </div>
                 {this.state.projectShownPostRows}
                 { 
-                    this.state.showButton && <div className='projectsgrid-loadmore-container'><div className='projectsgrid-loadmore-button' onClick={this.renderRest}> Load Rest </div></div>
+                    this.state.showButton && <div className='projectsgrid-loadmore-container'><div className='projectsgrid-loadmore-button' onClick={this.renderRest}> LOAD MORE </div></div>
                 }
             </div>
         )

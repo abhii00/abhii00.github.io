@@ -224,7 +224,7 @@
 }
 
 .projectsgrid-loadmore-button {
-  transition: transform 0.6s, color 0.6s;
+  transition: transform 0.6s, color 0.6s, background-color 0.6s;
 }
 
 /*ProjectTile*/
@@ -571,6 +571,7 @@ body {
   background-color: #cfcfcf;
   text-align: center;
   font-size: 1.25vw;
+  margin-top: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
   width: 20%;
@@ -584,7 +585,8 @@ body {
 }
 
 .projectsgrid-loadmore-button:hover {
-  color: #368F8B;
+  color: #F5F5F5;
+  background-color: #368F8B;
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -654,90 +656,49 @@ body {
   }
 }
 
-.section-sidebar-container-left {
-  position: absolute;
-  top: 200px;
-  left: 6vw;
-}
-@media (min-width: 500px) and (max-width: 1400px) {
-  .section-sidebar-container-left {
-    top: auto;
-    bottom: 20px;
-    left: 0;
-    padding-left: 48vw;
-  }
-}
-@media (max-width: 500px) {
-  .section-sidebar-container-left {
-    top: auto;
-    bottom: 20px;
-    left: 0;
-    padding-left: 48vw;
-  }
-}
-
-.section-sidebar-container-right {
-  position: absolute;
-  top: 200px;
+.sidebar-container {
+  position: fixed;
+  bottom: 0px;
   left: 92vw;
+  z-index: -2;
 }
 @media (min-width: 500px) and (max-width: 1400px) {
-  .section-sidebar-container-right {
-    top: auto;
-    bottom: 20px;
-    left: 0;
-    padding-left: 48vw;
-  }
-}
-@media (max-width: 500px) {
-  .section-sidebar-container-right {
-    top: auto;
-    bottom: 20px;
-    left: 0;
-    padding-left: 48vw;
-  }
-}
-
-.section-sidebar-icon {
-  height: 70px;
-}
-@media (min-width: 500px) and (max-width: 1400px) {
-  .section-sidebar-icon {
+  .sidebar-container {
     display: none;
   }
 }
 @media (max-width: 500px) {
-  .section-sidebar-icon {
+  .sidebar-container {
     display: none;
   }
 }
 
-.section-sidebar-icon-spec {
+.sidebar-icon {
   height: 70px;
 }
 @media (min-width: 500px) and (max-width: 1400px) {
-  .section-sidebar-icon-spec {
-    height: 30px;
+  .sidebar-icon {
+    display: none;
   }
 }
 @media (max-width: 500px) {
-  .section-sidebar-icon-spec {
-    height: 20px;
+  .sidebar-icon {
+    display: none;
   }
 }
 
-.section-sidebar-line {
-  border-left: 1px solid #368F8B;
+.sidebar-line {
+  border-left: 3px solid #368F8B;
   height: 50vh;
-  margin-left: 50%;
+  margin-left: 46%;
 }
 @media (min-width: 500px) and (max-width: 1400px) {
-  .section-sidebar-line {
+  .sidebar-line {
     display: none;
   }
 }
 @media (max-width: 500px) {
-  .section-sidebar-line {
+  .sidebar-line {
     display: none;
   }
 }

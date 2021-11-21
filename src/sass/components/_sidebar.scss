@@ -1,0 +1,26 @@
+.sidebar-container {
+    position: fixed;
+    bottom: 0px;
+    left: 92vw;
+    z-index: -2;
+
+    @include breakpoint(tablet){display: none};
+    @include breakpoint(mobile){display: none};
+}
+
+    .sidebar-icon {
+        height: 70px;
+
+        @include breakpoint(tablet){display: none};
+        @include breakpoint(mobile){display: none};
+    }
+
+    .sidebar-line {
+        border-left: 3px solid $color4;
+
+        height: 50vh;
+        margin-left: 46%;
+
+        @include breakpoint(tablet){display: none};
+        @include breakpoint(mobile){display: none};
+    }
