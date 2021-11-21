@@ -47,16 +47,21 @@
 }
 /*Introduction*/
 .introduction-text-name {
-  animation-name: introduction_text_rise;
+  animation-name: introduction_text_fade;
   animation-duration: 1.2s;
+  animation-direction: reverse;
 }
 
-@keyframes introduction_text_rise {
+@keyframes introduction_text_fade {
   from {
-    transform: translateY(50vh);
+    opacity: 1;
+    filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+    transform: scale(1.1);
   }
   to {
-    transform: translateY(0);
+    opacity: 0;
+    filter: auto;
+    transform: scale(1);
   }
 }
 /*ProjectsGrid*/
@@ -235,10 +240,6 @@
 }
 
 /*Introduction*/
-.introduction-text-name {
-  transition: transform 0.6s, color 0.6s;
-}
-
 .introduction-icon {
   transition: transform 0.6s, color 0.6s;
 }
@@ -994,11 +995,8 @@ body {
 .introduction-text-name {
   font-size: 9vw;
   text-align: center;
-}
-
-.introduction-text-name:hover {
+  filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
   transform: scale(1.1);
-  color: #368F8B;
 }
 
 .introduction-text-tagline {

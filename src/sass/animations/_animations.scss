@@ -51,16 +51,21 @@
 
 /*Introduction*/
 .introduction-text-name {
-    animation-name: introduction_text_rise;
+    animation-name: introduction_text_fade;
     animation-duration: calc($transition_time*2);
+    animation-direction: reverse;
 }
 
-    @keyframes introduction_text_rise {
+    @keyframes introduction_text_fade {
         from {
-            transform: translateY(50vh);
+            opacity: 1;
+            filter: $color4_filter;
+            transform: scale(1.1);
         }
         to {
-            transform: translateY(0);
+            opacity: 0;
+            filter: auto;
+            transform: scale(1);
         }
     }
 

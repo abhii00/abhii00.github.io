@@ -42,12 +42,10 @@
     .introduction-text-name {
         font-size: 9vw;
         text-align: center;
+        
+        filter: $color4_filter;
+        transform: scale(1.1);
     }
-
-        .introduction-text-name:hover {
-            transform: scale(1.1);
-            color: $color4;
-        }
 
     .introduction-text-tagline {
         font-size: 3.75vw;
