@@ -57,7 +57,7 @@ class App extends React.Component{
                         <div className='introduction-text-container'>
                             <div className='introduction-text-hi'>HI, I'M</div>
                             <div className='introduction-text-name'>ABHIJIT PANDIT</div>
-                            <div className='introduction-text-tagline'>AN ASPIRING SPACE ENGINEER AND CREATIVE</div>
+                            <div className='introduction-text-tagline'>AN ASPIRING ENGINEER</div>
                         </div>
                     </Section>
 
