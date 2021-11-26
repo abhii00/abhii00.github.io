@@ -5,9 +5,12 @@ import logo from '../assets/icons/logo.png';
 class Loading extends React.Component {
     render(){
         return(
-            <div className='loading-logo-container'>
-                <img src={logo} alt='' className='loading-logo'/>
-            </div>
+            this.props.loading ?
+            <div className='loading-background'>
+                <div className='loading-logo-container'>
+                    <img src={logo} alt='' className='loading-logo'/>
+                </div>
+            </div> : ''
         )
     }
 }

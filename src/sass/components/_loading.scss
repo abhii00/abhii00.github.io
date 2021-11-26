@@ -1,12 +1,23 @@
-.loading-logo-container {
-    @include flexbox($justify-content: center, $align-items:center);
+.loading-background {
+    background-color: $color1;
+
+    height: 100%;
     width: 100%;
 
-    position: absolute;
-    top: calc(50vh - 7.5vw);
+    position: fixed;
+    z-index: 5;
 }
 
-.loading-logo {
-    height: 15vw;
-    width: 15vw;
-}
+    .loading-logo-container {
+        @include flexbox($justify-content: center, $align-items:center);
+        
+        width: 100%;
+        
+        position: absolute;
+        top: calc(50vh - 7.5vw);
+    }
+
+        .loading-logo {
+            height: 15vw;
+            width: 15vw;
+        }

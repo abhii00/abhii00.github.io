@@ -1,84 +1,56 @@
-/*App*/
-.app {
-    animation: app_fade;
-    animation-duration: calc($transition_time);
-    animation-delay: calc($transition_time*3 - 0.1s);
-    animation-direction: reverse;
+@keyframes fade {
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
 
-    @keyframes app_fade {
-        from {
-            opacity: 1;
-        }
+@keyframes shrinkY {
+    from {transform: scaleY(1);}
+    to {transform: scaleY(0);}
+}
 
-        to {
-            opacity: 0;
-        }
-    }
+@keyframes grow20 {
+    from {transform: scale(1);}
+    to {transform: scale(1.2);}
+}
+
+@keyframes filter4 {
+    from {filter: auto;}
+    to {filter: $color4_filter;}
+}
 
 /*Loading*/
-.loading-logo {
-    animation-name: loading_logo_fill, loading_logo_fade;
-    animation-duration: calc($transition_time*1.5), calc($transition_time*1.5); 
-    animation-delay: 0s, calc($transition_time*1.5 - 0.1s);
+.loading-background {
+    animation-name: fade;
+    animation-duration: calc($transition_time*2);
+    animation-delay: calc($transition_time*1.5);
 }
 
-    @keyframes loading_logo_fill {
-        from {
-            transform: scale(1);
-            filter: auto;
-        }
-
-        to {
-            transform: scale(1.3);
-            filter: $color4_filter;
-        }
-    }
-
-    @keyframes loading_logo_fade {
-        from {
-            opacity: 1;
-            filter: $color4_filter;
-            transform: scale(1.3);
-        }
-
-        to {
-            opacity: 0;
-            filter: $color4_filter;
-            transform: scale(1.3);
-        }
-    }
+.loading-logo {
+    animation-name: filter4, grow20;
+    animation-duration: calc($transition_time*1.5), calc($transition_time*1.5); 
+    animation-delay: 0s, 0s;
+    animation-direction: normal, alternate;
+}
 
 /*Introduction*/
 .introduction-text-name {
-    animation-name: introduction_text_fade;
-    animation-duration: calc($transition_time*2);
-    animation-direction: reverse;
+    animation-name: grow20, filter4;
+    animation-duration: calc($transition_time*1.5), calc($transition_time*1.5);
+    animation-delay: calc($transition_time*1.5), calc($transition_time*1.5);
+    animation-direction: normal, normal;
+    animation-fill-mode: forwards, forwards;
 }
-
-    @keyframes introduction_text_fade {
-        from {
-            opacity: 1;
-            filter: $color4_filter;
-            transform: scale(1.1);
-        }
-        to {
-            opacity: 0;
-            filter: auto;
-            transform: scale(1);
-        }
-    }
 
 /*ProjectsGrid*/
 .projectsgrid-description-container.loading {
-    animation-name: projectsgrid_descriptioncontainer_scale;
+    animation-name: shrinkY;
     animation-duration: $transition_time;
     animation-direction: alternate;
     animation-iteration-count: 2;
 }
 
 .projectsgrid-description-container.loadingfirst {
-    animation-name: projectsgrid_descriptioncontainer_scale;
+    animation-name: shrinkY;
     animation-duration: $transition_time;
     animation-direction: reverse;
 }
@@ -87,48 +59,28 @@
         transform-origin: top left;
     }
 
-    @keyframes projectsgrid_descriptioncontainer_scale {
-        from {
-            transform: scaleY(1);
-        }
-
-        to {
-            transform: scaleY(0);
-        }
-    }
-
 .projectsgrid-description-content-container.loading {
-    animation-name: projectsgrid_descriptioncontentcontainer_fade;
+    animation-name: fade;
     animation-duration: $transition_time;
     animation-direction: alternate;
     animation-iteration-count: 2;
 }
 
 .projectsgrid-description-content-container.loadingfirst {
-    animation-name: projectsgrid_descriptioncontentcontainer_fade;
+    animation-name: fade;
     animation-duration: $transition_time;
     animation-direction: reverse;
 }
 
-    @keyframes projectsgrid_descriptioncontentcontainer_fade {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-        }
-    }
-
 .projectsgrid-description-image.loading {
-    animation-name: projectsgrid_descriptionimage_scale;
+    animation-name: shrinkY;
     animation-duration: $transition_time;
     animation-direction: alternate;
     animation-iteration-count: 2;
 }
 
 .projectsgrid-description-image.loadingfirst {
-    animation-name: projectsgrid_descriptionimage_scale;
+    animation-name: shrinkY;
     animation-duration: $transition_time;
     animation-direction: reverse;
 }
@@ -137,37 +89,16 @@
         transform-origin: top left;
     }
 
-    @keyframes projectsgrid_descriptionimage_scale {
-        from {
-            transform: scaleY(1);
-        }
-
-        to {
-            transform: scaleY(0);
-        }
-    }
-
-
 /*Slideshow*/
 .slideshow-background.loading {
-    animation-name: slideshow_background_fade;
+    animation-name: fade;
     animation-duration: $transition-time;
     animation-direction: alternate;
     animation-iteration-count: 2;
 }
 
-    @keyframes slideshow_background_fade {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-        }
-    }
-
 .slideshow-image.loading {
-    animation-name: slideshow_image_scale;
+    animation-name: shrinkY;
     animation-duration: $transition-time;
     animation-direction: alternate;
     animation-iteration-count: 2;
@@ -177,18 +108,8 @@
         transform-origin: top left;
     }
 
-    @keyframes slideshow_image_scale {
-        from {
-            transform: scaleY(1);
-        }
-        
-        to {
-            transform: scaleY(0);
-        }
-    }
-
 .slideshow-box-container.loading {
-    animation-name: slideshow_boxcontainer_scale;
+    animation-name: shrinkY;
     animation-duration: $transition-time;
     animation-direction: alternate;
     animation-iteration-count: 2;
@@ -198,29 +119,9 @@
         transform-origin: top left;
     }
 
-    @keyframes slideshow_boxcontainer_scale {
-        from {
-            transform: scaleY(1);
-        }
-        
-        to {
-            transform: scaleY(0);
-        }
-    }
-
 .slideshow-content-container.loading {
-    animation-name: slideshow_content_fade;
+    animation-name: fade;
     animation-duration: $transition-time;
     animation-direction: alternate;
     animation-iteration-count: 2;
 }
-
-    @keyframes slideshow_content_fade {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-        }
-    }
