@@ -20,6 +20,8 @@
 
     height: 100%;
     width: 100%;
+
+    @include breakpoint(mobile){display: none;}
 }
 
 .introduction-text-container {
