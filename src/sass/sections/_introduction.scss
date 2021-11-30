@@ -5,7 +5,6 @@
 
     height: 100%;
     width: 100%;
-    overflow: none;
 }
 
 .introduction-animation-container canvas {
@@ -37,14 +36,21 @@
     .introduction-text-hi {
         font-size: 3.25vw;
         text-align: center;
+
+        @include breakpoint(mobile){font-size: 5vw;}
     }
 
     .introduction-text-name {
+        color: $color4;
         font-size: 9vw;
         text-align: center;
+
+        @include breakpoint(mobile){font-size: 12vw;}
     }
 
     .introduction-text-tagline {
         font-size: 3.75vw;
         text-align: center;
+
+        @include breakpoint(mobile){font-size: 5vw;}
     }

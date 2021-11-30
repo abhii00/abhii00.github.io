@@ -20,4 +20,6 @@
         .loading-logo {
             height: 15vw;
             width: 15vw;
+
+            @include breakpoint(mobile){height: 30vw; width: 30vw;}
         }

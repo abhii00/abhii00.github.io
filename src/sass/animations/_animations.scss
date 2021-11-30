@@ -32,15 +32,6 @@
     animation-direction: normal, alternate;
 }
 
-/*Introduction*/
-.introduction-text-name {
-    animation-name: grow20, filter4;
-    animation-duration: calc($transition_time*1.5), calc($transition_time*1.5);
-    animation-delay: calc($transition_time*1.5), calc($transition_time*1.5);
-    animation-direction: normal, normal;
-    animation-fill-mode: forwards, forwards;
-}
-
 /*ProjectsGrid*/
 .projectsgrid-description-container.loading {
     animation-name: shrinkY;

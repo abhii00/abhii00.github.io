@@ -46,15 +46,6 @@
   animation-direction: normal, alternate;
 }
 
-/*Introduction*/
-.introduction-text-name {
-  animation-name: grow20, filter4;
-  animation-duration: 0.9s, 0.9s;
-  animation-delay: 0.9s, 0.9s;
-  animation-direction: normal, normal;
-  animation-fill-mode: forwards, forwards;
-}
-
 /*ProjectsGrid*/
 .projectsgrid-description-container.loading {
   animation-name: shrinkY;
@@ -235,6 +226,12 @@ body {
 .loading-logo {
   height: 15vw;
   width: 15vw;
+}
+@media (max-width: 500px) {
+  .loading-logo {
+    height: 30vw;
+    width: 30vw;
+  }
 }
 
 .menu-container {
@@ -579,6 +576,7 @@ body {
   align-items: stretch;
   position: relative;
   height: 100vh;
+  overflow-y: hidden;
 }
 @media (max-width: 500px) {
   .section-container-spec {
@@ -881,7 +879,6 @@ body {
   z-index: -1;
   height: 100%;
   width: 100%;
-  overflow: none;
 }
 
 .introduction-animation-container canvas {
@@ -912,15 +909,31 @@ body {
   font-size: 3.25vw;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .introduction-text-hi {
+    font-size: 5vw;
+  }
+}
 
 .introduction-text-name {
+  color: #368F8B;
   font-size: 9vw;
   text-align: center;
+}
+@media (max-width: 500px) {
+  .introduction-text-name {
+    font-size: 12vw;
+  }
 }
 
 .introduction-text-tagline {
   font-size: 3.75vw;
   text-align: center;
+}
+@media (max-width: 500px) {
+  .introduction-text-tagline {
+    font-size: 5vw;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
