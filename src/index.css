@@ -893,6 +893,11 @@ body {
   height: 100%;
   width: 100%;
 }
+@media (max-width: 500px) {
+  .introduction-darkfilter {
+    display: none;
+  }
+}
 
 .introduction-text-container {
   display: flex;
