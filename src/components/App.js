@@ -39,8 +39,9 @@ class App extends React.Component{
             [scene, camera, renderer] = setupScene(new THREE.Vector3(-210,15,35));
             this.mount.appendChild(renderer.domElement);
             animation1(scene, camera, renderer);
-            window.addEventListener('resize', () => {resizeScene(camera, renderer)});
         }
+
+        window.addEventListener('resize', () => {resizeScene(camera, renderer)});
     }
 
     render(){       
