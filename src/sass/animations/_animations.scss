@@ -13,9 +13,9 @@
     to {transform: scale(1.2);}
 }
 
-@keyframes filter4 {
-    from {filter: auto;}
-    to {filter: $color4_filter;}
+@keyframes filterh {
+    from {filter: $color_ft_filter;}
+    to {filter: $color_h_filter;}
 }
 
 /*Loading*/
@@ -26,7 +26,7 @@
 }
 
 .loading-logo {
-    animation-name: filter4, grow20;
+    animation-name: filterh, grow20;
     animation-duration: calc($transition_time*1.5), calc($transition_time*1.5); 
     animation-delay: 0s, 0s;
     animation-direction: normal, alternate;

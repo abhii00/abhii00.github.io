@@ -28,8 +28,8 @@
         @include frostedglass();
 
         background-color: $darkest_translucent;
-        color: $color1;
-        font-weight: 100;
+        color: $color_f;
+        font-weight: $weight_f;
 
         height: 23vw;
         width: 70vw;
@@ -71,7 +71,9 @@
 
                 .projectsgrid-description-title {
                     font-size: 2.75vw;
-                    font-family: 'Lato', 'sans-serif';
+                    font-family: $font_ft;
+                    font-weight: $weight_ft;
+                    color: $color_ft;
 
                     @include breakpoint(mobile){font-size: 8vw; text-align: center;}
                 }
@@ -131,19 +133,19 @@
 
                         .projectsgrid-description-icon-new:hover {
                             transform: scale(1.1);
-                            color: $color4;
+                            color: $color_h;
                         }
 
                     .projectsgrid-description-icon-github {
                         height: 2vw;
-                        filter: $color1_filter;
+                        filter: $color_ft_filter;
 
                         @include breakpoint(mobile){height: 7.5vw}
                     }
 
                         .projectsgrid-description-icon-github:hover {
                             transform: scale(1.1);
-                            filter: $color4_filter;
+                            filter: $color_h_filter;
                         }
 
     .projectsgrid-loadmore-container {
@@ -156,7 +158,8 @@
             @include floatingboxshadow();
             @include roundedcorners();
 
-            background-color: $color3;
+            background-color: $color_f;
+            color: $color_b;
             
             text-align: center;
             font-size: 1.25vw;
@@ -170,8 +173,8 @@
         }
 
             .projectsgrid-loadmore-button:hover {
-                color: $color1;
-                background-color: $color4;
+                color: $color_f;
+                background-color: $color_h;
                 transform: scale(1.1);
                 cursor: pointer;
             }

@@ -22,10 +22,13 @@
 }
 
     .section-title {
+        color: $color_ft;
+
         font-size: 4vw;
-        font-family: 'Lato', 'sans-serif';
+        font-family: $font_ft;
         text-align: center;
-        
+        font-weight: $weight_ft;
+
         margin-bottom: 20px;
         margin-top: 20px;
 

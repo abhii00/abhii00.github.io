@@ -14,18 +14,22 @@
     }
 
     .contact-email{
-        color: $color2;
-        font-weight: bold;
+        color: $color_f;
+        
         font-size: 3.25vw;
         text-align: center;
         text-decoration: none;
+
+        font-weight: calc($weight_ft + 100);
+        font-family: $font_ft;
+        color: $color_ft;
 
         @include breakpoint(mobile){font-size: 5vw}
     }
 
         .contact-email:hover {
             transform: scale(1.1);
-            color: $color4;
+            color: $color_h;
 
             cursor: pointer;
         }
@@ -39,6 +43,8 @@
     }
 
         .contact-icon {
+            filter: $color_ft_filter;
+
             height: 3.75vw;
 
             @include breakpoint(mobile){height: 8vw}
@@ -46,5 +52,5 @@
 
         .contact-icon:hover {
             transform: scale(1.1);
-            filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+            filter: $color_h_filter;
         }

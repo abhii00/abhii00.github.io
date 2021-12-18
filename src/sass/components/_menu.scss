@@ -2,7 +2,7 @@
     @include flexbox($flex-direction: row, $justify-content: space-between);
 
     background-color: $darker_translucent;
-    color: $color1;
+    color: $color_f;
 
     position: fixed;
     z-index: 1;
@@ -14,6 +14,8 @@
 }
 
     .menu-icon {
+        filter: $color_ft_filter;
+
         height: 50px;
         margin-left: 1vw;
 
@@ -24,7 +26,7 @@
 
         .menu-icon:hover {
             transform: scale(1.1);
-            filter: $color4_filter;
+            filter: $color_h_filter;
         }
 
     .menu-links-container {
@@ -38,11 +40,13 @@
 
         .menu-link {
             font-size: 1.4vw;
+            font-family: $font_ft;
+            color: $color_ft;
 
             cursor: pointer;
         }
 
         .menu-link:hover {
             transform: scale(1.1);
-            color: $color4;
+            color: $color_h;
         }

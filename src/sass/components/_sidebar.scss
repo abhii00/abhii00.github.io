@@ -10,13 +10,14 @@
 
     .sidebar-icon {
         height: 70px;
+        filter: $color_h_filter;
 
         @include breakpoint(tablet){display: none};
         @include breakpoint(mobile){display: none};
     }
 
     .sidebar-line {
-        border-left: 3px solid $color4;
+        border-left: 3px solid $color_h;
 
         height: 50vh;
         margin-left: 46%;

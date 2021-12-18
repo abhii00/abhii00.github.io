@@ -1,6 +1,6 @@
 import React from 'react';
 
-import rktIcon from '../assets/icons/rktteal.svg';
+import rktIcon from '../assets/icons/rkt.png';
 
 class Sidebar extends React.Component{
     render(){

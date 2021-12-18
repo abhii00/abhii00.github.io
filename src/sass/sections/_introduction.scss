@@ -27,8 +27,9 @@
 .introduction-text-container {
     @include flexbox();
 
-    color: $color1;
-    font-family: 'Lato', 'sans-serif';
+    color: $color_ft;
+    font-family: $font_ft;
+    font-weight: $weight_ft;
     
     margin-top: 10%;
 
@@ -43,7 +44,7 @@
     }
 
     .introduction-text-name {
-        color: $color4;
+        color: $color_h;
         font-size: 9vw;
         text-align: center;
 

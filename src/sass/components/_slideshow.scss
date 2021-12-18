@@ -1,108 +1,120 @@
 /*Main*/
-.slideshow-background {
-    height: 100%;
-    width: 100%;
 
-    object-fit: cover;
+.slideshow-container {
+    @include flexbox($flex-direction: row, $align-items: center);
 }
 
-.slideshow-shadow {
-    height: 100%;
-    width: 100%;
-
-    position: absolute;
-    z-index: -1;
-}
-
-.slideshow-box-container {
-    @include floatingboxshadow();
-    @include roundedcorners();
-    @include frostedglass();
-
-    background-color: $darkest_translucent;
-    color: $color1;
-    font-weight: 100;
-
-    position: absolute;
-    top: 50%;
-    left: 10vw; 
-    z-index: 0;
-
-    height: 23vw;
-    width: 70vw;
-
-    transform-origin: top left;
-
-    @include breakpoint(mobile){display: none}
-}
-
-    .slideshow-content-container {
-        @include flexbox($flex-direction: row, $align-items: center);
+    .slideshow-background {
+        @include floatingboxshadow();
+        @include roundedcorners();
 
         height: 100%;
-        width: 80vw;
+        width: 90%;
+
+        object-fit: cover;
+
+        @include breakpoint(mobile){width: 100%}
     }
 
-        .slideshow-image {
-            @include floatingboxshadow();
-            @include roundedcorners();
+    .slideshow-shadow {
+        height: 100%;
+        width: 100%;
 
-            height: 18vw;
-            width: 18vw;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .slideshow-box-container {
+        @include floatingboxshadow();
+        @include roundedcorners();
+        @include frostedglass();
+
+        background-color: $darkest_translucent;
+        color: $color_f;
+        font-weight: $weight_f;
+
+        position: absolute;
+        top: 50%;
+        left: 10vw; 
+        z-index: 0;
+
+        height: 23vw;
+        width: 70vw;
+
+        transform-origin: top left;
+
+        @include breakpoint(mobile){display: none}
+    }
+
+        .slideshow-content-container {
+            @include flexbox($flex-direction: row, $align-items: center);
+
+            height: 100%;
+            width: 80vw;
         }
 
-        .slideshow-leftcol-container {
-            @include flexbox();
+            .slideshow-image {
+                @include floatingboxshadow();
+                @include roundedcorners();
 
-            height: 90%;
-        }
-
-            .slideshow-title {
-                font-size: 2.75vw;
-                font-family: 'Lato', 'sans-serif';
+                height: 18vw;
+                width: 18vw;
             }
 
-            .slideshow-institution {
-                font-size: 1.75vw;
-                font-style: italic;
+            .slideshow-leftcol-container {
+                @include flexbox();
+
+                height: 90%;
             }
 
-            .slideshow-text {
-                font-size: 1.5vw;
-                text-align: justify;
-
-                width: 55vw;
-            }
-
-            .slideshow-links-container {
-                @include flexbox($flex-direction: row, $align-items: center);
-
-                height: 2.4vw;
-                width: 6vw;
-                margin-left: -0.8vw;
-            }
-
-                .slideshow-link {
-                    color: white;
-                    text-decoration: none;
+                .slideshow-title {
+                    font-size: 2.75vw;
+                    font-family: $font_ft;
+                    font-weight: $weight_ft;
+                    color: $color_ft;
                 }
 
-                .slideshow-icon-new {
-                    height: 2.4vw !important; 
-                    width: 2.4vw !important; 
+                .slideshow-institution {
+                    font-size: 1.75vw;
+                    font-style: italic;
                 }
 
-                    .slideshow-icon-new:hover {
-                        transform: scale(1.1);
-                        color: $color4;
+                .slideshow-text {
+                    font-size: 1.5vw;
+                    text-align: justify;
+
+                    width: 55vw;
+                }
+
+                .slideshow-links-container {
+                    @include flexbox($flex-direction: row, $align-items: center);
+
+                    height: 2.4vw;
+                    width: 6vw;
+                    margin-left: -0.8vw;
+                }
+
+                    .slideshow-link {
+                        color: white;
+                        text-decoration: none;
                     }
 
-                .slideshow-icon-github {
-                    height: 2vw;
-                    filter: $color1_filter;
-                }
-
-                    .slideshow-icon-github:hover {
-                        transform: scale(1.1);
-                        filter: $color4_filter;
+                    .slideshow-icon-new {
+                        height: 2.4vw !important; 
+                        width: 2.4vw !important; 
                     }
+
+                        .slideshow-icon-new:hover {
+                            transform: scale(1.1);
+                            color: $color_h;
+                        }
+
+                    .slideshow-icon-github {
+                        height: 2vw;
+                        filter: $color_ft_filter;
+                    }
+
+                        .slideshow-icon-github:hover {
+                            transform: scale(1.1);
+                            filter: $color_h_filter;
+                        }

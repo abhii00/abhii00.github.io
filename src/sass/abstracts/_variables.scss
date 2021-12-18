@@ -1,13 +1,19 @@
-$color1: #F5F5F5;
-$color2: #05080F;
-$color3: #cfcfcf;
-$color4: #368F8B;
+$color_b: #091A26; //background - loadmore button
+$color_f: #C4B69F; //body font - loadmore button
+$color_ft: #FFEED2; //title font
+$color_h: #1EA1C2; //highlight
 
-$color4_filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
-$color1_filter: invert(89%) sepia(18%) saturate(24%) hue-rotate(57deg) brightness(122%) contrast(92%);
+$color_ft_filter: invert(96%) sepia(6%) saturate(549%) hue-rotate(348deg) brightness(94%) contrast(87%); //used for setting default github+logo icon color
+$color_h_filter: invert(47%) sepia(26%) saturate(1181%) hue-rotate(145deg) brightness(107%) contrast(98%); //used for seeting highlight github+logo icon color
 
-$darkest_translucent: rgba(0, 0, 0, 0.55);
-$darker_translucent: rgba(0, 0, 0, 0.35);
+$font_f: 'Roboto', 'sans-serif'; //body font
+$font_ft: 'Lato', 'sans-serif'; //title font
+
+$weight_f: 300; //body font weight
+$weight_ft: 300; //title font weight
+
 $dark_translucent: rgba(0, 0, 0, 0.15);
+$darker_translucent: rgba(0, 0, 0, 0.35);
+$darkest_translucent: rgba(0, 0, 0, 0.55);
 
 $transition_time: 0.6s;

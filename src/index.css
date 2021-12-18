@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500&display=swap");
 @keyframes fade {
   from {
     opacity: 1;
@@ -24,12 +24,12 @@
     transform: scale(1.2);
   }
 }
-@keyframes filter4 {
+@keyframes filterh {
   from {
-    filter: auto;
+    filter: invert(96%) sepia(6%) saturate(549%) hue-rotate(348deg) brightness(94%) contrast(87%);
   }
   to {
-    filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+    filter: invert(47%) sepia(26%) saturate(1181%) hue-rotate(145deg) brightness(107%) contrast(98%);
   }
 }
 /*Loading*/
@@ -40,7 +40,7 @@
 }
 
 .loading-logo {
-  animation-name: filter4, grow20;
+  animation-name: filterh, grow20;
   animation-duration: 0.9s, 0.9s;
   animation-delay: 0s, 0s;
   animation-direction: normal, alternate;
@@ -197,16 +197,16 @@ html::-webkit-scrollbar {
 }
 
 body {
-  background-color: #F5F5F5;
-  color: #05080F;
-  font-family: "Roboto", sans-serif;
+  background-color: #091A26;
+  color: #C4B69F;
+  font-family: "Roboto", "sans-serif";
   font-weight: 300;
   margin: 0;
   padding: 0;
 }
 
 .loading-background {
-  background-color: #F5F5F5;
+  background-color: #091A26;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -240,7 +240,7 @@ body {
   justify-content: space-between;
   align-items: stretch;
   background-color: rgba(0, 0, 0, 0.35);
-  color: #F5F5F5;
+  color: #C4B69F;
   position: fixed;
   z-index: 1;
   height: 50px;
@@ -253,6 +253,7 @@ body {
 }
 
 .menu-icon {
+  filter: invert(96%) sepia(6%) saturate(549%) hue-rotate(348deg) brightness(94%) contrast(87%);
   height: 50px;
   margin-left: 1vw;
   cursor: pointer;
@@ -265,7 +266,7 @@ body {
 
 .menu-icon:hover {
   transform: scale(1.1);
-  filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+  filter: invert(47%) sepia(26%) saturate(1181%) hue-rotate(145deg) brightness(107%) contrast(98%);
 }
 
 .menu-links-container {
@@ -288,12 +289,14 @@ body {
 
 .menu-link {
   font-size: 1.4vw;
+  font-family: "Lato", "sans-serif";
+  color: #FFEED2;
   cursor: pointer;
 }
 
 .menu-link:hover {
   transform: scale(1.1);
-  color: #368F8B;
+  color: #1EA1C2;
 }
 
 /*Main*/
@@ -334,8 +337,8 @@ body {
   border-radius: 6px;
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.55);
-  color: #F5F5F5;
-  font-weight: 100;
+  color: #C4B69F;
+  font-weight: 300;
   height: 23vw;
   width: 70vw;
   margin-bottom: 20px;
@@ -394,6 +397,8 @@ body {
 .projectsgrid-description-title {
   font-size: 2.75vw;
   font-family: "Lato", "sans-serif";
+  font-weight: 300;
+  color: #FFEED2;
 }
 @media (max-width: 500px) {
   .projectsgrid-description-title {
@@ -479,12 +484,12 @@ body {
 
 .projectsgrid-description-icon-new:hover {
   transform: scale(1.1);
-  color: #368F8B;
+  color: #1EA1C2;
 }
 
 .projectsgrid-description-icon-github {
   height: 2vw;
-  filter: invert(89%) sepia(18%) saturate(24%) hue-rotate(57deg) brightness(122%) contrast(92%);
+  filter: invert(96%) sepia(6%) saturate(549%) hue-rotate(348deg) brightness(94%) contrast(87%);
 }
 @media (max-width: 500px) {
   .projectsgrid-description-icon-github {
@@ -494,7 +499,7 @@ body {
 
 .projectsgrid-description-icon-github:hover {
   transform: scale(1.1);
-  filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+  filter: invert(47%) sepia(26%) saturate(1181%) hue-rotate(145deg) brightness(107%) contrast(98%);
 }
 
 .projectsgrid-loadmore-container {
@@ -508,7 +513,8 @@ body {
 .projectsgrid-loadmore-button {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
   border-radius: 6px;
-  background-color: #cfcfcf;
+  background-color: #C4B69F;
+  color: #091A26;
   text-align: center;
   font-size: 1.25vw;
   margin-top: 15px;
@@ -525,8 +531,8 @@ body {
 }
 
 .projectsgrid-loadmore-button:hover {
-  color: #F5F5F5;
-  background-color: #368F8B;
+  color: #C4B69F;
+  background-color: #1EA1C2;
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -534,7 +540,7 @@ body {
 .projecttile-container {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
   border-radius: 6px;
-  background-color: #05080F;
+  background-color: #C4B69F;
   height: 15vw;
   width: 15vw;
   cursor: pointer;
@@ -585,9 +591,11 @@ body {
 }
 
 .section-title {
+  color: #FFEED2;
   font-size: 4vw;
   font-family: "Lato", "sans-serif";
   text-align: center;
+  font-weight: 300;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -616,6 +624,7 @@ body {
 
 .sidebar-icon {
   height: 70px;
+  filter: invert(47%) sepia(26%) saturate(1181%) hue-rotate(145deg) brightness(107%) contrast(98%);
 }
 @media (min-width: 500px) and (max-width: 1400px) {
   .sidebar-icon {
@@ -629,7 +638,7 @@ body {
 }
 
 .sidebar-line {
-  border-left: 3px solid #368F8B;
+  border-left: 3px solid #1EA1C2;
   height: 50vh;
   margin-left: 46%;
 }
@@ -645,10 +654,24 @@ body {
 }
 
 /*Main*/
+.slideshow-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .slideshow-background {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  border-radius: 6px;
   height: 100%;
-  width: 100%;
+  width: 90%;
   object-fit: cover;
+}
+@media (max-width: 500px) {
+  .slideshow-background {
+    width: 100%;
+  }
 }
 
 .slideshow-shadow {
@@ -663,8 +686,8 @@ body {
   border-radius: 6px;
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.55);
-  color: #F5F5F5;
-  font-weight: 100;
+  color: #C4B69F;
+  font-weight: 300;
   position: absolute;
   top: 50%;
   left: 10vw;
@@ -706,6 +729,8 @@ body {
 .slideshow-title {
   font-size: 2.75vw;
   font-family: "Lato", "sans-serif";
+  font-weight: 300;
+  color: #FFEED2;
 }
 
 .slideshow-institution {
@@ -741,24 +766,24 @@ body {
 
 .slideshow-icon-new:hover {
   transform: scale(1.1);
-  color: #368F8B;
+  color: #1EA1C2;
 }
 
 .slideshow-icon-github {
   height: 2vw;
-  filter: invert(89%) sepia(18%) saturate(24%) hue-rotate(57deg) brightness(122%) contrast(92%);
+  filter: invert(96%) sepia(6%) saturate(549%) hue-rotate(348deg) brightness(94%) contrast(87%);
 }
 
 .slideshow-icon-github:hover {
   transform: scale(1.1);
-  filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+  filter: invert(47%) sepia(26%) saturate(1181%) hue-rotate(145deg) brightness(107%) contrast(98%);
 }
 
 .about-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
-  align-items: stretch;
+  align-items: center;
   width: 80%;
   padding-left: 10vw;
 }
@@ -775,9 +800,9 @@ body {
 
 .about-image {
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
-  border: 2px solid #05080F;
-  height: 20vw;
-  width: 20vw;
+  border: 2px solid #C4B69F;
+  height: 25vw;
+  width: 25vw;
 }
 @media (max-width: 500px) {
   .about-image {
@@ -804,7 +829,7 @@ body {
 }
 
 .about-text span {
-  color: #368F8B;
+  color: #1EA1C2;
 }
 
 .contact-container {
@@ -828,11 +853,13 @@ body {
 }
 
 .contact-email {
-  color: #05080F;
-  font-weight: bold;
+  color: #C4B69F;
   font-size: 3.25vw;
   text-align: center;
   text-decoration: none;
+  font-weight: 400;
+  font-family: "Lato", "sans-serif";
+  color: #FFEED2;
 }
 @media (max-width: 500px) {
   .contact-email {
@@ -842,7 +869,7 @@ body {
 
 .contact-email:hover {
   transform: scale(1.1);
-  color: #368F8B;
+  color: #1EA1C2;
   cursor: pointer;
 }
 
@@ -860,6 +887,7 @@ body {
 }
 
 .contact-icon {
+  filter: invert(96%) sepia(6%) saturate(549%) hue-rotate(348deg) brightness(94%) contrast(87%);
   height: 3.75vw;
 }
 @media (max-width: 500px) {
@@ -870,7 +898,7 @@ body {
 
 .contact-icon:hover {
   transform: scale(1.1);
-  filter: invert(49%) sepia(29%) saturate(799%) hue-rotate(128deg) brightness(93%) contrast(86%);
+  filter: invert(47%) sepia(26%) saturate(1181%) hue-rotate(145deg) brightness(107%) contrast(98%);
 }
 
 .introduction-animation-container {
@@ -904,8 +932,9 @@ body {
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: stretch;
-  color: #F5F5F5;
+  color: #FFEED2;
   font-family: "Lato", "sans-serif";
+  font-weight: 300;
   margin-top: 10%;
   cursor: default;
 }
@@ -921,7 +950,7 @@ body {
 }
 
 .introduction-text-name {
-  color: #368F8B;
+  color: #1EA1C2;
   font-size: 9vw;
   text-align: center;
 }
