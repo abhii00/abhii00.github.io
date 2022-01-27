@@ -39,7 +39,7 @@ class Slideshow extends React.Component{
     render(){ 
         return(
             <div className='slideshow-container'>
-                <img src={require('../assets/projects/'+this.state.project.pictures.main).default} alt='' className={`slideshow-background${this.state.loading ? ' loading' : ''}`}/>
+                <img src={require('../assets/projects/'+this.state.project.pictures.main)} alt='' className={`slideshow-background${this.state.loading ? ' loading' : ''}`}/>
                 <div className='slideshow-shadow'/>
                 <div className={`slideshow-box-container${this.state.loading ? ' loading' : ''}`}>
                     <div className={`slideshow-content-container${this.state.loading ? ' loading' : ''}`}>
@@ -62,7 +62,7 @@ class Slideshow extends React.Component{
                                 }                                
                             </div>
                         </div>
-                        <img src={require('../assets/projects/'+this.state.project.pictures.square).default} alt='' className={`slideshow-image${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ''}`}`}/>
+                        <img src={require('../assets/projects/'+this.state.project.pictures.square)} alt='' className={`slideshow-image${this.state.loadin ? ' loadin' : `${this.state.loadout ? ' loadout' : ''}`}`}/>
                     </div>
                 </div>
             </div>

@@ -136,7 +136,7 @@ class ProjectsGrid extends React.Component {
                                 }
                             </div>
                         </div>
-                        <img src={this.state.descriptionShown && require('../assets/projects/'+ this.state.descriptionProject.pictures.square).default} alt=''className={`projectsgrid-description-image${loadingClass}`}/>
+                        <img src={this.state.descriptionShown && require('../assets/projects/'+ this.state.descriptionProject.pictures.square)} alt=''className={`projectsgrid-description-image${loadingClass}`}/>
                     </div>
                 </div>
                 {this.state.projectShownPostRows}
