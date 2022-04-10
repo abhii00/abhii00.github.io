@@ -55,7 +55,7 @@
             "prod": "https://cusf.co.uk/white-giant",
             "src": ""
         },
-        "description": "A manufacturing-oriented design of a 10kN Nitrous Oxide-Isopyropyl Alcohol, after analysis of temperatures, stresses and material compatibility.",
+        "description": "A manufacturing-oriented design of a 1.5kN and a 10kN Nitrous Oxide-Isopyropyl Alcohol liquid rocket engine, after analysis of temperatures, stresses and material compatibility..",
         "techs": "PYTHON, SOLIDWORKS",
         "pictures": {
             "main": "",
@@ -65,7 +65,7 @@
     },
     {
         "name": "Lead Website Developer",
-        "date": "August 2021 - Present",
+        "date": "August 2021 - March 2022",
         "institution": "Cambridge University Spaceflight",
         "urls": {
             "prod": "https://cusf.co.uk",
@@ -129,7 +129,7 @@
     },
     {
         "name": "Research Student",
-        "date": "August 2021 - Present",
+        "date": "August 2021 - March 2022",
         "institution": "Division A: Energy, Fluid Mechanics and Turbomachinery, Cambridge University Engineering Department",
         "urls": {
             "prod": "https://eng.cam.ac.uk/profiles/rsc10",
