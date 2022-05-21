@@ -13,6 +13,11 @@ import portfolioProjects from '../assets/projects/portfolio.json';
 import githubIcon from '../assets/icons/github.png';
 import linkedinIcon from '../assets/icons/linkedin.png';
 
+//TODO change to rocket animation
+//TODO improve graphic design
+//TODO update loading animation
+//TODO optimise performance
+
 class App extends React.Component{
     constructor(props){
         super(props)
@@ -71,7 +76,9 @@ class App extends React.Component{
                                 <br/>
                                 Recently, I interned at <span>Thales Alenia Space UK</span> working on modelling satellite propellant feed systems. I also received an IET Diamond Jubilee Scholarship sponsored by Thales. 
                                 <br/>
-                                Alongside this, I act as the Co-President, and Launch and Safety Officer with <span>Cambridge University Spaceflight</span>, working to launch the first European student-built rocket to reach space. I am also a propulsion engineer working on our 2kN and 10kN liquid bipropellant engines.  I recently also won the second place prize in the 2022 <span>Airbus</span> National Student Space Competition (Ocean World Category) with my design of Europa Inspire, an astrobiology mission to Europa.
+                                Alongside this, I act as the Co-President, and Launch and Safety Officer with <span>Cambridge University Spaceflight</span>, working to launch the first European student-built rocket to reach space. I am also a propulsion engineer working on our 2kN and 10kN liquid bipropellant engines. 
+                                <br/>
+                                I recently also won the second place prize in the 2022 <span>Airbus</span> National Student Space Competition (Ocean World Category) with my design of Europa Inspire, an astrobiology mission to Europa.
                                 <br/>
                                 In my spare time, I've been working on projects such as an Earth Observation Data Visualiser.
                             </div>
