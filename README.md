@@ -1,5 +1,7 @@
 # **Portfolio**
 
+:white_check_mark: WORK PLANNED :white_check_mark:
+
 A portfolio website displaying my projects.
 
 _July - October 2021_
