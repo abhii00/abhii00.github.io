@@ -9,11 +9,13 @@ import { animation0, animation1 } from '../graphics/animations.js';
 import aboutImage from '../assets/images/about.jpeg';
 import featuredProjects from '../assets/projects/featured.json';
 import experienceProjects from '../assets/projects/experience.json';
+import organisationProjects from '../assets/projects/organisation.json';
 import portfolioProjects from '../assets/projects/portfolio.json';
 import githubIcon from '../assets/icons/github.png';
 import linkedinIcon from '../assets/icons/linkedin.png';
 
 //TODO change to rocket animation
+//TODO golden highlight around most important projects
 //TODO improve graphic design
 //TODO update loading animation
 //TODO optimise performance
@@ -70,17 +72,17 @@ class App extends React.Component{
                         <div className='about-container'>
                             <img src={aboutImage} alt='' className='about-image'/>
                             <div className='about-text'>
-                                Hi! I'm Abhi. My goal is to work in the global space industry, contributing to a better future for humanity through the pursuit of space exploration. My other interests lie in software development, deep technologies such as genetics and quantum technology, and medicine. 
+                                Hi! I'm Abhi. My goal is to work in the global space industry, contributing to a better future for humanity through the pursuit of space exploration. 
                                 <br/>
-                                Currently, I'm a 3rd year undergraduate engineer at the <span>University of Cambridge</span>, taking my very own eclectic mix of Aerothermal, Mechanical, Information and Bioengineering modules.
+                                Currently, I'm <span>interning at NASA's Jet Propulsion Laboratory</span>, working on dispersion analysis for future lander missions, alongside my <span>MEng in Aerospace and Control Engineering at the University of Cambridge</span>, where I recently received my <span>1st Class BA (Hons)</span>.
                                 <br/>
-                                Recently, I interned at <span>Thales Alenia Space UK</span> working on modelling satellite propellant feed systems. I also received an IET Diamond Jubilee Scholarship sponsored by Thales. 
+                                My <span>Master's Project is focused on Real-Time Optimal Control of Spacecraft Attitude</span>, while my prior experience includes an internship modelling satellite propellant feed systems at <span>Thales Alenia Space UK</span>.
                                 <br/>
-                                Alongside this, I act as the Co-President, and Launch and Safety Officer with <span>Cambridge University Spaceflight</span>, working to launch the first European student-built rocket to reach space. I am also a propulsion engineer working on our 2kN and 10kN liquid bipropellant engines. 
+                                I currently act as the <span>Co-President of Cambridge University Spaceflight</span>, working to become the first European student team to reach space, as well as the <span>President of Selwyn College Engineering Society</span>, building an inclusive Engineering environment at the College.
                                 <br/>
-                                I recently also won the second place prize in the 2022 <span>Airbus</span> National Student Space Competition (Ocean World Category) with my design of Europa Inspire, an astrobiology mission to Europa.
+                                I'm a recipient of the <span>IET Diamond Jubilee Scholarship, supported by Thales</span> as well as a <span>Scholarship of Selwyn College</span> for my performance in 2nd and 3rd Year. I also won the <span>2nd place prize in the 2022 Airbus NSSC</span>  with my design of an astrobiology lander for Europa.
                                 <br/>
-                                In my spare time, I've been working on projects such as an Earth Observation Data Visualiser.
+                                Feel free to take a look around and find out more about my projects!
                             </div>
                         </div>
                     </Section>
@@ -91,6 +93,10 @@ class App extends React.Component{
 
                     <Section title='EXPERIENCE AND EDUCATION' id='experience'>
                         <ProjectsGrid projectsJSON={experienceProjects}/>
+                    </Section>
+
+                    <Section title='ORGANISATIONS' id='organisation'>
+                        <ProjectsGrid projectsJSON={organisationProjects}/>
                     </Section>
 
                     <Section title='PORTFOLIO' id='portfolio'>

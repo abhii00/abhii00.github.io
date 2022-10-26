@@ -21,6 +21,9 @@ class Menu extends React.Component{
                     <Link to='experience'>
                         <div className='menu-link'>EXPERIENCE AND EDUCATION</div>
                     </Link>
+                    <Link to='organisation'>
+                        <div className='menu-link'>ORGS</div>
+                    </Link>
                     <Link to='portfolio'>
                         <div className='menu-link'>PORTFOLIO</div>
                     </Link>

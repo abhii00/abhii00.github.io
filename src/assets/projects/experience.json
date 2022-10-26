@@ -1,5 +1,37 @@
 [
     {
+        "name": "Mission Design and Navigation Intern",
+        "date": "August 2022 - Present",
+        "institution": "NASA's Jet Propulsion Laboratory",
+        "urls": {
+            "prod": "",
+            "src": ""
+        },
+        "description": "Analysing dispersion propagation from arrival to landing for future lander missions to Mars and Titan.",
+        "techs": "MONTE, PYTHON",
+        "pictures": {
+            "main": "",
+            "tile": "experience/jpl/tile.jpg",
+            "square": "experience/jpl/tile.jpg"
+        }
+    },
+    {
+        "name": "Research Student",
+        "date": "August 2021 - March 2022",
+        "institution": "Division A: Energy, Fluid Mechanics and Turbomachinery, Cambridge University Engineering Department",
+        "urls": {
+            "prod": "https://eng.cam.ac.uk/profiles/rsc10",
+            "src": ""
+        },
+        "description": "A CFD research project with Professor R.S. Cant involving creating a standard test case library for stationary laminar hydrogen flame speeds for proprietary code, automated with Linux and Python.",
+        "techs": "LINUX, PYTHON",
+        "pictures": {
+            "main": "",
+            "tile": "experience/cued/tile.png",
+            "square": "experience/cued/tile.png"
+        }
+    },
+    {
         "name": "Propulsion Intern",
         "date": "August - September 2021",
         "institution": "Thales Alenia Space UK",
@@ -17,68 +49,20 @@
     },
     {
         "name": "BA, MEng in Engineering",
-        "date": "2019-2023",
+        "date": "2019 - 2023",
         "institution": "Selwyn College, University of Cambridge",
         "urls": {
             "prod": "https://teaching.eng.cam.ac.uk/node/2979",
             "src": ""
         },
-        "description": "Specialisation in Aerothermal, Mechanical, Information and Bioengineering. Modules: 3A1/3, 3C5, 3E1, 3F1/2, 3G1, 4M12. Year 2: 79%, 1st Class, Official; Year 1: 75: 1st Class Equivalent, Unofficial.",
+        "description": "MEng Student specialising in Aerospace and Control Engineering with Master's project on Real-Time Optimal Control of Spacecraft Attitude. Achieved 1st Class BA (Hons) in Mechanical and Aerospace Engineering.",
         "techs": "",
         "pictures": {
             "main": "",
-            "tile": "experience/cam/tile.png",
+            "tile": "experience/cam/square.png",
             "square": "experience/cam/square.png"
         }
     }, 
-    {
-        "name": "Launch and Safety Officer",
-        "date": "March 2021 - Present",
-        "institution": "Cambridge University Spaceflight",
-        "urls": {
-            "prod": "https://cusf.co.uk",
-            "src": ""
-        },
-        "description": "Negotiation with 10+ launch sites for the launch of a UK record-breaking 20km, 5kN hybrid rocket. Safety procedure regarding Nitrous Oxide pressure vessels for cold flow and hot fire testing.",
-        "techs": "",
-        "pictures": {
-            "main": "experience/cusf/main.png",
-            "tile": "experience/cusf/tile3.png",
-            "square": "experience/cusf/square3.png"
-        }
-    },
-    {
-        "name": "Cooling Sub-Team Propulsion Engineer",
-        "date": "January 2021 - Present",
-        "institution": "Cambridge University Spaceflight",
-        "urls": {
-            "prod": "https://cusf.co.uk/white-giant",
-            "src": ""
-        },
-        "description": "A manufacturing-oriented design of a 1.5kN and a 10kN Nitrous Oxide-Isopyropyl Alcohol liquid rocket engine, after analysis of temperatures, stresses and material compatibility..",
-        "techs": "PYTHON, SOLIDWORKS",
-        "pictures": {
-            "main": "",
-            "tile": "experience/cusf/tile1.png",
-            "square": "experience/cusf/square1.png"
-        }
-    },
-    {
-        "name": "Lead Website Developer",
-        "date": "August 2021 - March 2022",
-        "institution": "Cambridge University Spaceflight",
-        "urls": {
-            "prod": "https://cusf.co.uk",
-            "src": ""
-        },
-        "description": "A total redesign of the website as part of a new marketing strategy, built in Wordpress and complete with my own design, and Blender renders.",
-        "techs": "WORDPRESS",
-        "pictures": {
-            "main": "",
-            "tile": "experience/cusf/tile2.png",
-            "square": "experience/cusf/square2.png"
-        }
-    },
     {
         "name": "Engineering in Education Scheme Student",
         "date": "September 2017 - April 2018",
@@ -96,51 +80,19 @@
         }
     },
     {
-        "name": "Co-Founder",
-        "date": "September 2021 - Present",
-        "institution": "Cambridge University Plant Society",
+        "name": "Work Experience Student",
+        "date": "June 2017",
+        "institution": "SAIC Motor Technical Centre UK",
         "urls": {
-            "prod": "",
+            "prod": "https://saicmotor.com/",
             "src": ""
         },
-        "description": "Plant Society!!!!",
-        "techs": "",
+        "description": "A project reproducing VR controllers using CAD and 3D printing to integrate into a visualisation system for automotive interiors.",
+        "techs": "CATIA V5",
         "pictures": {
             "main": "",
-            "tile": "experience/cups/tile.png",
-            "square": "experience/cups/tile.png"
-        }
-    },
-    {
-        "name": "President & IIA Representative",
-        "date": "November 2020 - Present",
-        "institution": "Staff Student Joint Council, Cambridge University Engineering Department",
-        "urls": {
-            "prod": "https://teaching.eng.cam.ac.uk/content/ssjc-remit-roles-officers",
-            "src": ""
-        },
-        "description": "Formerly IB Representative. Responsible for collecting and relaying student opinion to senior professors within the department.",
-        "techs": "",
-        "pictures": {
-            "main": "",
-            "tile": "experience/cued/tile.png",
-            "square": "experience/cued/tile.png"
-        }
-    },
-    {
-        "name": "Research Student",
-        "date": "August 2021 - March 2022",
-        "institution": "Division A: Energy, Fluid Mechanics and Turbomachinery, Cambridge University Engineering Department",
-        "urls": {
-            "prod": "https://eng.cam.ac.uk/profiles/rsc10",
-            "src": ""
-        },
-        "description": "A CFD research project with Professor R.S. Cant involving creating a standard test case library for stationary laminar hydrogen flame speeds for proprietary code, automated with Linux and Python.",
-        "techs": "LINUX, PYTHON",
-        "pictures": {
-            "main": "",
-            "tile": "experience/cued/tile.png",
-            "square": "experience/cued/tile.png"
+            "tile": "experience/saic/tile.png",
+            "square": "experience/saic/tile.png"
         }
     },
     {
@@ -173,38 +125,6 @@
             "main": "",
             "tile": "experience/kechb/tile.png",
             "square": "experience/kechb/tile.png"
-        }
-    },
-    {
-        "name": "Work Experience Student",
-        "date": "June 2017",
-        "institution": "SAIC Motor Technical Centre UK",
-        "urls": {
-            "prod": "https://saicmotor.com/",
-            "src": ""
-        },
-        "description": "A project reproducing VR controllers using CAD and 3D printing to integrate into a visualisation system for automotive interiors.",
-        "techs": "CATIA V5",
-        "pictures": {
-            "main": "",
-            "tile": "experience/saic/tile.png",
-            "square": "experience/saic/tile.png"
-        }
-    },
-    {
-        "name": "Mentor",
-        "date": "September 2021 - Present",
-        "institution": "Zero Gravity",
-        "urls": {
-            "prod": "",
-            "src": ""
-        },
-        "description": "Mentored a sixth-form student through the admissions process for studying Engineering at university.",
-        "techs": "",
-        "pictures": {
-            "main": "",
-            "tile": "experience/zerog/tile.png",
-            "square": "experience/zerog/tile.png"
         }
     }
 ]

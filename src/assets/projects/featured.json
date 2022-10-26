@@ -1,18 +1,34 @@
 [
     {
-        "name": "Launch and Safety Officer",
-        "date": "March 2021 - Present",
+        "name": "Mission Design and Navigation Intern",
+        "date": "August 2022 - Present",
+        "institution": "NASA's Jet Propulsion Laboratory",
+        "urls": {
+            "prod": "",
+            "src": ""
+        },
+        "description": "Analysing dispersion propagation from arrival to landing for future lander missions to Mars and Titan.",
+        "techs": "MONTE, PYTHON",
+        "pictures": {
+            "main": "experience/jpl/main.jpg",
+            "tile": "experience/jpl/tile.jpg",
+            "square": "experience/jpl/tile.jpg"
+        }
+    },
+    {
+        "name": "Co-President",
+        "date": "March 2022 - Present",
         "institution": "Cambridge University Spaceflight",
         "urls": {
             "prod": "https://cusf.co.uk",
             "src": ""
         },
-        "description": "Negotiation with 10+ launch sites for the launch of a UK record-breaking 20km, 5kN hybrid rocket. Safety procedure regarding Nitrous Oxide pressure vessels for cold flow and hot fire testing.",
+        "description": "Leading a 40-student team towards the first European sub-orbital launch, Griffin, through project management, systems engineering and attracting sponsorship.",
         "techs": "",
         "pictures": {
-            "main": "experience/cusf/main.png",
-            "tile": "experience/cusf/tile3.png",
-            "square": "experience/cusf/square3.png"
+            "main": "organisation/cusf/main.png",
+            "tile": "organisation/cusf/tile2.png",
+            "square": "organisation/cusf/square2.png"
         }
     },
     {

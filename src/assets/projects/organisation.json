@@ -1,0 +1,162 @@
+[
+    {
+        "name": "President",
+        "date": "July 2022 - Present",
+        "institution": "Selwyn College Engineering Society",
+        "urls": {
+            "prod": "https://selwynengineering.com",
+            "src": ""
+        },
+        "description": "Building an inclusive and welcoming Engineering community at Selwyn College.",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "organisation/sces/tile.png",
+            "square": "organisation/sces/tile.png"
+        }
+    },
+    {
+        "name": "Member",
+        "date": "July 2022 - Present",
+        "institution": "Societies Syndicate Technical Committee",
+        "urls": {
+            "prod": "",
+            "src": ""
+        },
+        "description": "Reviewing funding applications from societies at the University.",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "experience/cam/tile.png",
+            "square": "experience/cam/tile.png"
+        }
+    },
+    {
+        "name": "Co-President",
+        "date": "March 2022 - Present",
+        "institution": "Cambridge University Spaceflight",
+        "urls": {
+            "prod": "https://cusf.co.uk",
+            "src": ""
+        },
+        "description": "Leading a 40-student team towards the first European sub-orbital launch, Griffin, through project management, systems engineering and attracting sponsorship.",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "organisation/cusf/tile2.png",
+            "square": "organisation/cusf/square2.png"
+        }
+    },
+    {
+        "name": "Launch and Safety Officer",
+        "date": "March 2021 - Present",
+        "institution": "Cambridge University Spaceflight",
+        "urls": {
+            "prod": "https://cusf.co.uk",
+            "src": ""
+        },
+        "description": "Responsible for logistics and regulatory awareness regarding international and domestic launch and tests. Liased with 11 operators in 6 countries for 3 independent launches.",
+        "techs": "",
+        "pictures": {
+            "main": "organisation/cusf/main.png",
+            "tile": "organisation/cusf/tile3.png",
+            "square": "organisation/cusf/square3.png"
+        }
+    },
+    {
+        "name": "Propulsion Engineer",
+        "date": "January 2021 - Present",
+        "institution": "Cambridge University Spaceflight",
+        "urls": {
+            "prod": "https://cusf.co.uk/white-dwarf",
+            "src": ""
+        },
+        "description": "Pre-test and test-day activities following design, manufacture and assembly of the UK's first student liquid bipropellant engine, White Dwarf.",
+        "techs": "PYTHON, SOLIDWORKS",
+        "pictures": {
+            "main": "",
+            "tile": "organisation/cusf/tile1.png",
+            "square": "organisation/cusf/square1.png"
+        }
+    },
+    {
+        "name": "Writer",
+        "date": "February 2022 - Present",
+        "institution": "United States Task Force, Space Generational Advisory Council",
+        "urls": {
+            "prod": "https://spacegeneration.org/us-task-force",
+            "src": ""
+        },
+        "description": "Writing articles and background briefs for policy members and the general public regarding key space policy issues facing the US.",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "organisation/sgac/tile.jpg",
+            "square": "organisation/sgac/tile.jpg"
+        }
+    },
+    {
+        "name": "Mentor",
+        "date": "September 2021 - Present",
+        "institution": "Zero Gravity",
+        "urls": {
+            "prod": "",
+            "src": ""
+        },
+        "description": "Mentoring sixth-form students through the admissions process for studying Engineering at university.",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "organisation/zerog/tile.png",
+            "square": "organisation/zerog/tile.png"
+        }
+    },
+    {
+        "name": "President & IIA Representative",
+        "date": "November 2021 - Present",
+        "institution": "Staff Student Joint Council, Cambridge University Engineering Department",
+        "urls": {
+            "prod": "https://teaching.eng.cam.ac.uk/content/ssjc-remit-roles-officers",
+            "src": ""
+        },
+        "description": "Formerly IB Representative. Responsible for collecting and relaying student opinion to senior professors within the department.",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "experience/cued/tile.png",
+            "square": "experience/cued/tile.png"
+        }
+    },
+    {
+        "name": "Researcher",
+        "date": "February 2022 - May 2022",
+        "institution": "Selwyn College JCR Cost of Living Group",
+        "urls": {
+            "prod": "",
+            "src": ""
+        },
+        "description": "Researched college wealth as part of a broader study into affordability at the College.",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "organisation/clg/tile.png",
+            "square": "organisation/clg/tile.png"
+        }
+    },
+    {
+        "name": "Co-Founder",
+        "date": "September 2021 - July 2022",
+        "institution": "Cambridge University Plant Society",
+        "urls": {
+            "prod": "",
+            "src": ""
+        },
+        "description": "Plant Society!!!!",
+        "techs": "",
+        "pictures": {
+            "main": "",
+            "tile": "organisation/cups/tile.png",
+            "square": "organisation/cups/tile.png"
+        }
+    }
+]
