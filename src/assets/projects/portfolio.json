@@ -55,7 +55,7 @@
             "prod": "/eovisualiser",
             "src": "https://github.com/abhii00/eovisualiser"
         },
-        "description": "An accessible visualiser for Earth Observation data and space object tracking.",
+        "description": "An accessible visualiser for Earth Observation data and space object tracking. CURRENTLY DOWN FOR MAINTENANCE.",
         "techs": "REACTJS, JAVASCRIPT, THREEJS",
         "pictures": {
             "main": "",
