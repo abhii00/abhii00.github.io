@@ -39,10 +39,12 @@ export default function App() {
         </Card>
         <Card> 
           <h4> Projects </h4>  
+          <PortfolioItem icon={logoIcon} date={"2026"} role={"Digital Vinyl Frame"} organisation={"CircuitPython"}/> 
+          <PortfolioItem icon={logoIcon} date={"2026"} role={"Quick Access Button"} organisation={"Android (Kotlin), Arduino"}/>
           <PortfolioItem icon={scesIcon} date={"2022 - 23"} role={"President"} organisation={"Selwyn College Engineering Society"}/> 
-          <PortfolioItem icon={zgIcon} date={"2021 - 23"} role={"Mentor"} organisation={"Zero Gravity"}/>
-          <PortfolioItem icon={cusfIcon} date={"2020 - 23"} role={"White Dwarf Propulsion Engineer / President"} organisation={"Cambridge University Spaceflight"}/>
-          <PortfolioItem icon={camIcon} date={"2020 - 23"} role={"IB - IIB Representative / President"} organisation={"CUED Staff-Student Joint Committee"}/>
+          {/* <PortfolioItem icon={zgIcon} date={"2021 - 23"} role={"Mentor"} organisation={"Zero Gravity"}/> */}
+          <PortfolioItem icon={cusfIcon} date={"2020 - 23"} role={"President / White Dwarf Propulsion Engineer"} organisation={"Cambridge University Spaceflight"}/>
+          {/* <PortfolioItem icon={camIcon} date={"2020 - 23"} role={"IB - IIB Representative / President"} organisation={"CUED Staff-Student Joint Committee"}/> */}
           <PortfolioItem icon={logoIcon} date={"2019 - 22"} role={"Orbit & Landing Simulator and Earth Observation Visualiser"} organisation={"JavaScript, Python, C++"}/> 
         </Card>
       </Page>
